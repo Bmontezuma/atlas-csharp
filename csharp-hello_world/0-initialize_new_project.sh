@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-mkdir 0-new_project
-cd 0-new_project
-dotnet new console
+# This will create a new C# project with dotnet
+dotnet new console -o 0-new_project
