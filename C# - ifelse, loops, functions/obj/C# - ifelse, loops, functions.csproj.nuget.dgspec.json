@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\brand\\OneDrive\\Documents\\GitHub\\atlas-csharp\\C# - ifelse, loops, functions\\C# - ifelse, loops, functions.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\brand\\OneDrive\\Documents\\GitHub\\atlas-csharp\\C# - ifelse, loops, functions\\C# - ifelse, loops, functions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\brand\\OneDrive\\Documents\\GitHub\\atlas-csharp\\C# - ifelse, loops, functions\\C# - ifelse, loops, functions.csproj",
+        "projectName": "C# - ifelse, loops, functions",
+        "projectPath": "C:\\Users\\brand\\OneDrive\\Documents\\GitHub\\atlas-csharp\\C# - ifelse, loops, functions\\C# - ifelse, loops, functions.csproj",
+        "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brand\\OneDrive\\Documents\\GitHub\\atlas-csharp\\C# - ifelse, loops, functions\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
