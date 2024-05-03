@@ -1,0 +1,11 @@
+C:\Users\brand\OneDrive\Documents\GitHub\atlas-csharp\C# - ifelse, loops, functions\bin\Debug\netcoreapp2.1\C# - ifelse, loops, functions.deps.json
+C:\Users\brand\OneDrive\Documents\GitHub\atlas-csharp\C# - ifelse, loops, functions\bin\Debug\netcoreapp2.1\C# - ifelse, loops, functions.runtimeconfig.json
+C:\Users\brand\OneDrive\Documents\GitHub\atlas-csharp\C# - ifelse, loops, functions\bin\Debug\netcoreapp2.1\C# - ifelse, loops, functions.runtimeconfig.dev.json
+C:\Users\brand\OneDrive\Documents\GitHub\atlas-csharp\C# - ifelse, loops, functions\bin\Debug\netcoreapp2.1\C# - ifelse, loops, functions.dll
+C:\Users\brand\OneDrive\Documents\GitHub\atlas-csharp\C# - ifelse, loops, functions\bin\Debug\netcoreapp2.1\C# - ifelse, loops, functions.pdb
+C:\Users\brand\OneDrive\Documents\GitHub\atlas-csharp\C# - ifelse, loops, functions\obj\Debug\netcoreapp2.1\C# - ifelse, loops, functions.csprojAssemblyReference.cache
+C:\Users\brand\OneDrive\Documents\GitHub\atlas-csharp\C# - ifelse, loops, functions\obj\Debug\netcoreapp2.1\C# - ifelse, loops, functions.csproj.CoreCompileInputs.cache
+C:\Users\brand\OneDrive\Documents\GitHub\atlas-csharp\C# - ifelse, loops, functions\obj\Debug\netcoreapp2.1\C# - ifelse, loops, functions.AssemblyInfoInputs.cache
+C:\Users\brand\OneDrive\Documents\GitHub\atlas-csharp\C# - ifelse, loops, functions\obj\Debug\netcoreapp2.1\C# - ifelse, loops, functions.AssemblyInfo.cs
+C:\Users\brand\OneDrive\Documents\GitHub\atlas-csharp\C# - ifelse, loops, functions\obj\Debug\netcoreapp2.1\C# - ifelse, loops, functions.dll
+C:\Users\brand\OneDrive\Documents\GitHub\atlas-csharp\C# - ifelse, loops, functions\obj\Debug\netcoreapp2.1\C# - ifelse, loops, functions.pdb
