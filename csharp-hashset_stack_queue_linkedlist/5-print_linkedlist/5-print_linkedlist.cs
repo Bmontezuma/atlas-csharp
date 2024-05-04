@@ -5,26 +5,18 @@ public static class LList
 {
     public static LinkedList<int> CreatePrint(int size)
     {
-        LinkedList<int> list = new LinkedList<int>();
+        LinkedList<int> myLList = new LinkedList<int>();
 
-        if (size >= 0)
+        if (size < 0)
+            return myLList;
+
+        for (int i = 0; i < size; i++)
         {
-            for (int i = 0; i < size; i++)
-            {
-                list.AddLast(i);
-            }
-
-            Console.WriteLine("LinkedList: ");
-            foreach (int item in list)
-            {
-                Console.WriteLine(item);
-            }
+            myLList.AddLast(i);
+            Console.Write(i + " ");
         }
-        else
-        {
-            Console.WriteLine("LinkedList is empty");
-        }
+        Console.WriteLine();
 
-        return list;
+        return myLList;
     }
 }
