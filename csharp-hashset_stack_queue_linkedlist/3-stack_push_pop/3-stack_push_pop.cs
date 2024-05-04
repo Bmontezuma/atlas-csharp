@@ -16,17 +16,40 @@ public static class MyStack
             Console.WriteLine("Stack is empty");
         }
 
-        Console.WriteLine("Stack contains " + search + ": " + aStack.Contains(search));
-
         if (aStack.Contains(search))
         {
-            while (aStack.Contains(search))
+            Console.WriteLine("Stack contains " + search + ": True");
+
+            while (aStack.Count > 0 && aStack.Peek() == search)
             {
                 aStack.Pop();
             }
+
+            if (aStack.Count > 0)
+            {
+                Console.WriteLine("Stack after removing all items up to and including " + search + ":");
+                foreach (string item in aStack)
+                {
+                    Console.Write(item + " ");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Stack is empty after removing all items up to and including " + search);
+            }
+        }
+        else
+        {
+            Console.WriteLine("Stack contains " + search + ": False");
         }
 
         aStack.Push(newItem);
+
+        Console.WriteLine("\nStack after adding " + newItem + ":");
+        foreach (string item in aStack)
+        {
+            Console.Write(item + " ");
+        }
 
         return aStack;
     }
