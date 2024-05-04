@@ -9,6 +9,11 @@ class Array
             Console.WriteLine("Size cannot be negative");
             return null;
         }
+        else if (size == 0)
+        {
+            Console.WriteLine("Array of size 0 created");
+            return new int[0]; // Return an empty array if size is 0
+        }
 
         int[] newArray = new int[size];
         for (int i = 0; i < size; i++)
