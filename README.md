@@ -4,3 +4,4 @@
 
 # ***Learning Objective Wiki's***
 - [C# - Hello, World](https://github.com/Bmontezuma/atlas-csharp/wiki/C%23-%E2%80%90-Hello,-World-Learning-Objectives)
+- [C# - Data Structures: Arrays, Lists, Dictionaries](https://github.com/Bmontezuma/atlas-csharp/wiki/C%23-%E2%80%90-Data-Structures:-Arrays,-Lists,-Dictionaries)
