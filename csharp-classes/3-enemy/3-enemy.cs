@@ -10,7 +10,7 @@ namespace Enemies
         /// <summary>
         /// Represents the health of the zombie.
         /// </summary>
-        public int health;
+        private int health;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Zombie"/> class with default health of 0.
@@ -35,6 +35,15 @@ namespace Enemies
             {
                 health = value;
             }
+        }
+
+        /// <summary>
+        /// Gets the current health of the zombie.
+        /// </summary>
+        /// <returns>The current health value.</returns>
+        public int GetHealth()
+        {
+            return health;
         }
     }
 }
