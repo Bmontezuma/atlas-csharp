@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
-using static System.Console;
 
-public class ListExtensions
+class ListOperations
 {
-    public static List<int> Divide(List<int> list1, List<int> list2, int listLength)
+    public static List<int> DivideLists(List<int> list1, List<int> list2, int listLength)
     {
         List<int> result = new List<int>();
 
@@ -12,42 +11,27 @@ public class ListExtensions
         {
             try
             {
-                int dividend = list1[i];
-                int divisor = list2[i];
+                int dividend = GetValueAtIndexOrDefault(list1, i);
+                int divisor = GetValueAtIndexOrDefault(list2, i);
 
-                if (divisor == 0)
-                {
-                    WriteLine("Cannot divide by zero");
-                    result.Add(0);
-                }
-                else
-                {
-                    int divisionResult = dividend / divisor;
-                    result.Add(divisionResult);
-                }
+                result.Add(dividend / divisor);
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Cannot divide by zero");
+                result.Add(0);
             }
             catch (ArgumentOutOfRangeException)
             {
-                WriteLine("Out of range");
-                result.Add(0); // Add a placeholder value for out-of-range indices
+                Console.WriteLine("Out of range");
             }
         }
 
         return result;
     }
-}
 
-class Program
-{
-    static void Main(string[] args)
+    private static int GetValueAtIndexOrDefault(List<int> list, int index)
     {
-        List<int> list1 = new List<int>() { 1, 20, 16, 15, 54 };
-        List<int> list2 = new List<int>() { 1, 0, 2, 3 };
-        int listLength = Math.Max(list1.Count, list2.Count);
-
-        List<int> result = ListExtensions.Divide(list1, list2, listLength);
-
-        foreach (int value in result)
-            WriteLine(value);
+        return index < list.Count ? list[index] : 0;
     }
 }
