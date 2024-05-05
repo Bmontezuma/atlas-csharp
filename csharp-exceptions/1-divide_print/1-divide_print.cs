@@ -19,3 +19,16 @@ class Int
         }
     }
 }
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Int.divide(12, 2);
+        Int.divide(7, 0);
+        Int.divide(12, -2);
+        Int.divide(0, 2);
+        Int.divide(10, 0);
+        Int.divide(0, 0);
+    }
+}
