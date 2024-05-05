@@ -1,25 +1,12 @@
 using System;
 
-public class Except
+namespace atlas_csharp.csharp_exceptions
 {
-    public static void Throw()
+    public static class Except
     {
-        // Throw a custom exception (you can choose any specific exception type)
-        throw new Exception("Custom exception thrown intentionally");
-    }
-}
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        try
+        public static void Throw()
         {
-            Except.Throw();
-        }
-        catch (Exception)
-        {
-            Console.WriteLine("Exception raised");
+            throw new Exception("This is a custom exception");
         }
     }
 }
