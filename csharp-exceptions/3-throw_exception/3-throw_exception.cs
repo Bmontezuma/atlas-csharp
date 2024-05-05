@@ -1,12 +1,8 @@
 using System;
+using static System.Console;
 
-namespace atlas_csharp.csharp_exceptions
-{
-    public static class Except
-    {
-        public static void Throw()
-        {
-            throw new Exception("This is a custom exception");
-        }
+class Except {
+    public static void Throw() {
+        throw new System.Exception("We're going to neeed a bigger boat.");
     }
 }
