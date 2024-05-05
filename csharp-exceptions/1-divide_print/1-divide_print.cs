@@ -1,13 +1,14 @@
 using System;
 
-public class Int
+class Int
 {
     public static void divide(int a, int b)
     {
+        int result = 0;
+
         try
         {
-            int result = a / b;
-            Console.WriteLine($"{a} / {b} = {result}");
+            result = a / b;
         }
         catch (DivideByZeroException)
         {
@@ -15,24 +16,7 @@ public class Int
         }
         finally
         {
-            Console.WriteLine("Division operation completed.");
+            Console.WriteLine($"{a} / {b} = {result}");
         }
-    }
-}
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        int a, b;
-
-        a = 4;
-        b = 3;
-        Int.divide(a, b);
-        Console.WriteLine();
-
-        a = 9;
-        b = 0;
-        Int.divide(a, b);
     }
 }
