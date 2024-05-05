@@ -1,9 +1,13 @@
 using System;
+using static System.Console;
 
-/// <summary>
-/// Represents a zombie enemy in the game.
-/// </summary>
-public class Zombie
+namespace Enemies 
 {
-    // Zombie class definition
+    /// <summary>
+    /// Class for Eneny type zombie.
+    /// </summary>
+    class Zombie 
+    {
+
+    }
 }
