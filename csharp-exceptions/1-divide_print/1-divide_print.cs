@@ -1,6 +1,6 @@
 using System;
 
-class Int
+public class Int
 {
     public static void divide(int a, int b)
     {
@@ -15,7 +15,7 @@ class Int
         }
         finally
         {
-            Console.WriteLine($"{a} / {b} = {(b == 0 ? 0 : (a / b))}");
+            Console.WriteLine("Division operation completed.");
         }
     }
 }
@@ -24,11 +24,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        Int.divide(12, 2);
-        Int.divide(7, 0);
-        Int.divide(12, -2);
-        Int.divide(0, 2);
-        Int.divide(10, 0);
-        Int.divide(0, 0);
+        int a, b;
+
+        a = 4;
+        b = 3;
+        Int.divide(a, b);
+        Console.WriteLine();
+
+        a = 9;
+        b = 0;
+        Int.divide(a, b);
     }
 }
