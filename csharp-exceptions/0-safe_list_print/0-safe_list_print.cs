@@ -1,26 +1,3 @@
-using System;
-using System.Collections.Generic;
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        List<int> myList = new List<int>() {1, 2, 3, 4, 5};
-        int count;
-
-        count = List.SafePrint(myList, myList.Count);
-        Console.WriteLine("Number of integers printed: " + count);
-        Console.WriteLine();
-
-        count = List.SafePrint(myList, myList.Count - 2);
-        Console.WriteLine("Number of integers printed: " + count);
-        Console.WriteLine();
-
-        count = List.SafePrint(myList, myList.Count + 2);
-        Console.WriteLine("Number of integers printed: " + count);
-    }
-}
-
 public static class List
 {
     public static int SafePrint(List<int> myList, int n)
@@ -32,6 +9,19 @@ public static class List
             if (myList == null)
             {
                 throw new ArgumentNullException(nameof(myList), "List cannot be null");
+            }
+
+            // Check if the list is empty
+            if (myList.Count == 0)
+            {
+                Console.WriteLine("The list is empty");
+                return count;
+            }
+
+            // Check if n is less than 0
+            if (n < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(n), "n cannot be less than 0");
             }
 
             // Use Math.Min to ensure we don't go out of bounds
