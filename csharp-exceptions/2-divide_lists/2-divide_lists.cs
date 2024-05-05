@@ -1,37 +1,39 @@
 using System;
 using System.Collections.Generic;
+using static System.Console;
 
-public class List
+public class ListExtensions
 {
     public static List<int> Divide(List<int> list1, List<int> list2, int listLength)
     {
-        List<int> resultList = new List<int>();
+        List<int> result = new List<int>();
 
-        try
+        for (int i = 0; i < listLength; i++)
         {
-            for (int i = 0; i < listLength; i++)
+            try
             {
                 int dividend = list1[i];
                 int divisor = list2[i];
 
                 if (divisor == 0)
                 {
-                    Console.WriteLine("Cannot divide by zero");
-                    resultList.Add(0);
+                    WriteLine("Cannot divide by zero");
+                    result.Add(0);
                 }
                 else
                 {
-                    int result = dividend / divisor;
-                    resultList.Add(result);
+                    int divisionResult = dividend / divisor;
+                    result.Add(divisionResult);
                 }
             }
-        }
-        catch (ArgumentOutOfRangeException)
-        {
-            Console.WriteLine("Out of range");
+            catch (ArgumentOutOfRangeException)
+            {
+                WriteLine("Out of range");
+                result.Add(0); // Add a placeholder value for out-of-range indices
+            }
         }
 
-        return resultList;
+        return result;
     }
 }
 
@@ -41,9 +43,11 @@ class Program
     {
         List<int> list1 = new List<int>() { 1, 20, 16, 15, 54 };
         List<int> list2 = new List<int>() { 1, 0, 2, 3 };
-        List<int> result = List.Divide(list1, list2, 5);
+        int listLength = Math.Max(list1.Count, list2.Count);
 
-        foreach (int i in result)
-            Console.WriteLine(i);
+        List<int> result = ListExtensions.Divide(list1, list2, listLength);
+
+        foreach (int value in result)
+            WriteLine(value);
     }
 }
