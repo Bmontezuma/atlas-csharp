@@ -1,9 +1,9 @@
-// File: 0-enemy.cs
+using System;
 
-namespace Enemies
+/// <summary>
+/// Represents a zombie enemy in the game.
+/// </summary>
+public class Zombie
 {
-    public class Zombie
-    {
-        // Zombie class definition
-    }
+    // Zombie class definition
 }
