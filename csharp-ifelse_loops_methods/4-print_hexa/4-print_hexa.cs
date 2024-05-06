@@ -4,15 +4,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        int i = 0;
-        while (i < 99)
+        for (int i = 0, j = 0x10; i < 100; i++, j += 0x10)
         {
             Console.Write($"{i} = 0x{i:X2} ");
-            if ((i + 1) % 10 == 0)
+            if (i == j - 0x10)
             {
                 Console.WriteLine();
+                Console.Write($"{i + 1} = 0x{i + 1:X2} ");
             }
-            i++;
         }
     }
 }
