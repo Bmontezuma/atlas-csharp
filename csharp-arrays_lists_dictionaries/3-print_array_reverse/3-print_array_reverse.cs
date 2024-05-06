@@ -1,20 +1,11 @@
-public static class Array
-{
-    public static void Reverse(int[] array)
-    {
-        if (array == null)
-        {
-            Console.WriteLine("Array cannot be null");
-            return;
-        }
+using System;
+using System.Linq;
 
-        int length = array.Length;
-
-        for (int i = length - 1; i >= 0; i--)
-        {
-            Console.Write($"{array[i]} ");
-        }
-
-        Console.WriteLine();
+class Array {
+    public static void Reverse(int[] array) {
+        string s = "";
+        if (array != null)
+            s = string.Format("{0}", array.Length > 0 ? string.Join(" ", array.Reverse()) : "");
+        Console.WriteLine(s);
     }
 }
