@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public static class List
 {
     public static List<int> DeleteAt(List<int> myList, int index)
@@ -11,16 +8,16 @@ public static class List
             return myList;
         }
 
-        List<int> result = new List<int>(myList.Count - 1);
+        List<int> updatedList = new List<int>();
 
         for (int i = 0; i < myList.Count; i++)
         {
             if (i != index)
             {
-                result.Add(myList[i]);
+                updatedList.Add(myList[i]);
             }
         }
 
-        return result;
+        return updatedList;
     }
 }
