@@ -4,10 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        for (int i = 0; i < 98; i++)
+        for (int i = 0; i < 99; i++)
         {
-            Console.Write($"{0} = 0x{0:X}\n",i);
+            Console.Write($"{i} = 0x{i:X2} ");
+            if ((i + 1) % 10 == 0)
+            {
+                Console.WriteLine();
+            }
         }
     }
 }
-
