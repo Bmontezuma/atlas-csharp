@@ -5,6 +5,8 @@ class MyQueue
 {
     public static Queue<string> Info(Queue<string> aQueue, string newItem, string search)
     {
+        bool dequeueUsed = false;
+
         Console.WriteLine($"Number of items: {aQueue.Count}");
 
         if (aQueue.Count > 0)
@@ -18,16 +20,19 @@ class MyQueue
 
         aQueue.Enqueue(newItem);
 
-        bool containsSearch = aQueue.Contains(search);
-        Console.WriteLine($"Queue contains {search}: {containsSearch}");
+        Console.WriteLine($"Queue contains {search}: {aQueue.Contains(search)}");
 
-        if (containsSearch)
+        if (aQueue.Contains(search))
         {
-            while (aQueue.Peek() != search)
+            while (aQueue.Peek() != search && !dequeueUsed)
+            {
+                aQueue.Dequeue();
+                dequeueUsed = true;
+            }
+            if (dequeueUsed)
             {
                 aQueue.Dequeue();
             }
-            aQueue.Dequeue();
         }
 
         return aQueue;
