@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 class List
 {
@@ -11,15 +12,10 @@ class List
             return null;
         }
 
-        List<int> newList = new List<int>();
-        for (int i = 0; i < size; i++)
-        {
-            newList.Add(i);
-            Console.Write(i + " ");
-        }
-        Console.WriteLine();
+        var newList = Enumerable.Range(0, size).ToList();
+        Console.WriteLine(string.Join(" ", newList));
 
-        Console.WriteLine("List Length: " + newList.Count);
+        Console.WriteLine($"List Length: {newList.Count}");
 
         return newList;
     }
