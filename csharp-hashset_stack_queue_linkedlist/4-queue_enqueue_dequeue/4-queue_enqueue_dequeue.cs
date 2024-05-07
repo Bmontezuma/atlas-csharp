@@ -5,25 +5,29 @@ class MyQueue
 {
     public static Queue<string> Info(Queue<string> aQueue, string newItem, string search)
     {
-        // Print the number of items in the queue
-        Console.WriteLine($"Number of items: {aQueue.Count}");
+        bool hasSearch = aQueue.Contains(search);
 
-        // Print the item at the top of the queue without removing it
-        if (aQueue.Count > 0)
-            Console.WriteLine($"First item: {aQueue.Peek()}");
-        else
-            Console.WriteLine("Queue is empty");
+        Console.WriteLine("Number of items: {0}", aQueue.Count);
+        Console.WriteLine("{0}", aQueue.Count == 0 ? "Queue is empty" : string.Format("First item: {0}", aQueue.Peek()));
 
-        // Add a new item to the queue
         aQueue.Enqueue(newItem);
 
-        // Print if the queue contains the given item
-        Console.WriteLine($"Queue contains \"{search}\": {aQueue.Contains(search)}");
+        Console.WriteLine("Queue contains \"{0}\": {1}", search, hasSearch);
 
-        // Remove items up to and including the given item, if it exists
-        while (aQueue.Count > 0 && aQueue.Peek() != search)
-            aQueue.Dequeue();
-
+        if (hasSearch)
+        {
+            int upTo = 0;
+            foreach (string i in aQueue)
+            {
+                upTo++;
+                if (i == search)
+                    break;
+            }
+            for (int i = 0; i < upTo; i++)
+            {
+                aQueue.Dequeue();
+            }
+        }
         return aQueue;
     }
 }
