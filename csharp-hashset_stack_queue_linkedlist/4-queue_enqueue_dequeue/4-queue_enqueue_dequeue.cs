@@ -32,25 +32,17 @@ class Program
 {
     static void Main(string[] args)
     {
-        Queue<string> aQueue = new Queue<string>();
+        // Test cases
+        TestQueue(new Queue<string>(new string[] { "C", "HTML", "Javascript", "Python", "React", "Ruby" }), "C#", "Javascript");
+        TestQueue(new Queue<string>(new string[] { "Cohort 0", "Cohort 1", "Cohort 2", "Cohort 3", "Cohort 4", "Cohort 5", "Cohort 6", "Cohort 7" }), "Cohort 8", "Cohort 5");
+        TestQueue(new Queue<string>(new string[] { "C", "HTML", "Javascript", "Python", "React", "Ruby" }), "C#", "C++");
+        TestQueue(new Queue<string>(), "C#", "C++");
+    }
 
-        aQueue.Enqueue("C");
-        aQueue.Enqueue("HTML");
-        aQueue.Enqueue("Javascript");
-        aQueue.Enqueue("Python");
-        aQueue.Enqueue("React");
-        aQueue.Enqueue("Ruby");
-
-        foreach (string item in aQueue)
-            Console.WriteLine(item);
-
-        Console.WriteLine("------");
-
-        MyQueue.Info(aQueue, "C#", "Javascript");
-
-        Console.WriteLine("------");
-
-        foreach (string item in aQueue)
-            Console.WriteLine(item);
+    static void TestQueue(Queue<string> queue, string newItem, string search)
+    {
+        Console.WriteLine($"Case: Queue: {string.Join(", ", queue)} // Add: {newItem} // Search: {search}");
+        MyQueue.Info(queue, newItem, search);
+        Console.WriteLine();
     }
 }
