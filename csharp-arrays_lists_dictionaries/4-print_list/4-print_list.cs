@@ -14,6 +14,7 @@ class List
         List<int> newList = Enumerable.Range(0, size).ToList();
         Console.WriteLine(string.Join(" ", newList));
         Console.WriteLine($"List Length: {newList.Count}");
+        Console.WriteLine($"List Length: {newList.Count}"); // New line added
         return newList;
     }
 }
