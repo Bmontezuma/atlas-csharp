@@ -13,8 +13,10 @@ class List
         }
         List<int> newList = Enumerable.Range(0, size).ToList();
         Console.WriteLine(string.Join(" ", newList));
-        Console.WriteLine($"List Length: {newList.Count}");
-        Console.WriteLine($"List Length: {newList.Count}"); // New line added
+        for (int i = 0; i < size; i++)
+        {
+            Console.WriteLine($"List Length: {newList.Count}");
+        }
         return newList;
     }
 }
