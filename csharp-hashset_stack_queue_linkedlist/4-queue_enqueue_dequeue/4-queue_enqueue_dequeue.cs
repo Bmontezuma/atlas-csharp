@@ -1,32 +1,34 @@
 using System;
 using System.Collections.Generic;
 
-public static class MyQueue
+class MyQueue
 {
     public static Queue<string> Info(Queue<string> aQueue, string newItem, string search)
     {
-        Console.WriteLine("Number of items: " + aQueue.Count);
+        Console.WriteLine($"Number of items: {aQueue.Count}");
 
         if (aQueue.Count > 0)
         {
-            Console.WriteLine("First item: " + aQueue.Peek());
+            Console.WriteLine($"First item: {aQueue.Peek()}");
         }
         else
         {
             Console.WriteLine("Queue is empty");
         }
 
-        Console.WriteLine("Queue contains " + search + ": " + aQueue.Contains(search));
+        aQueue.Enqueue(newItem);
 
-        if (aQueue.Contains(search))
+        bool containsSearch = aQueue.Contains(search);
+        Console.WriteLine($"Queue contains {search}: {containsSearch}");
+
+        if (containsSearch)
         {
-            while (aQueue.Peek() == search)
+            while (aQueue.Peek() != search)
             {
                 aQueue.Dequeue();
             }
+            aQueue.Dequeue();
         }
-
-        aQueue.Enqueue(newItem);
 
         return aQueue;
     }
