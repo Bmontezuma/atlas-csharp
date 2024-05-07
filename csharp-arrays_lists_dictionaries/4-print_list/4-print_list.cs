@@ -1,7 +1,8 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 
-public class List
+class List
 {
     public static List<int> CreatePrint(int size)
     {
@@ -11,17 +12,12 @@ public class List
             return null;
         }
 
-        List<int> newList = new List<int>();
-        for (int i = 0; i < size; i++)
-        {
-            newList.Add(i);
-            Console.Write(i + " ");
-        }
-        Console.WriteLine();
-        
-        Console.WriteLine("List Length: " + newList.Count);
+        var ls = Enumerable.Range(0, size).ToList();
+        Console.WriteLine(string.Join(" ", ls));
 
-        return newList;
+        Console.WriteLine("List Length: " + ls.Count);
+
+        return ls;
     }
 }
 
