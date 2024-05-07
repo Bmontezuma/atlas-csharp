@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-public static class List
+public class List
 {
-    public static List<int> CreatePrint(int size)
+    public static List<int> CreateAndPrintIntegerList(int size)
     {
         if (size < 0)
         {
@@ -11,15 +12,19 @@ public static class List
             return null;
         }
 
-        List<int> list = new List<int>(size);
+        var list = Enumerable.Range(0, size).ToList();
 
-        for (int i = 0; i < size; i++)
-        {
-            list.Add(i);
-            Console.Write(i + " ");
-        }
+        Console.WriteLine(string.Join(" ", list));
 
-        Console.WriteLine();
         return list;
+    }
+
+    public static void Main(string[] args)
+    {
+        List<int> myList = CreateAndPrintIntegerList(10);
+        if (myList!= null)
+        {
+            Console.WriteLine("List created successfully");
+        }
     }
 }
