@@ -1,49 +1,29 @@
 using System;
 using System.Collections.Generic;
 
-public class LList
+class LList
 {
     public static void Delete(LinkedList<int> myLList, int index)
     {
-        if (myLList == null)
-        {
-            throw new ArgumentNullException(nameof(myLList), "List cannot be null.");
-        }
-
-        if (index < -1 || index >= myLList.Count)
-        {
-            throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range.");
-        }
-
-        if (myLList.Count == 0)
-        {
-            throw new InvalidOperationException("List is empty.");
-        }
-
-        if (index == 0)
-        {
-            myLList.RemoveFirst();
-            return;
-        }
+        if (myLList == null || index < 0)
+            throw new ArgumentException("Invalid input");
 
         LinkedListNode<int> current = myLList.First;
-        for (int i = 0; i < index - 1; i++)
+        int count = 0;
+
+        // Traverse the list to find the node at the specified index
+        while (current != null)
         {
-            if (current == null)
+            if (count == index)
             {
-                throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range.");
+                myLList.Remove(current);
+                return;
             }
-
             current = current.Next;
+            count++;
         }
 
-        if (current != null && current.Next != null)
-        {
-            current.Next = current.Next.Next;
-        }
-        else
-        {
-            throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range.");
-        }
+        // If the index is out of bounds, throw an exception
+        throw new IndexOutOfRangeException("Index out of range");
     }
 }
