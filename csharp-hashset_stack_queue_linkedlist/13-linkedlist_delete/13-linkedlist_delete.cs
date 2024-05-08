@@ -29,14 +29,21 @@ public class LList
         LinkedListNode<int> current = myLList.First;
         for (int i = 0; i < index - 1; i++)
         {
+            if (current == null)
+            {
+                throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range.");
+            }
+
             current = current.Next;
         }
 
-        if (current.Next == null)
+        if (current != null && current.Next != null)
+        {
+            current.Next = current.Next.Next;
+        }
+        else
         {
             throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range.");
         }
-
-        current.Next = current.Next.Next;
     }
 }
