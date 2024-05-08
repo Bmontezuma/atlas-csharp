@@ -5,9 +5,19 @@ public class LList
 {
     public static void Delete(LinkedList<int> myLList, int index)
     {
-        if (index < 0 || index >= myLList.Count)
+        if (myLList == null)
+        {
+            throw new ArgumentNullException(nameof(myLList), "List cannot be null.");
+        }
+
+        if (index < -1 || index >= myLList.Count)
         {
             throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range.");
+        }
+
+        if (myLList.Count == 0)
+        {
+            throw new InvalidOperationException("List is empty.");
         }
 
         if (index == 0)
