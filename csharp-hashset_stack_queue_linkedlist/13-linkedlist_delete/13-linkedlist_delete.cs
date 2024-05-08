@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-public static class LList
+public class LList
 {
     public static void Delete(LinkedList<int> myLList, int index)
     {
@@ -16,14 +16,17 @@ public static class LList
             return;
         }
 
-        LinkedListNode<int> currentNode = myLList.First;
+        LinkedListNode<int> current = myLList.First;
         for (int i = 0; i < index - 1; i++)
         {
-            currentNode = currentNode.Next;
+            current = current.Next;
         }
 
-        LinkedListNode<int> nodeToRemove = currentNode.Next;
-        currentNode.Next = currentNode.Next.Next;
-        nodeToRemove.Value = default;
+        if (current.Next == null)
+        {
+            throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range.");
+        }
+
+        current.Next = current.Next.Next;
     }
 }
