@@ -1,37 +1,74 @@
 using System;
 using System.Collections.Generic;
 
-public static class LList
+namespace OrderedLinkedList
 {
-    public static LinkedListNode<int> Insert(LinkedList<int> myLList, int n)
+    public class LinkedListNode<T>
     {
-        LinkedListNode<int> newNode = new LinkedListNode<int>(n);
+        public T Value { get; set; }
+        public LinkedListNode<T> Next { get; set; }
 
-        if (myLList.Count == 0)
+        public LinkedListNode(T value)
         {
-            myLList.AddFirst(newNode);
+            Value = value;
+        }
+    }
+
+    public class LinkedList<T> where T : IComparable
+    {
+        public LinkedListNode<T> First { get; private set; }
+
+        public void Add(T value)
+        {
+            if (First == null)
+            {
+                First = new LinkedListNode<T>(value);
+                return;
+            }
+
+            LinkedListNode<T> current = First;
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
+
+            current.Next = new LinkedListNode<T>(value);
+        }
+
+        public static LinkedListNode<T> Insert(LinkedList<T> myLList, T n)
+        {
+            LinkedListNode<T> newNode = new LinkedListNode<T>(n);
+            if (myLList.Count == 0 || n.CompareTo(myLList.First.Value) <= 0)
+            {
+                newNode.Next = myLList.First;
+                myLList.First = newNode;
+                return newNode;
+            }
+
+            LinkedListNode<T> current = myLList.First;
+            while (current.Next != null && current.Next.Value.CompareTo(n) < 0)
+            {
+                current = current.Next;
+            }
+
+            newNode.Next = current.Next;
+            current.Next = newNode;
             return newNode;
         }
 
-        LinkedListNode<int> currentNode = myLList.First;
-        LinkedListNode<int> previousNode = null;
-
-        while (currentNode != null && currentNode.Value < n)
+        public int Count
         {
-            previousNode = currentNode;
-            currentNode = currentNode.Next;
+            get
+            {
+                int count = 0;
+                LinkedListNode<T> current = First;
+                while (current != null)
+                {
+                    count++;
+                    current = current.Next;
+                }
+                return count;
+            }
         }
-
-        if (currentNode == null)
-        {
-            myLList.AddLast(newNode);
-        }
-        else
-        {
-            newNode.Next = currentNode;
-            previousNode.Next = newNode;
-        }
-
-        return newNode;
     }
 }
