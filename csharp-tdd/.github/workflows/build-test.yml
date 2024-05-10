@@ -16,7 +16,7 @@ jobs:
       - name: Setup .NET SDK
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '2.1.x'  # Replace '2.1.x' with the desired SDK version
+          dotnet-version: '2.1.526'  # Replace '2.1.x' with the desired SDK version
 
       - name: Restore dependencies
         run: dotnet restore
