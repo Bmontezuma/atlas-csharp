@@ -1,15 +1,41 @@
-namespace MyMath.Tests;
+using NUnit.Framework;
+using MyMath;
 
-public class Tests
+namespace MyMath.Tests
 {
-    [SetUp]
-    public void Setup()
+    public class OperationsTests
     {
-    }
+        [Test]
+        public void Max_ValidList_ReturnsMaxNum()
+        {
+            List<int> nums = new List<int> { 1, 2, 3, 4, 5 };
+            int expected = 5;
 
-    [Test]
-    public void Test1()
-    {
-        Assert.Pass();
+            int result = Operations.Max(nums);
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void Max_EmptyList_ReturnsZero()
+        {
+            List<int> nums = new List<int>();
+            int expected = 0;
+
+            int result = Operations.Max(nums);
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void Max_NullList_ReturnsZero()
+        {
+            List<int> nums = null;
+            int expected = 0;
+
+            int result = Operations.Max(nums);
+
+            Assert.AreEqual(expected, result);
+        }
     }
 }
