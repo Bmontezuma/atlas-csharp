@@ -1,54 +1,36 @@
 ﻿using System;
 
-namespace Vehicle
+namespace ShapeNamespace
 {
     /// <summary>
-    /// Represents a vehicle.
+    /// Represents a square.
     /// </summary>
-    public class Vehicle
+    public class Square : Shape
     {
-        /// <summary>
-        /// Gets or sets the name of the vehicle.
-        /// </summary>
-        public string Name { get; set; }
+        private int size;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Vehicle"/> class.
+        /// Gets or sets the size of the square.
         /// </summary>
-        /// <param name="name">The name of the vehicle.</param>
-        public Vehicle(string name)
+        /// <exception cref="ArgumentException">Thrown when size is set to a negative value.</exception>
+        public int Size
         {
-            Name = name;
+            get { return size; }
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentException("Size must be greater than or equal to 0");
+                size = value;
+            }
         }
 
         /// <summary>
-        /// Outputs a message indicating that the vehicle is driving.
+        /// Calculates the area of the square.
         /// </summary>
-        public virtual void Drive()
+        /// <returns>The area of the square.</returns>
+        public override int Area()
         {
-            Console.WriteLine($"The {Name} is driving.");
-        }
-    }
-
-    /// <summary>
-    /// Represents a car.
-    /// </summary>
-    public class Car : Vehicle
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Car"/> class.
-        /// </summary>
-        /// <param name="name">The name of the car.</param>
-        public Car(string name) : base(name)
-        {
-        }
-
-        /// <summary>
-        /// Outputs a message indicating that the car is accelerating.
-        /// </summary>
-        public override void Drive()
-        {
-            Console.WriteLine($"The {Name} is accelerating.");
+            return size * size;
         }
     }
 }
