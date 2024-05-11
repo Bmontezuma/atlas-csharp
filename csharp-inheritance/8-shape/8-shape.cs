@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShapeNamespace
+namespace Shape
 {
     /// <summary>
     /// Represents a square.
