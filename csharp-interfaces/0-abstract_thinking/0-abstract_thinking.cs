@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace Borderlands3.Entities
+﻿namespace Claptrap
 {
     /// <summary>
-    /// An abstract class representing a base entity in Borderlands 3.
+    /// An abstract class representing a base entity.
     /// </summary>
     public abstract class Base
     {
@@ -22,10 +20,7 @@ namespace Borderlands3.Entities
         }
     }
 
-    /// <summary>
-    /// A class representing Claptrap in Borderlands 3.
-    /// </summary>
-    public class Claptrap : Base
+    class SoftwareEngineer : Base
     {
         // Empty class
     }
