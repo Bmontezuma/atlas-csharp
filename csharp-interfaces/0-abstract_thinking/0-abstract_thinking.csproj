@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net22.0</TargetFramework>
+    <TargetFramework>net2.0</TargetFramework>
     <RootNamespace>_0_abstract_thinking</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
