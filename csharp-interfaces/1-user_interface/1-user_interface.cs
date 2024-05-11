@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 /// <summary>
 /// An abstract class representing a base entity.
@@ -32,24 +33,62 @@ public interface IInteractive
 }
 
 /// <summary>
-/// Represents a door object.
+/// An interface for breakable objects.
 /// </summary>
-public class Door : Base, IInteractive
+public interface IBreakable
 {
     /// <summary>
-    /// Constructor for the Door class.
+    /// Property representing the durability of the object.
     /// </summary>
-    /// <param name="name">The name of the door.</param>
-    public Door(string name = "Door")
-    {
-        this.name = name;
-    }
+    int durability { get; set; }
 
     /// <summary>
-    /// Interaction method for the door.
+    /// Method for breaking the object.
     /// </summary>
-    public void Interact()
+    void Break();
+}
+
+/// <summary>
+/// An interface for collectable objects.
+/// </summary>
+public interface ICollectable
+{
+    /// <summary>
+    /// Property representing whether the object has been collected.
+    /// </summary>
+    bool isCollected { get; set; }
+
+    /// <summary>
+    /// Method for collecting the object.
+    /// </summary>
+    void Collect();
+}
+
+/// <summary>
+/// Represents a test object inheriting from Base and implementing all three interfaces.
+/// </summary>
+public class TestObject : Base, IInteractive, IBreakable, ICollectable
+{
+    public int durability { get; set; }
+    public bool isCollected { get; set; }
+
+    public void Interact() { }
+    public void Break() { }
+    public void Collect() { }
+
+    static void Main(string[] args)
     {
-        Console.WriteLine($"You try to open the {name}. It's locked.");
+        TestObject item = new TestObject();
+        Type type = item.GetType();
+
+        Console.WriteLine("Type: " + type);
+
+        Console.WriteLine("Properties:");
+        foreach (PropertyInfo info in type.GetProperties())
+            Console.WriteLine(info.Name);
+
+        Console.WriteLine("Methods:");
+        foreach (MethodInfo info in type.GetMethods())
+            Console.WriteLine(info.Name);
     }
 }
