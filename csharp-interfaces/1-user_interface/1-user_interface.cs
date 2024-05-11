@@ -1,48 +1,39 @@
 ﻿using System;
 
-/// <summary>
-/// An interface for interactive objects.
-/// </summary>
-public interface IInteractive
+interface IInteractive
 {
     void Interact();
 }
 
-/// <summary>
-/// An interface for breakable objects.
-/// </summary>
-public interface IBreakable
+interface IBreakable
 {
     int durability { get; set; }
     void Break();
 }
 
-/// <summary>
-/// An interface for collectable objects.
-/// </summary>
-public interface ICollectable
+interface ICollectable
 {
     bool isCollected { get; set; }
     void Collect();
 }
 
-/// <summary>
-/// A class representing a software engineer.
-/// </summary>
-class SoftwareEngineer : Base
-{
-    // Empty class
-}
-
-/// <summary>
-/// A class representing a test object inheriting from Base and implementing the interfaces IInteractive, IBreakable, and ICollectable.
-/// </summary>
 class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
-    public bool isCollected { get; set; }
     public int durability { get; set; }
+    public bool isCollected { get; set; }
 
-    public void Interact() { }
-    public void Break() { }
-    public void Collect() { }
+    public void Interact()
+    {
+        // Implementation not required for this task
+    }
+
+    public void Break()
+    {
+        // Implementation not required for this task
+    }
+
+    public void Collect()
+    {
+        // Implementation not required for this task
+    }
 }
