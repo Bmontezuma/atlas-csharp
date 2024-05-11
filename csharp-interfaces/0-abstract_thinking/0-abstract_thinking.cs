@@ -1,27 +1,72 @@
 ﻿namespace Claptrap
 {
     /// <summary>
-    /// An abstract class representing a base entity.
+    /// Base class for objects to inherit.
     /// </summary>
     public abstract class Base
     {
         /// <summary>
-        /// Gets or sets the name of the entity.
+        /// Public name of the object.
         /// </summary>
-        public string name { get; set; }
+        public string name;
 
         /// <summary>
-        /// Returns a string representation of the entity.
+        /// Returns a message.
         /// </summary>
-        /// <returns>A string in the format '<see cref="name"/> is a <see cref="T:Base"/>'.</returns>
+        /// <returns>string</returns>
         public override string ToString()
         {
-            return $"{name} is a {GetType().Name}";
+            return string.Format("{0} is a {1}", name, this.GetType().Name);
         }
     }
 
-    class SoftwareEngineer : Base
+    /// <summary>
+    /// Makes an object interactable.
+    /// </summary>
+    interface IInteractive
     {
-        // Empty class
+        void Interact();
+    }
+
+    /// <summary>
+    /// Gives objects a durability property and breakable state.
+    /// </summary>
+    interface IBreakable
+    {
+        int durability { get; set; }
+        void Break();
+    }
+
+    /// <summary>
+    /// Makes an object collectible.
+    /// </summary>
+    interface ICollectable
+    {
+        bool isCollected { get; set; }
+        void Collect();
+    }
+
+    /// <summary>
+    /// Represents a test object inheriting from Base and implementing interfaces.
+    /// </summary>
+    class TestObject : Base, IInteractive, IBreakable, ICollectable
+    {
+        public int durability { get; set; }
+        public bool isCollected { get; set; }
+
+        public void Interact()
+        {
+            // Implementation of interaction behavior.
+        }
+
+        public void Break()
+        {
+            // Implementation of break behavior.
+        }
+
+        public void Collect()
+        {
+            // Implementation of collect behavior.
+        }
     }
 }
