@@ -1,21 +1,21 @@
-﻿/// <summary>
-/// An abstract base class.
-/// </summary>
-using System;
+﻿using System;
 
+/// <summary>
+/// An abstract class representing a base entity.
+/// </summary>
 public abstract class Base
 {
     /// <summary>
-    /// The name property.
+    /// Gets or sets the name of the entity.
     /// </summary>
     public string name { get; set; }
 
     /// <summary>
-    /// Overrides the ToString() method to return the name and type of the object.
+    /// Returns a string representation of the entity.
     /// </summary>
-    /// <returns>The name and type of the object.</returns>
+    /// <returns>A string in the format '<see cref="name"/> is a <see cref="T:Base"/>'.</returns>
     public override string ToString()
     {
-        return $"{name} is a {this.GetType().Name}";
+        return $"{name} is a {GetType().Name}";
     }
 }
