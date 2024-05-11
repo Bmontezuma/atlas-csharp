@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using MyMath;
+using System;
 
 namespace MyMath.Tests
 {
@@ -23,9 +24,17 @@ namespace MyMath.Tests
             int[,] matrix = { { 1, 2 }, { 3, 4 } };
             int num = 0;
 
-            int[,] result = Matrix.Divide(matrix, num);
+            // Redirecting console output to capture the printed error message
+            using (var consoleOutput = new ConsoleOutput())
+            {
+                int[,] result = Matrix.Divide(matrix, num);
 
-            Assert.IsNull(result);
+                // Checking if the error message was printed
+                Assert.That(consoleOutput.GetOuput(), Does.Contain("Num cannot be 0"));
+
+                // Checking if the result is null
+                Assert.IsNull(result);
+            }
         }
 
         [Test]
@@ -37,6 +46,31 @@ namespace MyMath.Tests
             int[,] result = Matrix.Divide(matrix, num);
 
             Assert.IsNull(result);
+        }
+
+        // Custom ConsoleOutput class to redirect console output
+        public class ConsoleOutput : IDisposable
+        {
+            private readonly System.IO.StringWriter stringWriter;
+            private readonly System.IO.TextWriter originalOutput;
+
+            public ConsoleOutput()
+            {
+                stringWriter = new System.IO.StringWriter();
+                originalOutput = Console.Out;
+                Console.SetOut(stringWriter);
+            }
+
+            public string GetOuput()
+            {
+                return stringWriter.ToString();
+            }
+
+            public void Dispose()
+            {
+                stringWriter.Dispose();
+                Console.SetOut(originalOutput);
+            }
         }
     }
 }
