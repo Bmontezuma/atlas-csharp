@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using MyMath;
 using System;
+using System.IO;
 
 namespace MyMath.Tests
 {
@@ -25,12 +26,16 @@ namespace MyMath.Tests
             int num = 0;
 
             // Redirecting console output to capture the printed error message
-            using (var consoleOutput = new ConsoleOutput())
+            using (StringWriter sw = new StringWriter())
             {
+                Console.SetOut(sw);
+
                 int[,] result = Matrix.Divide(matrix, num);
 
+                string printedMessage = sw.ToString();
+
                 // Checking if the error message was printed
-                Assert.That(consoleOutput.GetOuput(), Does.Contain("Num cannot be 0"));
+                Assert.That(printedMessage, Does.Contain("Num cannot be 0"));
 
                 // Checking if the result is null
                 Assert.IsNull(result);
@@ -48,28 +53,19 @@ namespace MyMath.Tests
             Assert.IsNull(result);
         }
 
-        // Custom ConsoleOutput class to redirect console output
-        public class ConsoleOutput : IDisposable
+        [Test]
+        public void TestOutput_DoesNotContain_SuccessfulMessage()
         {
-            private readonly System.IO.StringWriter stringWriter;
-            private readonly System.IO.TextWriter originalOutput;
-
-            public ConsoleOutput()
+            using (StringWriter sw = new StringWriter())
             {
-                stringWriter = new System.IO.StringWriter();
-                originalOutput = Console.Out;
-                Console.SetOut(stringWriter);
-            }
+                Console.SetOut(sw);
 
-            public string GetOuput()
-            {
-                return stringWriter.ToString();
-            }
+                // Perform any action that may print "Test Run Successful."
 
-            public void Dispose()
-            {
-                stringWriter.Dispose();
-                Console.SetOut(originalOutput);
+                string printedMessage = sw.ToString();
+
+                // Checking if the printed message does not contain "Test Run Successful."
+                Assert.That(printedMessage, Does.Not.Contain("Test Run Successful."));
             }
         }
     }
