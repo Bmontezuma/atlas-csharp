@@ -44,33 +44,11 @@ namespace Vehicle
         }
 
         /// <summary>
-        /// Overrides the <see cref="Drive"/> method of the <see cref="Vehicle"/> class to output a message indicating that the car is driving on the road.
+        /// Outputs a message indicating that the car is accelerating.
         /// </summary>
         public override void Drive()
         {
-            Console.WriteLine($"The {Name} is driving on the road.");
-        }
-    }
-
-    /// <summary>
-    /// Represents a bike.
-    /// </summary>
-    public class Bike : Vehicle
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Bike"/> class.
-        /// </summary>
-        /// <param name="name">The name of the bike.</param>
-        public Bike(string name) : base(name)
-        {
-        }
-
-        /// <summary>
-        /// Overrides the <see cref="Drive"/> method of the <see cref="Vehicle"/> class to output a message indicating that the bike is driving on the sidewalk.
-        /// </summary>
-        public override void Drive()
-        {
-            Console.WriteLine($"The {Name} is driving on the sidewalk.");
+            Console.WriteLine($"The {Name} is accelerating.");
         }
     }
 }
