@@ -1,4 +1,9 @@
-﻿public class Dog : Animal
-{
-    // Empty class
+﻿using System;
+
+class Dog : Animal {
+    // Empty
+}
+
+class Animal {
+    //empty
 }
