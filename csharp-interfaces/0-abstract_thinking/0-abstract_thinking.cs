@@ -1,32 +1,21 @@
-﻿using System;
+﻿/// <summary>
+/// An abstract base class.
+/// </summary>
+using System;
 
-namespace csharp_interfaces
+public abstract class Base
 {
     /// <summary>
-    /// Abstract base class for all objects.
+    /// The name property.
     /// </summary>
-    public abstract class Base
-    {
-        /// <summary>
-        /// The name of the object.
-        /// </summary>
-        public string name { get; set; }
-
-        /// <summary>
-        /// Returns a string representation of the object.
-        /// </summary>
-        /// <returns>A string representation of the object.</returns>
-        public override string ToString()
-        {
-            return $"{name} is a {this.GetType().Name}";
-        }
-    }
+    public string name { get; set; }
 
     /// <summary>
-    /// A software engineer.
+    /// Overrides the ToString() method to return the name and type of the object.
     /// </summary>
-    public class SoftwareEngineer : Base
+    /// <returns>The name and type of the object.</returns>
+    public override string ToString()
     {
-        // Empty class
+        return $"{name} is a {this.GetType().Name}";
     }
 }
