@@ -1,36 +1,70 @@
 ﻿using System;
 
-namespace Shape
-{
+class Shape {
     /// <summary>
-    /// Represents a square.
+    /// Calculate the Area of a shape
     /// </summary>
-    public class Square : Shape
-    {
-        private int size;
+    /// <returns>Int Value of the Area</returns>
+    public virtual int Area() {
+        throw new NotImplementedException("Area() is not implemented");
+    }
+}
 
-        /// <summary>
-        /// Gets or sets the size of the square.
-        /// </summary>
-        /// <exception cref="ArgumentException">Thrown when size is set to a negative value.</exception>
-        public int Size
-        {
-            get { return size; }
-            set
-            {
-                if (value < 0)
-                    throw new ArgumentException("Size must be greater than or equal to 0");
-                size = value;
-            }
-        }
+/// <summary>
+/// Constructor for class Rectangle
+/// </summary>
+class Rectangle : Shape {
+    private int width;
+    private int height;
 
-        /// <summary>
-        /// Calculates the area of the square.
-        /// </summary>
-        /// <returns>The area of the square.</returns>
-        public override int Area()
-        {
-            return size * size;
+    public int Width {
+        
+        get { return width;}
+        set { 
+            if (value < 0 )
+                throw new ArgumentException("Width must be greater than or equal to 0");
+            width = value;
         }
     }
+
+    public int Height {
+        get {return height;}
+        set { 
+            if (value < 0 )
+                throw new ArgumentException("Height must be greater than or equal to 0");
+            height = value;
+        }
+    }
+
+    /// <summary>
+    /// Calculate area
+    /// </summary>
+    /// <returns>Int of Height * Width</returns>
+    public override int Area() {
+            return height * width;
+    }
+
+    /// <summary>
+    /// Return string representation for Rectangle 
+    /// </summary>
+    /// <returns>stinrg</returns>
+    public override string ToString() {
+            return $"[Rectangle] {width} / {height}";
+    }
+}
+
+
+/// <summary>
+/// Constructor for class Square
+/// </summary>
+class Square : Rectangle {
+        private int size;
+
+        public int Size {
+                get { return size;}
+                set { if (value < 0)
+                        throw new ArgumentException("Size must be greater than or equal to 0");
+                        Width = Height = size = value;
+                }
+        }
 }
