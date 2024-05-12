@@ -1,4 +1,3 @@
-// 8-main.cs
 using System;
 
 class Program
@@ -12,7 +11,7 @@ class Program
         if (typeof(Square).IsSubclassOf(typeof(Shape)))
             Console.WriteLine("Square is a subclass of Shape");
         else
-            Console.WriteLine("Square is NOT a subclass of Shape");
+            Console.WriteLine("Square is a NOT subclass of Shape");
 
         Console.WriteLine("Size: {0}", aSquare.Size);
     }

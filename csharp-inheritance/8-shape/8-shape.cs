@@ -74,7 +74,7 @@ public class Rectangle : Shape
     /// Calculates the area of the rectangle.
     /// </summary>
     /// <returns>The area of the rectangle.</returns>
-    public int Area()
+    public override int Area()
     {
         return Width * Height;
     }
@@ -107,8 +107,25 @@ public class Square : Rectangle
             if (value < 0)
                 throw new ArgumentException("Size must be greater than or equal to 0");
             size = value;
-            Width = size;
-            Height = size;
+            Width = value;
+            Height = value;
         }
+    }
+
+    /// <summary>
+    /// Constructs a square with default size of 0.
+    /// </summary>
+    public Square()
+    {
+        // Default constructor
+    }
+
+    /// <summary>
+    /// Constructs a square with specified size.
+    /// </summary>
+    /// <param name="size">The size of the square.</param>
+    public Square(int size) : base(size, size)
+    {
+        Size = size;
     }
 }
