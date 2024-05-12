@@ -125,13 +125,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        Decoration coffeeMug = new Decoration("Coffee Mug", 2);
+        Decoration teacup = new Decoration("Teacup");
 
-        Console.WriteLine(coffeeMug.ToString());
+        Console.WriteLine(teacup.ToString());
 
-        coffeeMug.Interact();
-        coffeeMug.Break();
-        coffeeMug.Break();
-        coffeeMug.Interact();
+        teacup.Interact();
+        teacup.Break();
+        teacup.Break();
+        teacup.Interact();
+        Console.WriteLine($"isQuestItem: {teacup.isQuestItem}");
     }
 }
