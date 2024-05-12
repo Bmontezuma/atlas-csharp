@@ -85,8 +85,8 @@ class Program
     static void Main(string[] args)
     {
         Rectangle aRect = new Rectangle();
-        aRect.Width = 10;
-        aRect.Height = 2;
+        aRect.Width = 3;
+        aRect.Height = 8;
 
         if (typeof(Rectangle).IsSubclassOf(typeof(Shape)))
             Console.WriteLine("Rectangle is a subclass of Shape");
