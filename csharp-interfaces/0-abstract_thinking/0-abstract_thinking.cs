@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace YourNamespace
+namespace Base
 {
     /// <summary>
     /// Represents a base entity with a name.
