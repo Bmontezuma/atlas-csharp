@@ -3,7 +3,7 @@ using System;
 /// <summary>
 /// Base class representing a generic entity.
 /// </summary>
-abstract class Base
+public abstract class Base
 {
     /// <summary>
     /// Gets or sets the name of the entity.
@@ -23,44 +23,12 @@ abstract class Base
 /// <summary>
 /// Interface for interactive objects.
 /// </summary>
-interface IInteractive
+public interface IInteractive
 {
     /// <summary>
     /// Interact with the object.
     /// </summary>
     void Interact();
-}
-
-/// <summary>
-/// Interface for breakable objects.
-/// </summary>
-interface IBreakable
-{
-    /// <summary>
-    /// Gets or sets the durability of the object.
-    /// </summary>
-    int durability { get; set; }
-
-    /// <summary>
-    /// Break the object.
-    /// </summary>
-    void Break();
-}
-
-/// <summary>
-/// Interface for collectable objects.
-/// </summary>
-interface ICollectable
-{
-    /// <summary>
-    /// Gets or sets whether the object is collected.
-    /// </summary>
-    bool isCollected { get; set; }
-
-    /// <summary>
-    /// Collect the object.
-    /// </summary>
-    void Collect();
 }
 
 /// <summary>
