@@ -74,7 +74,7 @@ public class Rectangle : Shape
     /// Calculates the area of the rectangle.
     /// </summary>
     /// <returns>The area of the rectangle.</returns>
-    public override int Area()
+    public new int Area()
     {
         return Width * Height;
     }
@@ -89,43 +89,16 @@ public class Rectangle : Shape
     }
 }
 
-/// <summary>
-/// Represents a square shape.
-/// </summary>
-public class Square : Rectangle
+class Program
 {
-    private int size;
-
-    /// <summary>
-    /// Size of the square.
-    /// </summary>
-    public int Size
+    static void Main(string[] args)
     {
-        get { return size; }
-        set
-        {
-            if (value < 0)
-                throw new ArgumentException("Size must be greater than or equal to 0");
-            size = value;
-            Width = value;
-            Height = value;
-        }
-    }
+        Rectangle aRect = new Rectangle();
 
-    /// <summary>
-    /// Constructs a square with default size of 0.
-    /// </summary>
-    public Square()
-    {
-        // Default constructor
-    }
+        aRect.Width = 7;
+        aRect.Height = 4;
 
-    /// <summary>
-    /// Constructs a square with specified size.
-    /// </summary>
-    /// <param name="size">The size of the square.</param>
-    public Square(int size) : base(size, size)
-    {
-        Size = size;
+        Console.WriteLine("Area: {0}", aRect.Area());
+        Console.WriteLine(aRect.ToString());
     }
 }
