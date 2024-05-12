@@ -1,21 +1,22 @@
 ﻿using System;
 
 /// <summary>
-/// Represents a base entity with a name.
+/// Base class
 /// </summary>
-public abstract class BaseEntity
+abstract class Base
 {
+    public string name
+    {
+        get;
+        set;
+    }
     /// <summary>
-    /// Gets or sets the name of the entity.
+    /// Override tostring() method
     /// </summary>
-    public string Name { get; set; }
+    /// <returns>string</returns>
 
-    /// <summary>
-    /// Returns a string representation of the entity.
-    /// </summary>
-    /// <returns>A string representation of the entity.</returns>
     public override string ToString()
     {
-        return $"{Name} is a {GetType().Name}";
+        return ($"{this.name} is a {this.GetType()}");
     }
 }
