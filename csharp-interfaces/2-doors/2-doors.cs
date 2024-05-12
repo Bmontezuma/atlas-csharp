@@ -1,3 +1,5 @@
+using System;
+
 /// <summary>
 /// Base class representing a generic entity.
 /// </summary>
@@ -30,53 +32,21 @@ interface IInteractive
 }
 
 /// <summary>
-/// Interface for breakable objects.
-/// </summary>
-interface IBreakable
-{
-    /// <summary>
-    /// Gets or sets the durability of the object.
-    /// </summary>
-    int durability { get; set; }
-
-    /// <summary>
-    /// Break the object.
-    /// </summary>
-    void Break();
-}
-
-/// <summary>
-/// Interface for collectable objects.
-/// </summary>
-interface ICollectable
-{
-    /// <summary>
-    /// Gets or sets whether the object is collected.
-    /// </summary>
-    bool isCollected { get; set; }
-
-    /// <summary>
-    /// Collect the object.
-    /// </summary>
-    void Collect();
-}
-
-/// <summary>
-/// Represents a door that inherits from Base and implements IInteractive.
+/// Represents a door entity.
 /// </summary>
 class Door : Base, IInteractive
 {
     /// <summary>
-    /// Initializes a new instance of the Door class.
+    /// Constructor for the Door class.
     /// </summary>
-    /// <param name="name">The name of the door (optional).</param>
-    public Door(string name = "Door")
+    /// <param name="name">The name of the door.</param>
+    public Door(string name)
     {
-        this.name = name;
+        this.name = string.IsNullOrEmpty(name) ? "Door" : name;
     }
 
     /// <summary>
-    /// Interact with the door.
+    /// Implementation of the Interact method for the Door class.
     /// </summary>
     public void Interact()
     {
@@ -84,8 +54,14 @@ class Door : Base, IInteractive
     }
 }
 
+/// <summary>
+/// Main program class.
+/// </summary>
 class Program
 {
+    /// <summary>
+    /// Main method.
+    /// </summary>
     static void Main(string[] args)
     {
         Door frontDoor = new Door("Front Door");
@@ -93,11 +69,5 @@ class Program
         Console.WriteLine(frontDoor.ToString());
 
         frontDoor.Interact();
-
-        Door noNameDoor = new Door();
-
-        Console.WriteLine(noNameDoor.ToString());
-
-        noNameDoor.Interact();
     }
 }
