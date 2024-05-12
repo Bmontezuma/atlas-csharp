@@ -1,9 +1,9 @@
 using System;
 
 /// <summary>
-/// Represents a generic entity.
+/// Base class representing a generic entity.
 /// </summary>
-public abstract class Base
+abstract class Base
 {
     /// <summary>
     /// Gets or sets the name of the entity.
@@ -11,7 +11,7 @@ public abstract class Base
     public string name { get; set; }
 
     /// <summary>
-    /// Provides a string representation of the entity.
+    /// Override of the ToString() method to provide a string representation of the entity.
     /// </summary>
     /// <returns>A string representation of the entity.</returns>
     public override string ToString()
@@ -23,12 +23,44 @@ public abstract class Base
 /// <summary>
 /// Interface for interactive objects.
 /// </summary>
-public interface IInteractive
+interface IInteractive
 {
     /// <summary>
     /// Interact with the object.
     /// </summary>
     void Interact();
+}
+
+/// <summary>
+/// Interface for breakable objects.
+/// </summary>
+interface IBreakable
+{
+    /// <summary>
+    /// Gets or sets the durability of the object.
+    /// </summary>
+    int durability { get; set; }
+
+    /// <summary>
+    /// Break the object.
+    /// </summary>
+    void Break();
+}
+
+/// <summary>
+/// Interface for collectable objects.
+/// </summary>
+interface ICollectable
+{
+    /// <summary>
+    /// Gets or sets whether the object is collected.
+    /// </summary>
+    bool isCollected { get; set; }
+
+    /// <summary>
+    /// Collect the object.
+    /// </summary>
+    void Collect();
 }
 
 /// <summary>
@@ -51,24 +83,5 @@ public class Door : Base, IInteractive
     public void Interact()
     {
         System.Console.WriteLine($"You try to open the {this.name}. It's locked.");
-    }
-}
-
-/// <summary>
-/// Represents a door program.
-/// </summary>
-public class DoorProgram
-{
-    /// <summary>
-    /// Entry point of the program.
-    /// </summary>
-    /// <param name="args">Command line arguments.</param>
-    public static void Main(string[] args)
-    {
-        Door frontDoor = new Door("Front Door");
-
-        Console.WriteLine(frontDoor.ToString());
-
-        frontDoor.Interact();
     }
 }
