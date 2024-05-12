@@ -52,6 +52,15 @@ public class Rectangle : Shape
             height = value;
         }
     }
+
+    /// <summary>
+    /// Calculates the area of the rectangle.
+    /// </summary>
+    /// <returns>The area of the rectangle.</returns>
+    public override double Area()
+    {
+        return width * height;
+    }
 }
 
 class Program
@@ -59,8 +68,8 @@ class Program
     static void Main(string[] args)
     {
         Rectangle aRect = new Rectangle();
-        aRect.Width = 10;
-        aRect.Height = 2;
+        aRect.Width = 3;
+        aRect.Height = 8;
 
         if (typeof(Rectangle).IsSubclassOf(typeof(Shape)))
             Console.WriteLine("Rectangle is a subclass of Shape");
