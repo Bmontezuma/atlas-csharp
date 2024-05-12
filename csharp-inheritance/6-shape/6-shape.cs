@@ -1,6 +1,21 @@
 ﻿using System;
 
 /// <summary>
+/// Represents a geometric shape.
+/// </summary>
+public class Shape
+{
+    /// <summary>
+    /// Calculates the area of the shape.
+    /// </summary>
+    /// <returns>The area of the shape.</returns>
+    public virtual int Area()
+    {
+        throw new NotImplementedException("Area() is not implemented");
+    }
+}
+
+/// <summary>
 /// Represents a rectangle shape.
 /// </summary>
 public class Rectangle : Shape
