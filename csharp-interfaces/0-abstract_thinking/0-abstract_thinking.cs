@@ -47,3 +47,17 @@ class Program
         Console.WriteLine(testObject);
     }
 }
+
+/// <summary>
+/// Represents a test object with no name set.
+/// </summary>
+public class TestObjectNoName : Base
+{
+    /// <summary>
+    /// Initializes a new instance of the <see cref="TestObjectNoName"/> class.
+    /// </summary>
+    public TestObjectNoName()
+    {
+        // Name property not set intentionally
+    }
+}
