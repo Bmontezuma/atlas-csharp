@@ -1,10 +1,11 @@
 using NUnit.Framework;
-using System.IO;
+using MyMath;
 using System.Collections.Generic;
+using System.IO;
 
 namespace MyMath.Tests
 {
-    public class OperationsTests
+    public class MyMathTests
     {
         [SetUp]
         public void Setup()
@@ -28,7 +29,7 @@ namespace MyMath.Tests
         }
 
         [Test]
-        public void Max_MaxAtEnd_ReturnsMaxInteger()
+        public void Max_MaxAtEnd()
         {
             // Arrange
             List<int> nums = new List<int> { 3, 9, 0, 1, 2, 7 };
@@ -41,7 +42,7 @@ namespace MyMath.Tests
         }
 
         [Test]
-        public void Max_MaxAtBeginning_ReturnsMaxInteger()
+        public void Max_MaxAtBeginning()
         {
             // Arrange
             List<int> nums = new List<int> { 1024, 42, 0, -727, 1 };
@@ -54,7 +55,7 @@ namespace MyMath.Tests
         }
 
         [Test]
-        public void Max_MaxInMiddle_ReturnsMaxInteger()
+        public void Max_MaxInMiddle()
         {
             // Arrange
             List<int> nums = new List<int> { -8, -17, -100, -20 };
@@ -67,7 +68,7 @@ namespace MyMath.Tests
         }
 
         [Test]
-        public void Max_NegativeNumberInList_ReturnsMaxInteger()
+        public void Max_NegativeNumberInList()
         {
             // Arrange
             List<int> nums = new List<int> { -5, -10, -20, -15, -1 };
@@ -90,17 +91,6 @@ namespace MyMath.Tests
 
             // Assert
             Assert.IsTrue(File.ReadAllText(Path.Combine(TestContext.CurrentContext.TestDirectory, "output")).Contains("Test Run Successful."));
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            // Delete the output file
-            string outputPath = Path.Combine(TestContext.CurrentContext.TestDirectory, "output");
-            if (File.Exists(outputPath))
-            {
-                File.Delete(outputPath);
-            }
         }
     }
 }
