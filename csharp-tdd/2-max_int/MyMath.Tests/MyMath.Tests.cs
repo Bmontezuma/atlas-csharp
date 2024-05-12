@@ -27,15 +27,6 @@ namespace MyMath.Tests
             Assert.AreEqual(0, result);
         }
 
-        // ... (other test methods)
-
-        [Test]
-        public void OutputContains_TestRunSuccessful()
-        {
-            // Assert - Check if the output file contains the expected text
-            Assert.IsTrue(File.ReadAllText(Path.Combine(TestContext.CurrentContext.TestDirectory, "output")).Contains("Test Run Successful."));
-        }
-
         [Test]
         public void Max_MaxAtEnd_ReturnsMaxInteger()
         {
@@ -99,6 +90,17 @@ namespace MyMath.Tests
 
             // Assert
             Assert.IsTrue(File.ReadAllText(Path.Combine(TestContext.CurrentContext.TestDirectory, "output")).Contains("Test Run Successful."));
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            // Delete the output file
+            string outputPath = Path.Combine(TestContext.CurrentContext.TestDirectory, "output");
+            if (File.Exists(outputPath))
+            {
+                File.Delete(outputPath);
+            }
         }
     }
 }
