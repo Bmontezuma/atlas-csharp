@@ -1,21 +1,6 @@
 ﻿using System;
 
 /// <summary>
-/// Represents a geometric shape.
-/// </summary>
-public class Shape
-{
-    /// <summary>
-    /// Calculates the area of the shape.
-    /// </summary>
-    /// <returns>The area of the shape.</returns>
-    public virtual int Area()
-    {
-        throw new NotImplementedException("Area() is not implemented");
-    }
-}
-
-/// <summary>
 /// Represents a rectangle shape.
 /// </summary>
 public class Rectangle : Shape
@@ -76,6 +61,6 @@ public class Rectangle : Shape
     /// <returns>The area of the rectangle.</returns>
     public override int Area()
     {
-        return Width * Height;
+        throw new NotImplementedException("Area() is not implemented");
     }
 }
