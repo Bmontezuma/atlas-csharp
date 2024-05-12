@@ -1,76 +1,137 @@
 ﻿using System;
 
-namespace csharp-interfaces
+/// <summary>
+/// Represents a base class.
+/// </summary>
+public abstract class Base
 {
     /// <summary>
-    /// A decoration that can be interacted with and broken.
+    /// Name of the object.
     /// </summary>
-    public class Decoration : Base, IInteractive, IBreakable
+    public string name { get; set; }
+
+    /// <summary>
+    /// Prints the name and type of the object.
+    /// </summary>
+    public override string ToString()
     {
-        /// <summary>
-        /// Gets or sets a value indicating whether this decoration is a quest item.
-        /// </summary>
-        public bool isQuestItem { get; set; }
+        return $"{name} is a {this.GetType().Name}";
+    }
+}
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Decoration"/> class.
-        /// </summary>
-        /// <param name="name">The name of the decoration.</param>
-        /// <param name="durability">The durability of the decoration.</param>
-        public Decoration(string name = "Decoration", int durability = 1)
+/// <summary>
+/// Represents an interactive interface.
+/// </summary>
+public interface IInteractive
+{
+    /// <summary>
+    /// Interacts with an object.
+    /// </summary>
+    void Interact();
+}
+
+/// <summary>
+/// Represents a breakable interface.
+/// </summary>
+public interface IBreakable
+{
+    /// <summary>
+    /// Durability of the object.
+    /// </summary>
+    int durability { get; set; }
+
+    /// <summary>
+    /// Breaks the object.
+    /// </summary>
+    void Break();
+}
+
+/// <summary>
+/// Represents a decoration.
+/// </summary>
+public class Decoration : Base, IInteractive, IBreakable
+{
+    /// <summary>
+    /// Durability of the decoration.
+    /// </summary>
+    public int durability { get; set; }
+
+    /// <summary>
+    /// Indicates if the decoration is a quest item.
+    /// </summary>
+    public bool isQuestItem { get; set; }
+
+    /// <summary>
+    /// Constructor for creating a decoration.
+    /// </summary>
+    /// <param name="name">Name of the decoration (default: "Decoration").</param>
+    /// <param name="durability">Durability of the decoration (default: 1).</param>
+    /// <param name="isQuestItem">Indicates if the decoration is a quest item (default: false).</param>
+    public Decoration(string name = "Decoration", int durability = 1, bool isQuestItem = false)
+    {
+        this.name = name;
+        this.durability = durability;
+
+        if (durability <= 0)
         {
-            if (durability <= 0)
-            {
-                throw new Exception("Durability must be greater than 0");
-            }
-
-            this.name = name;
-            this.durability = durability;
-            this.isQuestItem = false;
+            throw new ArgumentException("Durability must be greater than 0");
         }
 
-        /// <summary>
-        /// Interacts with the decoration.
-        /// </summary>
-        public void Interact()
+        this.isQuestItem = isQuestItem;
+    }
+
+    /// <summary>
+    /// Interacts with the decoration.
+    /// </summary>
+    public void Interact()
+    {
+        if (durability <= 0)
         {
-            if (durability <= 0)
-            {
-                Console.WriteLine($"The {name} has been broken.");
-                return;
-            }
-
-            if (isQuestItem)
-            {
-                Console.WriteLine($"You look at the {name}. There's a key inside.");
-            }
-            else
-            {
-                Console.WriteLine($"You look at the {name}. Not much to see here.");
-            }
+            Console.WriteLine($"The {name} has been broken.");
         }
-
-        /// <summary>
-        /// Breaks the decoration.
-        /// </summary>
-        public void Break()
+        else if (isQuestItem)
         {
-            if (durability > 0)
-            {
-                Console.WriteLine($"You hit the {name}. It cracks.");
-            }
-
-            if (durability == 0)
-            {
-                Console.WriteLine($"You smash the {name}. What a mess.");
-            }
-
-            if (durability < 0)
-            {
-                Console.WriteLine($"The {name} is already broken.");
-            }
-
-            durability--;
+            Console.WriteLine($"You look at the {name}. There's a key inside.");
         }
+        else
+        {
+            Console.WriteLine($"You look at the {name}. Not much to see here.");
+        }
+    }
+
+    /// <summary>
+    /// Breaks the decoration.
+    /// </summary>
+    public void Break()
+    {
+        durability--;
+
+        if (durability > 0)
+        {
+            Console.WriteLine($"You hit the {name}. It cracks.");
+        }
+        else if (durability == 0)
+        {
+            Console.WriteLine($"You smash the {name}. What a mess.");
+        }
+        else
+        {
+            Console.WriteLine($"The {name} is already broken.");
+        }
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Decoration coffeeMug = new Decoration("Coffee Mug", 2);
+
+        Console.WriteLine(coffeeMug.ToString());
+
+        coffeeMug.Interact();
+        coffeeMug.Break();
+        coffeeMug.Break();
+        coffeeMug.Interact();
     }
 }
