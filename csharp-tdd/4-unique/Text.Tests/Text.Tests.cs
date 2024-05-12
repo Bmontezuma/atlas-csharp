@@ -6,10 +6,10 @@ namespace Text.Tests
     public class StrTests
     {
         [Test]
-        public void UniqueChar_FirstNonRepeating_ReturnsCorrectIndex()
+        public void UniqueChar_FirstUniqueIsFirstChar_ReturnsZero()
         {
             // Arrange
-            string input = "leetcode";
+            string input = "helloworld";
 
             // Act
             int result = Str.UniqueChar(input);
@@ -19,10 +19,36 @@ namespace Text.Tests
         }
 
         [Test]
-        public void UniqueChar_NoNonRepeating_ReturnsMinusOne()
+        public void UniqueChar_FirstUniqueIsLastChar_ReturnsCorrectIndex()
         {
             // Arrange
-            string input = "aabbcc";
+            string input = "helloholberton";
+
+            // Act
+            int result = Str.UniqueChar(input);
+
+            // Assert
+            Assert.AreEqual(8, result);
+        }
+
+        [Test]
+        public void UniqueChar_FirstUniqueInMiddle_ReturnsCorrectIndex()
+        {
+            // Arrange
+            string input = "aabbccddeef";
+
+            // Act
+            int result = Str.UniqueChar(input);
+
+            // Assert
+            Assert.AreEqual(10, result);
+        }
+
+        [Test]
+        public void UniqueChar_NoUniqueCharacters_ReturnsMinusOne()
+        {
+            // Arrange
+            string input = "hellohello";
 
             // Act
             int result = Str.UniqueChar(input);
@@ -42,19 +68,6 @@ namespace Text.Tests
 
             // Assert
             Assert.AreEqual(-1, result);
-        }
-
-        [Test]
-        public void UniqueChar_SingleCharacter_ReturnsZero()
-        {
-            // Arrange
-            string input = "a";
-
-            // Act
-            int result = Str.UniqueChar(input);
-
-            // Assert
-            Assert.AreEqual(0, result);
         }
     }
 }

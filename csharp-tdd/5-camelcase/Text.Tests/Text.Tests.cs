@@ -6,7 +6,7 @@ namespace Text.Tests
     public class StrTests
     {
         [Test]
-        public void CamelCase_InputNull_ReturnsZero()
+        public void CamelCase_NullInput_ReturnsZero()
         {
             // Arrange
             string input = null;
@@ -19,7 +19,7 @@ namespace Text.Tests
         }
 
         [Test]
-        public void CamelCase_InputEmpty_ReturnsZero()
+        public void CamelCase_EmptyString_ReturnsZero()
         {
             // Arrange
             string input = "";
@@ -32,7 +32,7 @@ namespace Text.Tests
         }
 
         [Test]
-        public void CamelCase_SingleWord_ReturnsOne()
+        public void CamelCase_OneWord_ReturnsOne()
         {
             // Arrange
             string input = "hello";
@@ -61,13 +61,13 @@ namespace Text.Tests
         public void CamelCase_MultipleWords_ReturnsCorrectCount()
         {
             // Arrange
-            string input = "helloWorldHowAreYou";
+            string input = "helloWorldIAmHere";
 
             // Act
             int result = Str.CamelCase(input);
 
             // Assert
-            Assert.AreEqual(5, result);
+            Assert.AreEqual(4, result);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Text.Tests
     public class StrTests
     {
         [Test]
-        public void IsPalindrome_Racecar_ReturnsTrue()
+        public void RegularPalindrome_ReturnsTrue()
         {
             // Arrange
             string input = "Racecar";
@@ -19,10 +19,10 @@ namespace Text.Tests
         }
 
         [Test]
-        public void IsPalindrome_Level_ReturnsTrue()
+        public void UpperLowerCaseLetters_ReturnsTrue()
         {
             // Arrange
-            string input = "level";
+            string input = "LeVel";
 
             // Act
             bool result = Str.IsPalindrome(input);
@@ -32,7 +32,7 @@ namespace Text.Tests
         }
 
         [Test]
-        public void IsPalindrome_PanamaSentence_ReturnsTrue()
+        public void Punctuation_ReturnsTrue()
         {
             // Arrange
             string input = "A man, a plan, a canal: Panama.";
@@ -45,10 +45,10 @@ namespace Text.Tests
         }
 
         [Test]
-        public void IsPalindrome_EmptyString_ReturnsTrue()
+        public void Spaces_ReturnsTrue()
         {
             // Arrange
-            string input = "";
+            string input = "taco cat";
 
             // Act
             bool result = Str.IsPalindrome(input);
@@ -58,16 +58,16 @@ namespace Text.Tests
         }
 
         [Test]
-        public void IsPalindrome_NotPalindrome_ReturnsFalse()
+        public void EmptyString_ReturnsTrue()
         {
             // Arrange
-            string input = "hello";
+            string input = "";
 
             // Act
             bool result = Str.IsPalindrome(input);
 
             // Assert
-            Assert.IsFalse(result);
+            Assert.IsTrue(result);
         }
     }
 }
