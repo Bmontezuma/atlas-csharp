@@ -1,9 +1,9 @@
 using System;
 
 /// <summary>
-/// Base class representing a generic entity.
+/// Represents a generic entity.
 /// </summary>
-abstract class Base
+public abstract class Base
 {
     /// <summary>
     /// Gets or sets the name of the entity.
@@ -11,7 +11,7 @@ abstract class Base
     public string name { get; set; }
 
     /// <summary>
-    /// Override of the ToString() method to provide a string representation of the entity.
+    /// Provides a string representation of the entity.
     /// </summary>
     /// <returns>A string representation of the entity.</returns>
     public override string ToString()
@@ -23,7 +23,7 @@ abstract class Base
 /// <summary>
 /// Interface for interactive objects.
 /// </summary>
-interface IInteractive
+public interface IInteractive
 {
     /// <summary>
     /// Interact with the object.
@@ -55,14 +55,15 @@ public class Door : Base, IInteractive
 }
 
 /// <summary>
-/// Main program class.
+/// Represents a door program.
 /// </summary>
-class Program
+public class DoorProgram
 {
     /// <summary>
-    /// Main method.
+    /// Entry point of the program.
     /// </summary>
-    static void Main(string[] args)
+    /// <param name="args">Command line arguments.</param>
+    public static void Main(string[] args)
     {
         Door frontDoor = new Door("Front Door");
 
