@@ -19,3 +19,31 @@ public abstract class Base
         return $"{Name} is a {GetType().Name}";
     }
 }
+
+public class SoftwareEngineer : Base
+{
+    public SoftwareEngineer()
+    {
+        Name = "Betty"; // Setting the Name property
+    }
+}
+
+public class TestObject : Base
+{
+    public TestObject()
+    {
+        Name = "Abstract Classes"; // Setting the Name property
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        var engineer = new SoftwareEngineer();
+        Console.WriteLine(engineer);
+
+        var testObject = new TestObject();
+        Console.WriteLine(testObject);
+    }
+}
