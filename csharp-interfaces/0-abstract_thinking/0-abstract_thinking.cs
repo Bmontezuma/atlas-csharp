@@ -1,11 +1,17 @@
 ﻿using System;
 
-abstract class Base
+public abstract class Base
 {
-    public string name { get; set; }
+    private string _name;
+
+    public string Name
+    {
+        get { return _name; }
+        set { _name = value; }
+    }
 
     public override string ToString()
     {
-        return $"{name} is a {this.GetType().Name}";
+        return $"{Name} is a {GetType().Name}";
     }
 }
