@@ -16,7 +16,7 @@ public class Shape
 }
 
 /// <summary>
-/// Represents a rectangle, a type of geometric shape.
+/// Represents a rectangle shape.
 /// </summary>
 public class Rectangle : Shape
 {
@@ -24,12 +24,11 @@ public class Rectangle : Shape
     private int height;
 
     /// <summary>
-    /// Gets or sets the width of the rectangle.
+    /// Width of the rectangle.
     /// </summary>
-    /// <exception cref="ArgumentException">Thrown when the width is negative.</exception>
     public int Width
     {
-        get => width;
+        get { return width; }
         set
         {
             if (value < 0)
@@ -39,12 +38,11 @@ public class Rectangle : Shape
     }
 
     /// <summary>
-    /// Gets or sets the height of the rectangle.
+    /// Height of the rectangle.
     /// </summary>
-    /// <exception cref="ArgumentException">Thrown when the height is negative.</exception>
     public int Height
     {
-        get => height;
+        get { return height; }
         set
         {
             if (value < 0)
@@ -54,12 +52,31 @@ public class Rectangle : Shape
     }
 
     /// <summary>
+    /// Constructs a rectangle with default width and height of 0.
+    /// </summary>
+    public Rectangle()
+    {
+        // Default constructor
+    }
+
+    /// <summary>
+    /// Constructs a rectangle with specified width and height.
+    /// </summary>
+    /// <param name="width">The width of the rectangle.</param>
+    /// <param name="height">The height of the rectangle.</param>
+    public Rectangle(int width, int height)
+    {
+        Width = width;
+        Height = height;
+    }
+
+    /// <summary>
     /// Calculates the area of the rectangle.
     /// </summary>
     /// <returns>The area of the rectangle.</returns>
     public override int Area()
     {
-        return width * height;
+        return Width * Height;
     }
 }
 
