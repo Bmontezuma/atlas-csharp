@@ -16,7 +16,7 @@ abstract class Base
     /// <returns>A string representation of the entity.</returns>
     public override string ToString()
     {
-        return $"{this.name} is a {this.GetType()}";
+        return string.IsNullOrEmpty(this.name) ? "No name provided" : $"{this.name} is a {this.GetType()}";
     }
 }
 
@@ -51,17 +51,5 @@ class Door : Base, IInteractive
     public void Interact()
     {
         Console.WriteLine($"You try to open the {this.name}. It's locked.");
-    }
-}
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        Door frontDoor = new Door("Front Door");
-
-        Console.WriteLine(frontDoor.ToString());
-
-        frontDoor.Interact();
     }
 }
