@@ -1,3 +1,5 @@
+// MyMath.Tests/OperationsTests.cs
+
 using NUnit.Framework;
 using MyMath;
 using System.Collections.Generic;
@@ -108,6 +110,19 @@ namespace MyMath.Tests
 
             // Assert
             Assert.AreEqual(-8, result);
+        }
+
+        [Test]
+        public void Max_NegativeNumberInList_ReturnsMaxInteger()
+        {
+            // Arrange
+            List<int> nums = new List<int> { -5, -10, -20, -15, -1 };
+
+            // Act
+            int result = Operations.Max(nums);
+
+            // Assert
+            Assert.AreEqual(-1, result);
         }
     }
 }
