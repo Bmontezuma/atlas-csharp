@@ -1,63 +1,73 @@
 ﻿using System;
 
-/// <summary>
-/// An abstract class representing a base entity.
-/// </summary>
-public abstract class Base
+namespace YourNamespace
 {
     /// <summary>
-    /// Gets or sets the name of the entity.
+    /// Represents a base entity with a name.
     /// </summary>
-    public string Name { get; set; }
+    public abstract class Base
+    {
+        /// <summary>
+        /// Gets or sets the name of the entity.
+        /// </summary>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Returns a string representation of the entity.
+        /// </summary>
+        /// <returns>A string representation of the entity.</returns>
+        public override string ToString()
+        {
+            if (!string.IsNullOrEmpty(Name))
+                return $"{Name} is a {GetType().Name}";
+            else
+                return $"{GetType().Name} (no name set)";
+        }
+    }
 
     /// <summary>
-    /// Returns a string representation of the entity.
+    /// Represents a software engineer entity.
     /// </summary>
-    /// <returns>A string in the format '<see cref="Name"/> is a <see cref="T:Base"/>'.</returns>
-    public override string ToString()
+    public class SoftwareEngineer : Base
     {
-        return $"{Name} is a {GetType().Name}";
+        /// <summary>
+        /// Gets or sets the programming language the software engineer works with.
+        /// </summary>
+        public string ProgrammingLanguage { get; set; }
+
+        /// <summary>
+        /// Simulates the software engineer writing code.
+        /// </summary>
+        public void WriteCode()
+        {
+            Console.WriteLine($"{Name} is writing code in {ProgrammingLanguage}.");
+        }
     }
-}
 
-public class SoftwareEngineer : Base
-{
-    public SoftwareEngineer()
-    {
-        Name = "Betty"; // Setting the Name property
-    }
-}
-
-public class TestObject : Base
-{
-    public TestObject()
-    {
-        Name = "Abstract Classes"; // Setting the Name property
-    }
-}
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        var engineer = new SoftwareEngineer();
-        Console.WriteLine(engineer);
-
-        var testObject = new TestObject();
-        Console.WriteLine(testObject);
-    }
-}
-
-/// <summary>
-/// Represents a test object with no name set.
-/// </summary>
-public class TestObjectNoName : Base
-{
     /// <summary>
-    /// Initializes a new instance of the <see cref="TestObjectNoName"/> class.
+    /// Represents a test object entity.
     /// </summary>
-    public TestObjectNoName()
+    public class TestObject : Base
     {
-        // Name property not set intentionally
+        /// <summary>
+        /// Gets or sets a value indicating whether the test object is valid.
+        /// </summary>
+        public bool IsValid { get; set; }
+
+        /// <summary>
+        /// Runs tests on the test object.
+        /// </summary>
+        public void RunTests()
+        {
+            Console.WriteLine($"Running tests on {Name}. Result: {(IsValid ? "Pass" : "Fail")}");
+        }
+    }
+
+    class Program
+    {
+        static void Main()
+        {
+
+        }
     }
 }
