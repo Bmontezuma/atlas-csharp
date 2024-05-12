@@ -2,6 +2,9 @@
 
 namespace MyMath
 {
+    /// <summary>
+    /// Provides basic mathematical operations.
+    /// </summary>
     public static class Operations
     {
         /// <summary>
