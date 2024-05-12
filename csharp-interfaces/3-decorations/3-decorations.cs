@@ -1,16 +1,30 @@
 ﻿using System;
 
+// Define the Base interface or class
+public abstract class Base
+{
+    public string name;
+    public abstract override string ToString();
+}
+
+// Define the IInteractive interface
+public interface IInteractive
+{
+    void Interact();
+}
+
+// Define the IBreakable interface
+public interface IBreakable
+{
+    int durability { get; set; }
+    void Break();
+}
+
 class Decoration : Base, IInteractive, IBreakable
 {
     public bool isQuestItem;
     public int durability { get; set; }
 
-    /// <summary>
-    /// Constructor for Decoration
-    /// </summary>
-    /// <param name="name">Name of the Decoration (default: "Decoration").</param>
-    /// <param name="durability">Objects durability (HP) (default: 1).</param>
-    /// <param name="isQuestItem">Flag if it's a Quest item (default: false).</param>
     public Decoration(
         string name = "Decoration",
         int durability = 1,
