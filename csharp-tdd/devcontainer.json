@@ -1,0 +1,10 @@
+{
+  "name": "Your Codespace Configuration",
+  "extensions": [
+    "ms-dotnettools.csharp"
+  ],
+  "settings": {
+    "dotnet-sdk-version": "2.1.818"
+  }
+}
+
