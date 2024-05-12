@@ -1,8 +1,7 @@
-// MyMath.Tests/OperationsTests.cs
-
 using NUnit.Framework;
 using MyMath;
 using System.Collections.Generic;
+using System.IO;
 
 namespace MyMath.Tests
 {
@@ -123,6 +122,16 @@ namespace MyMath.Tests
 
             // Assert
             Assert.AreEqual(-1, result);
+        }
+
+        [Test]
+        public void OutputContains_TestRunSuccessful()
+        {
+            // Arrange - Get the path to the output file
+            string outputPath = Path.Combine(TestContext.CurrentContext.TestDirectory, "output");
+
+            // Assert - Check if the output file contains the expected text
+            Assert.IsTrue(File.ReadAllText(outputPath).Contains("Test Run Successful."));
         }
     }
 }
