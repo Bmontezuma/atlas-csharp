@@ -1,23 +1,66 @@
 ﻿using System;
-using System.Collections.Generic;
 
 /// <summary>
 /// Represents a geometric shape.
 /// </summary>
-class Rectangle
+public class Shape
 {
     /// <summary>
-    /// Gets or sets the width of the rectangle.
+    /// Calculates the area of the shape.
     /// </summary>
-    public int Width { get; set; }
+    /// <returns>The area of the shape.</returns>
+    public virtual int Area()
+    {
+        throw new NotImplementedException("Area() is not implemented");
+    }
+}
+
+/// <summary>
+/// Represents a rectangle shape.
+/// </summary>
+public class Rectangle : Shape
+{
+    private int width;
+    private int height;
 
     /// <summary>
-    /// Gets or sets the height of the rectangle.
+    /// Width of the rectangle.
     /// </summary>
-    public int Height { get; set; }
+    public int Width
+    {
+        get { return width; }
+        set
+        {
+            if (value < 0)
+                throw new ArgumentException("Width must be greater than or equal to 0");
+            width = value;
+        }
+    }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="Rectangle"/> class with the specified width and height.
+    /// Height of the rectangle.
+    /// </summary>
+    public int Height
+    {
+        get { return height; }
+        set
+        {
+            if (value < 0)
+                throw new ArgumentException("Height must be greater than or equal to 0");
+            height = value;
+        }
+    }
+
+    /// <summary>
+    /// Constructs a rectangle with default width and height of 0.
+    /// </summary>
+    public Rectangle()
+    {
+        // Default constructor
+    }
+
+    /// <summary>
+    /// Constructs a rectangle with specified width and height.
     /// </summary>
     /// <param name="width">The width of the rectangle.</param>
     /// <param name="height">The height of the rectangle.</param>
@@ -31,73 +74,41 @@ class Rectangle
     /// Calculates the area of the rectangle.
     /// </summary>
     /// <returns>The area of the rectangle.</returns>
-    public virtual int Area()
+    public int Area()
     {
         return Width * Height;
+    }
+
+    /// <summary>
+    /// Returns a string representation of the rectangle.
+    /// </summary>
+    /// <returns>A string representing the rectangle.</returns>
+    public override string ToString()
+    {
+        return $"[Rectangle] {Width} / {Height}";
     }
 }
 
 /// <summary>
-/// Represents a square, which is a special type of rectangle with equal width and height.
+/// Represents a square shape.
 /// </summary>
-class Square : Rectangle
+public class Square : Rectangle
 {
     private int size;
 
     /// <summary>
-    /// Gets or sets the size of the square.
+    /// Size of the square.
     /// </summary>
-    /// <exception cref="ArgumentException">Thrown when the specified size is negative.</exception>
     public int Size
     {
         get { return size; }
         set
         {
             if (value < 0)
-            {
                 throw new ArgumentException("Size must be greater than or equal to 0");
-            }
-            else
-            {
-                size = value;
-                Width = size;
-                Height = size;
-            }
+            size = value;
+            Width = size;
+            Height = size;
         }
-    }
-
-    /// <summary>
-    /// Initializes a new instance of the <see cref="Square"/> class with the specified size.
-    /// </summary>
-    /// <param name="size">The size of the square.</param>
-    public Square(int size) : base(size, size)
-    {
-        Size = size;
-    }
-}
-
-/// <summary>
-/// Represents the entry point of the program.
-/// </summary>
-class Program
-{
-    /// <summary>
-    /// The entry point of the program.
-    /// </summary>
-    /// <param name="args">The command-line arguments.</param>
-    static void Main(string[] args)
-    {
-        Square aSquare = new Square(10);
-
-        if (typeof(Square).IsSubclassOf(typeof(Rectangle)))
-        {
-            Console.WriteLine("Square is a subclass of Rectangle");
-        }
-        else
-        {
-            Console.WriteLine("Square is NOT a subclass of Rectangle");
-        }
-
-        Console.WriteLine("Size: {0}", aSquare.Size);
     }
 }
