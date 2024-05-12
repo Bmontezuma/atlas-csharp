@@ -89,16 +89,26 @@ public class Rectangle : Shape
     }
 }
 
-class Program
+/// <summary>
+/// Represents a square shape.
+/// </summary>
+public class Square : Rectangle
 {
-    static void Main(string[] args)
+    private int size;
+
+    /// <summary>
+    /// Size of the square.
+    /// </summary>
+    public int Size
     {
-        Rectangle aRect = new Rectangle();
-
-        aRect.Width = 7;
-        aRect.Height = 4;
-
-        Console.WriteLine("Area: {0}", aRect.Area());
-        Console.WriteLine(aRect.ToString());
+        get { return size; }
+        set
+        {
+            if (value < 0)
+                throw new ArgumentException("Size must be greater than or equal to 0");
+            size = value;
+            Width = value;
+            Height = value;
+        }
     }
 }
