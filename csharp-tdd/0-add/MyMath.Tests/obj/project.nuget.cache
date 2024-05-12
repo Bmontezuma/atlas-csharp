@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SIghEiHxvxslNgTLy4QxQinQ1MBrI9i+0ywTTPaKF0cHtXvOn5vH2F2yAikCrn9j+4Bt0F0geS6z+FMu98wOCQ==",
+  "dgSpecHash": "OEWgSZwZEYpVu9xnLzFlt3d+muHSd6/8d/uTS6RUcSg47rmC1AsIFoJl4enIrOFWQzQXooWhMFoh1XhxYM8cnw==",
   "success": true,
   "projectFilePath": "/workspaces/atlas-csharp/csharp-tdd/0-add/MyMath.Tests/MyMath.Tests.csproj",
   "expectedPackageFiles": [
