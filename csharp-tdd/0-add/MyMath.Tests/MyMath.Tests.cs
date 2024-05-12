@@ -1,9 +1,10 @@
-using System;
 using NUnit.Framework;
 using MyMath;
 
 namespace MyMath.Tests
 {
+    /// <summary> Test Class for Operations </summary>
+    [TestFixture]
     public class OperationsTests
     {
         [Test]
@@ -12,6 +13,18 @@ namespace MyMath.Tests
             int a = 3;
             int b = 5;
             int expected = 8;
+
+            int result = Operations.Add(a, b);
+
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void Add_NegativeAndPositive_ReturnsDifference()
+        {
+            int a = -3;
+            int b = 5;
+            int expected = 2;
 
             int result = Operations.Add(a, b);
 
@@ -31,15 +44,58 @@ namespace MyMath.Tests
         }
 
         [Test]
-        public void Add_NegativeAndPositive_ReturnsDifference()
+        public void TestAddingPositiveNumbers()
         {
-            int a = -3;
-            int b = 5;
-            int expected = 2;
+            int a = 1;
+            int b = 2;
 
             int result = Operations.Add(a, b);
 
-            Assert.AreEqual(expected, result);
+            Assert.AreEqual(3, result);
+        }
+
+        [Test]
+        public void TestAddingNegativeNumbers()
+        {
+            int a = -1;
+            int b = -3;
+
+            int result = Operations.Add(a, b);
+
+            Assert.AreEqual(-4, result);
+        }
+
+        [Test]
+        public void TestAddingPositiveAndNegativeNumbers()
+        {
+            int a = 1;
+            int b = -2;
+
+            int result = Operations.Add(a, b);
+
+            Assert.AreEqual(-1, result);
+        }
+
+        [Test]
+        public void TestAddingZeros()
+        {
+            int a = 0;
+            int b = 0;
+
+            int result = Operations.Add(a, b);
+
+            Assert.AreEqual(0, result);
+        }
+
+        [Test]
+        public void TestAddingBigNumbers()
+        {
+            int a = 100000;
+            int b = 200000;
+
+            int result = Operations.Add(a, b);
+
+            Assert.AreEqual(300000, result);
         }
 
         [Test]
