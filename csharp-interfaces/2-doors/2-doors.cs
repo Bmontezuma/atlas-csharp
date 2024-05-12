@@ -93,5 +93,11 @@ class Program
         Console.WriteLine(frontDoor.ToString());
 
         frontDoor.Interact();
+
+        Door noNameDoor = new Door();
+
+        Console.WriteLine(noNameDoor.ToString());
+
+        noNameDoor.Interact();
     }
 }
