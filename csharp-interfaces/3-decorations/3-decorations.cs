@@ -125,14 +125,31 @@ class Program
 {
     static void Main(string[] args)
     {
-        Decoration teacup = new Decoration("Teacup");
+        // Test case: no parameters given
+        Decoration noParams = new Decoration();
+        Console.WriteLine(noParams.ToString());
+        noParams.Interact();
+        noParams.Break();
+        noParams.Break();
+        noParams.Interact();
+        Console.WriteLine($"isQuestItem: {noParams.isQuestItem}");
 
-        Console.WriteLine(teacup.ToString());
+        // Test case: no name given / 10 / true
+        Decoration noName = new Decoration(durability: 10, isQuestItem: true);
+        Console.WriteLine(noName.ToString());
+        noName.Interact();
+        noName.Break();
+        noName.Break();
+        noName.Interact();
+        Console.WriteLine($"isQuestItem: {noName.isQuestItem}");
 
-        teacup.Interact();
-        teacup.Break();
-        teacup.Break();
-        teacup.Interact();
-        Console.WriteLine($"isQuestItem: {teacup.isQuestItem}");
+        // Test case: "Expensive Figurine" / no value given / true / change item values
+        Decoration expensiveFigurine = new Decoration("Expensive Figurine", isQuestItem: true);
+        Console.WriteLine(expensiveFigurine.ToString());
+        expensiveFigurine.Interact();
+        expensiveFigurine.Break();
+        expensiveFigurine.Break();
+        expensiveFigurine.Interact();
+        Console.WriteLine($"isQuestItem: {expensiveFigurine.isQuestItem}");
     }
 }
