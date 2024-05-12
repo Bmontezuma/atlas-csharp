@@ -32,25 +32,25 @@ interface IInteractive
 }
 
 /// <summary>
-/// Represents a door entity.
+/// Represents a door object.
 /// </summary>
-class Door : Base, IInteractive
+public class Door : Base, IInteractive
 {
     /// <summary>
-    /// Constructor for the Door class.
+    /// Initializes a new instance of the <see cref="Door"/> class with a specified name.
     /// </summary>
-    /// <param name="name">The name of the door.</param>
-    public Door(string name)
+    /// <param name="name">The name of the door. Defaults to "Door".</param>
+    public Door(string name = "Door")
     {
-        this.name = string.IsNullOrEmpty(name) ? "Door" : name;
+        this.name = name;
     }
 
     /// <summary>
-    /// Implementation of the Interact method for the Door class.
+    /// Performs the interaction with the door.
     /// </summary>
     public void Interact()
     {
-        Console.WriteLine($"You try to open the {this.name}. It's locked.");
+        System.Console.WriteLine($"You try to open the {this.name}. It's locked.");
     }
 }
 
