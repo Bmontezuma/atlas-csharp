@@ -32,6 +32,22 @@ interface IInteractive
 }
 
 /// <summary>
+/// Interface for breakable objects.
+/// </summary>
+interface IBreakable
+{
+    /// <summary>
+    /// Gets or sets the durability of the object.
+    /// </summary>
+    int durability { get; set; }
+
+    /// <summary>
+    /// Break the object.
+    /// </summary>
+    void Break();
+}
+
+/// <summary>
 /// Represents a door entity.
 /// </summary>
 class Door : Base, IInteractive
@@ -70,28 +86,30 @@ class Decoration : Base, IInteractive, IBreakable
     public bool isQuestItem { get; set; }
 
     /// <summary>
-    /// Constructor for the Decoration class.
+    /// Initializes a new instance of the <see cref="Decoration"/> class with the specified name, durability, and quest item status.
     /// </summary>
-    /// <param name="name">The name of the decoration.</param>
-    /// <param name="durability">The durability of the decoration.</param>
-    /// <param name="isQuestItem">Whether the decoration is a quest item.</param>
+    /// <param name="name">The name of the decoration. Defaults to "Decoration".</param>
+    /// <param name="durability">The durability of the decoration. Defaults to 1.</param>
+    /// <param name="isQuestItem">Indicates whether the decoration is a quest item. Defaults to false.</param>
     public Decoration(string name = "Decoration", int durability = 1, bool isQuestItem = false)
     {
         this.name = name;
-        this.durability = durability <= 0 ? throw new ArgumentException("Durability must be greater than 0") : durability;
+        this.durability = durability > 0 ? durability : throw new ArgumentException("Durability must be greater than 0");
         this.isQuestItem = isQuestItem;
     }
 
     /// <summary>
-    /// Interact with the decoration.
+    /// Implements the Interact method for the Decoration class.
     /// </summary>
     public void Interact()
     {
         if (durability <= 0)
         {
             Console.WriteLine($"The {this.name} has been broken.");
+            return;
         }
-        else if (isQuestItem)
+
+        if (isQuestItem)
         {
             Console.WriteLine($"You look at the {this.name}. There's a key inside.");
         }
@@ -102,46 +120,25 @@ class Decoration : Base, IInteractive, IBreakable
     }
 
     /// <summary>
-    /// Break the decoration.
+    /// Implements the Break method for the Decoration class.
     /// </summary>
     public void Break()
     {
-        if (durability > 0)
-        {
-            Console.WriteLine($"You hit the {this.name}. It cracks.");
-            durability--;
-            if (durability == 0)
-            {
-                Console.WriteLine($"You smash the {this.name}. What a mess.");
-            }
-        }
-        else
+        if (durability <= 0)
         {
             Console.WriteLine($"The {this.name} is already broken.");
+            return;
         }
-    }
-}
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        // Test for Door
-        Door frontDoor = new Door("Front Door");
+        if (durability > 0)
+        {
+            durability--;
+            Console.WriteLine($"You hit the {this.name}. It cracks.");
+        }
 
-        Console.WriteLine(frontDoor.ToString());
-
-        frontDoor.Interact();
-
-        // Test for Decoration
-        Decoration teacup = new Decoration("Teacup", 1, false);
-
-        Console.WriteLine(teacup.ToString());
-
-        teacup.Interact();
-        teacup.Break();
-        teacup.Break();
-        teacup.Interact();
-        Console.WriteLine("isQuestItem: " + teacup.isQuestItem);
+        if (durability == 0)
+        {
+            Console.WriteLine($"You smash the {this.name}. What a mess.");
+        }
     }
 }
