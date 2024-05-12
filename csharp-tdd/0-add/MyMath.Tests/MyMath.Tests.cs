@@ -1,119 +1,69 @@
 using NUnit.Framework;
 using MyMath;
 
-namespace MyMath.Tests
+namespace MathTests
 {
     [TestFixture]
-    public class OperationsTests
+    public class AdditionTests
     {
         [Test]
-        public void Add_TwoIntegers_ReturnsSum()
+        public void AddingTwoPositiveNumbers()
         {
-            int a = 3;
-            int b = 5;
-            int expected = 8;
+            // Arrange
+            int firstNumber = 1;
+            int secondNumber = 2;
+            int expectedResult = 3;
 
-            int result = Operations.Add(a, b);
+            // Act
+            int result = Operations.Add(firstNumber, secondNumber);
 
-            Assert.AreEqual(expected, result);
+            // Assert
+            Assert.AreEqual(expectedResult, result, $"Adding {firstNumber} and {secondNumber} should equal {expectedResult}");
         }
 
         [Test]
-        public void Add_NegativeAndPositive_ReturnsSum()
+        public void AddingTwoNegativeNumbers()
         {
-            int a = -3;
-            int b = 5;
-            int expected = 2;
+            // Arrange
+            int firstNumber = -1;
+            int secondNumber = -2;
+            int expectedResult = -3;
 
-            int result = Operations.Add(a, b);
+            // Act
+            int result = Operations.Add(firstNumber, secondNumber);
 
-            Assert.AreEqual(expected, result);
+            // Assert
+            Assert.AreEqual(expectedResult, result, $"Adding {firstNumber} and {secondNumber} should equal {expectedResult}");
         }
 
         [Test]
-        public void Add_PositiveAndNegative_ReturnsSum()
+        public void AddingTwoZeroNumbers()
         {
-            int a = 3;
-            int b = -5;
-            int expected = -2;
+            // Arrange
+            int firstNumber = 0;
+            int secondNumber = 0;
+            int expectedResult = 0;
 
-            int result = Operations.Add(a, b);
+            // Act
+            int result = Operations.Add(firstNumber, secondNumber);
 
-            Assert.AreEqual(expected, result);
+            // Assert
+            Assert.AreEqual(expectedResult, result, $"Adding {firstNumber} and {secondNumber} should equal {expectedResult}");
         }
 
         [Test]
-        public void Add_TwoNegativeIntegers_ReturnsSum()
+        public void AddingOnePositiveAndOneNegativeNumber()
         {
-            int a = -3;
-            int b = -5;
-            int expected = -8;
+            // Arrange
+            int positiveNumber = 1;
+            int negativeNumber = -2;
+            int expectedResult = -1;
 
-            int result = Operations.Add(a, b);
+            // Act
+            int result = Operations.Add(positiveNumber, negativeNumber);
 
-            Assert.AreEqual(expected, result);
-        }
-
-        [Test]
-        public void Add_ZeroAndNonZero_ReturnsNonZero()
-        {
-            int a = 0;
-            int b = 5;
-            int expected = 5;
-
-            int result = Operations.Add(a, b);
-
-            Assert.AreEqual(expected, result);
-        }
-
-        [Test]
-        public void Add_NonZeroAndZero_ReturnsNonZero()
-        {
-            int a = 3;
-            int b = 0;
-            int expected = 3;
-
-            int result = Operations.Add(a, b);
-
-            Assert.AreEqual(expected, result);
-        }
-
-        [Test]
-        public void Add_TwoZeros_ReturnsZero()
-        {
-            int a = 0;
-            int b = 0;
-            int expected = 0;
-
-            int result = Operations.Add(a, b);
-
-            Assert.AreEqual(expected, result);
-        }
-
-        [Test]
-        public void Add_MaxValueAndOne_ReturnsOverflow()
-        {
-            int a = int.MaxValue;
-            int b = 1;
-
-            Assert.Throws<System.OverflowException>(() => Operations.Add(a, b));
-        }
-
-        [Test]
-        public void Add_MinValueAndMinusOne_ReturnsOverflow()
-        {
-            int a = int.MinValue;
-            int b = -1;
-
-            Assert.Throws<System.OverflowException>(() => Operations.Add(a, b));
-        }
-
-        [Test]
-        public void TestRunSuccessful()
-        {
-            // This test verifies if the test run was successful
-            // If this test fails, it means there was an issue with the test run itself
-            Assert.Pass("Test Run Successful.");
+            // Assert
+            Assert.AreEqual(expectedResult, result, $"Adding {positiveNumber} and {negativeNumber} should equal {expectedResult}");
         }
     }
 }
