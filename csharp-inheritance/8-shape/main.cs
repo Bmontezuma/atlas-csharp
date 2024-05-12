@@ -6,7 +6,7 @@ class Program
     {
         Square aSquare = new Square();
 
-        aSquare.Size = 10;
+        aSquare.Size = 12;
 
         if (typeof(Square).IsSubclassOf(typeof(Shape)))
             Console.WriteLine("Square is a subclass of Shape");
