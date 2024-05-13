@@ -1,69 +1,59 @@
 using NUnit.Framework;
-using MyMath;
 
-namespace MathTests
+namespace MyMath.Tests
 {
+    /// <summary> Test Class of Operations </summary>
     [TestFixture]
-    public class AdditionTests
+    public class OpTests
     {
         [Test]
-        public void AddingTwoPositiveNumbers()
+        public void IsCorrect()
         {
-            // Arrange
-            int firstNumber = 1;
-            int secondNumber = 2;
-            int expectedResult = 3;
+            int a = 1;
+            int b = 2;
 
-            // Act
-            int result = Operations.Add(firstNumber, secondNumber);
+            int result = Operations.Add(a, b);
+            Assert.AreEqual(3, result);
+        }
+        
+        [Test]
+        public void NegativeNums()
+        {
+            int a = -1;
+            int b = -3;
 
-            // Assert
-            Assert.AreEqual(expectedResult, result, $"Adding {firstNumber} and {secondNumber} should equal {expectedResult}");
+            int result = Operations.Add(a, b);
+            Assert.AreEqual(-4, result);
         }
 
         [Test]
-        public void AddingTwoNegativeNumbers()
+        public void PositiveAndNegativeNums()
         {
-            // Arrange
-            int firstNumber = -1;
-            int secondNumber = -2;
-            int expectedResult = -3;
+            int a = 1;
+            int b = -2;
 
-            // Act
-            int result = Operations.Add(firstNumber, secondNumber);
-
-            // Assert
-            Assert.AreEqual(expectedResult, result, $"Adding {firstNumber} and {secondNumber} should equal {expectedResult}");
+            int result = Operations.Add(a, b);
+            Assert.AreEqual(-1, result);
         }
 
         [Test]
-        public void AddingTwoZeroNumbers()
+        public void AddingZeros()
         {
-            // Arrange
-            int firstNumber = 0;
-            int secondNumber = 0;
-            int expectedResult = 0;
+            int a = 0;
+            int b = 0;
 
-            // Act
-            int result = Operations.Add(firstNumber, secondNumber);
-
-            // Assert
-            Assert.AreEqual(expectedResult, result, $"Adding {firstNumber} and {secondNumber} should equal {expectedResult}");
+            int result = Operations.Add(a, b);
+            Assert.AreEqual(0, result);
         }
 
         [Test]
-        public void AddingOnePositiveAndOneNegativeNumber()
+        public void BigSum()
         {
-            // Arrange
-            int positiveNumber = 1;
-            int negativeNumber = -2;
-            int expectedResult = -1;
+            int a = 100000;
+            int b = 200000;
 
-            // Act
-            int result = Operations.Add(positiveNumber, negativeNumber);
-
-            // Assert
-            Assert.AreEqual(expectedResult, result, $"Adding {positiveNumber} and {negativeNumber} should equal {expectedResult}");
+            int result = Operations.Add(a, b);
+            Assert.AreEqual(300000, result);
         }
     }
 }
