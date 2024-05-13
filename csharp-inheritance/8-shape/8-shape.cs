@@ -8,8 +8,9 @@ public class Square : Shape
     private int size;
 
     /// <summary>
-    /// Size of the square.
+    /// Gets or sets the size of the square.
     /// </summary>
+    /// <exception cref="ArgumentException">Thrown when the size is less than 0.</exception>
     public int Size
     {
         get { return size; }
