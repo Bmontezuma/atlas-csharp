@@ -89,7 +89,7 @@ public class Rectangle_8 : Shape_8
     }
 }
 
-public class Square : Rectangle_8
+public class Square_8 : Rectangle_8
 {
     private int size;
 
@@ -111,3 +111,4 @@ public class Square : Rectangle_8
         return $"[Square] {Size} / {Size}";
     }
 }
+
