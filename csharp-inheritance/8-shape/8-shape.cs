@@ -3,7 +3,7 @@
 /// <summary>
 /// Represents a square shape.
 /// </summary>
-public class Square : Rectangle
+public class Square : Shape
 {
     private int size;
 
@@ -18,8 +18,15 @@ public class Square : Rectangle
             if (value < 0)
                 throw new ArgumentException("Size must be greater than or equal to 0");
             size = value;
-            Width = value;
-            Height = value;
         }
+    }
+
+    /// <summary>
+    /// Calculates the area of the square.
+    /// </summary>
+    /// <returns>The area of the square.</returns>
+    public override int Area()
+    {
+        return size * size;
     }
 }
