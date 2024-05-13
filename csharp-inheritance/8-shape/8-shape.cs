@@ -3,7 +3,7 @@
 /// <summary>
 /// Represents a geometric shape.
 /// </summary>
-public class Shape
+public class Shape_8
 {
     /// <summary>
     /// Calculates the area of the shape.
@@ -18,7 +18,7 @@ public class Shape
 /// <summary>
 /// Represents a rectangle shape.
 /// </summary>
-public class Rectangle : Shape
+public class Rectangle_8 : Shape_8
 {
     private int width;
     private int height;
@@ -54,7 +54,7 @@ public class Rectangle : Shape
     /// <summary>
     /// Constructs a rectangle with default width and height of 0.
     /// </summary>
-    public Rectangle()
+    public Rectangle_8()
     {
         // Default constructor
     }
@@ -64,7 +64,7 @@ public class Rectangle : Shape
     /// </summary>
     /// <param name="width">The width of the rectangle.</param>
     /// <param name="height">The height of the rectangle.</param>
-    public Rectangle(int width, int height)
+    public Rectangle_8(int width, int height)
     {
         Width = width;
         Height = height;
@@ -89,16 +89,10 @@ public class Rectangle : Shape
     }
 }
 
-/// <summary>
-/// Represents a square shape.
-/// </summary>
-public class Square : Rectangle
+public class Square : Rectangle_8
 {
     private int size;
 
-    /// <summary>
-    /// Size of the square.
-    /// </summary>
     public int Size
     {
         get { return size; }
@@ -107,25 +101,13 @@ public class Square : Rectangle
             if (value < 0)
                 throw new ArgumentException("Size must be greater than or equal to 0");
             size = value;
-            Width = value; // Setting width and height to the same value for a square
+            Width = value;
             Height = value;
         }
     }
-}
 
-class Program
-{
-    static void Main(string[] args)
+    public override string ToString()
     {
-        Square aSquare = new Square();
-
-        aSquare.Size = 12;
-
-        if (typeof(Square).IsSubclassOf(typeof(Shape)))
-            Console.WriteLine("Square is a subclass of Shape");
-        else
-            Console.WriteLine("Square is NOT a subclass of Shape");
-
-        Console.WriteLine("Size: {0}", aSquare.Size);
+        return $"[Square] {Size} / {Size}";
     }
 }
