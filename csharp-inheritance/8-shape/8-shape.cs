@@ -1,16 +1,104 @@
 ﻿using System;
 
 /// <summary>
+/// Represents a geometric shape.
+/// </summary>
+public class Shape
+{
+    /// <summary>
+    /// Calculates the area of the shape.
+    /// </summary>
+    /// <returns>The area of the shape.</returns>
+    public virtual int Area()
+    {
+        throw new NotImplementedException("Area() is not implemented");
+    }
+}
+
+/// <summary>
+/// Represents a rectangle shape.
+/// </summary>
+public class Rectangle : Shape
+{
+    private int width;
+    private int height;
+
+    /// <summary>
+    /// Width of the rectangle.
+    /// </summary>
+    public int Width
+    {
+        get { return width; }
+        set
+        {
+            if (value < 0)
+                throw new ArgumentException("Width must be greater than or equal to 0");
+            width = value;
+        }
+    }
+
+    /// <summary>
+    /// Height of the rectangle.
+    /// </summary>
+    public int Height
+    {
+        get { return height; }
+        set
+        {
+            if (value < 0)
+                throw new ArgumentException("Height must be greater than or equal to 0");
+            height = value;
+        }
+    }
+
+    /// <summary>
+    /// Constructs a rectangle with default width and height of 0.
+    /// </summary>
+    public Rectangle()
+    {
+        // Default constructor
+    }
+
+    /// <summary>
+    /// Constructs a rectangle with specified width and height.
+    /// </summary>
+    /// <param name="width">The width of the rectangle.</param>
+    /// <param name="height">The height of the rectangle.</param>
+    public Rectangle(int width, int height)
+    {
+        Width = width;
+        Height = height;
+    }
+
+    /// <summary>
+    /// Calculates the area of the rectangle.
+    /// </summary>
+    /// <returns>The area of the rectangle.</returns>
+    public override int Area()
+    {
+        return Width * Height;
+    }
+
+    /// <summary>
+    /// Returns a string representation of the rectangle.
+    /// </summary>
+    /// <returns>A string representing the rectangle.</returns>
+    public override string ToString()
+    {
+        return $"[Rectangle] {Width} / {Height}";
+    }
+}
+
+/// <summary>
 /// Represents a square shape.
 /// </summary>
-public class Square : Shape
+public class Square : Rectangle
 {
     private int size;
 
     /// <summary>
-    /// Gets or sets the size of the square.
+    /// Size of the square.
     /// </summary>
-    /// <exception cref="ArgumentException">Thrown when the size is less than 0.</exception>
     public int Size
     {
         get { return size; }
@@ -19,15 +107,25 @@ public class Square : Shape
             if (value < 0)
                 throw new ArgumentException("Size must be greater than or equal to 0");
             size = value;
+            Width = value; // Setting width and height to the same value for a square
+            Height = value;
         }
     }
+}
 
-    /// <summary>
-    /// Calculates the area of the square.
-    /// </summary>
-    /// <returns>The area of the square.</returns>
-    public override int Area()
+class Program
+{
+    static void Main(string[] args)
     {
-        return size * size;
+        Square aSquare = new Square();
+
+        aSquare.Size = 12;
+
+        if (typeof(Square).IsSubclassOf(typeof(Shape)))
+            Console.WriteLine("Square is a subclass of Shape");
+        else
+            Console.WriteLine("Square is NOT a subclass of Shape");
+
+        Console.WriteLine("Size: {0}", aSquare.Size);
     }
 }
