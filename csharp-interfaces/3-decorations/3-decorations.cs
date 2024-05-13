@@ -1,5 +1,9 @@
 ﻿using System;
 
+// Add the correct namespaces where Base, IInteractive, and IBreakable are defined
+using MyNamespaceContainingBaseClass;
+using MyNamespaceContainingInterfaces;
+
 /// <summary>
 /// Represents a decoration object.
 /// </summary>
