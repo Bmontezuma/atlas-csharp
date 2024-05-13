@@ -111,4 +111,3 @@ public class Square_8 : Rectangle_8
         return $"[Square] {Size} / {Size}";
     }
 }
-
