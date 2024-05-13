@@ -1,8 +1,51 @@
 ﻿using System;
 
-// Add the correct namespaces where Base, IInteractive, and IBreakable are defined
-using MyNamespaceContainingBaseClass;
-using MyNamespaceContainingInterfaces;
+/// <summary>
+/// Base class representing a generic entity.
+/// </summary>
+public abstract class Base
+{
+    /// <summary>
+    /// Gets or sets the name of the entity.
+    /// </summary>
+    public string name { get; set; }
+
+    /// <summary>
+    /// Override of the ToString() method to provide a string representation of the entity.
+    /// </summary>
+    /// <returns>A string representation of the entity.</returns>
+    public override string ToString()
+    {
+        return $"{this.name} is a {this.GetType()}";
+    }
+}
+
+/// <summary>
+/// Interface for interactive objects.
+/// </summary>
+public interface IInteractive
+{
+    /// <summary>
+    /// Interact with the object.
+    /// </summary>
+    void Interact();
+}
+
+/// <summary>
+/// Interface for breakable objects.
+/// </summary>
+public interface IBreakable
+{
+    /// <summary>
+    /// Gets or sets the durability of the object.
+    /// </summary>
+    int durability { get; set; }
+
+    /// <summary>
+    /// Break the object.
+    /// </summary>
+    void Break();
+}
 
 /// <summary>
 /// Represents a decoration object.
@@ -12,12 +55,12 @@ public class Decoration : Base, IInteractive, IBreakable
     /// <summary>
     /// Gets or sets the durability of the decoration.
     /// </summary>
-    public int Durability { get; set; }
+    public int durability { get; set; }
 
     /// <summary>
     /// Gets or sets whether the decoration is a quest item.
     /// </summary>
-    public bool IsQuestItem { get; set; }
+    public bool isQuestItem { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Decoration"/> class with a specified name, durability, and quest item status.
@@ -33,8 +76,8 @@ public class Decoration : Base, IInteractive, IBreakable
         }
 
         this.name = name;
-        this.Durability = durability;
-        this.IsQuestItem = isQuestItem;
+        this.durability = durability;
+        this.isQuestItem = isQuestItem;
     }
 
     /// <summary>
@@ -42,17 +85,17 @@ public class Decoration : Base, IInteractive, IBreakable
     /// </summary>
     public void Interact()
     {
-        if (this.Durability <= 0)
+        if (durability <= 0)
         {
-            Console.WriteLine($"The {this.name} has been broken.");
+            Console.WriteLine($"The {name} has been broken.");
         }
-        else if (this.IsQuestItem)
+        else if (isQuestItem)
         {
-            Console.WriteLine($"You look at the {this.name}. There's a key inside.");
+            Console.WriteLine($"You look at the {name}. There's a key inside.");
         }
         else
         {
-            Console.WriteLine($"You look at the {this.name}. Not much to see here.");
+            Console.WriteLine($"You look at the {name}. Not much to see here.");
         }
     }
 
@@ -61,22 +104,22 @@ public class Decoration : Base, IInteractive, IBreakable
     /// </summary>
     public void Break()
     {
-        if (this.Durability > 0)
+        if (durability > 0)
         {
-            this.Durability--;
+            durability--;
 
-            if (this.Durability > 0)
+            if (durability > 0)
             {
-                Console.WriteLine($"You hit the {this.name}. It cracks.");
+                Console.WriteLine($"You hit the {name}. It cracks.");
             }
             else
             {
-                Console.WriteLine($"You smash the {this.name}. What a mess.");
+                Console.WriteLine($"You smash the {name}. What a mess.");
             }
         }
         else
         {
-            Console.WriteLine($"The {this.name} is already broken.");
+            Console.WriteLine($"The {name} is already broken.");
         }
     }
 }
