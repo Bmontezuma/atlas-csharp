@@ -16,3 +16,4 @@ class Program_0
         Console.WriteLine("Size: {0}", aSquare.Size);
     }
 }
+
