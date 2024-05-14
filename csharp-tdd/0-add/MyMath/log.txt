@@ -1,0 +1,120 @@
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.953, 3271861259591, vstest.console.dll, Using .Net Framework version:.NETCoreApp,Version=v2.0
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:11.961, 3271861336237, vstest.console.dll, TestPluginCache: Discovering the extensions using extension path.
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.962, 3271861340553, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.Extensions.BlameDataCollector: Resolving assembly.
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.962, 3271861345269, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.Extensions.BlameDataCollector: Resolved assembly. 
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.963, 3271861350362, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.Extensions.EventLogCollector: Resolving assembly.
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.963, 3271861359632, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.Extensions.EventLogCollector: Resolved assembly. 
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.964, 3271861367355, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.TestHostRuntimeProvider: Resolving assembly.
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.965, 3271861370736, vstest.console.dll, AssemblyResolver: Microsoft.TestPlatform.TestHostRuntimeProvider: Resolved assembly. 
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.965, 3271861377722, vstest.console.dll, AssemblyResolver: Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger: Resolving assembly.
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.966, 3271861383366, vstest.console.dll, AssemblyResolver: Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger: Resolved assembly. 
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:11.967, 3271861390716, vstest.console.dll, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:11.967, 3271861391070, vstest.console.dll, TestPluginCache: Discoverers are ''.
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:11.967, 3271861391193, vstest.console.dll, TestPluginCache: Executors are ''.
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:11.967, 3271861391320, vstest.console.dll, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:11.967, 3271861391438, vstest.console.dll, TestPluginCache: Loggers are ''.
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.970, 3271861425323, vstest.console.dll, RunTestsArgumentProcessor:Execute: Test run is starting.
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:11.970, 3271861425767, vstest.console.dll, RunTestsArgumentProcessor:Execute: Queuing Test run.
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.970, 3271861426449, vstest.console.dll, TestRequestManager.RunTests: run tests started.
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.977, 3271861490478, vstest.console.dll, AssemblyMetadataProvider.GetFrameWork: Determined framework:'.NETCoreApp,Version=v2.0' for source: 'C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.0\MyMath.dll'
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.977, 3271861491249, vstest.console.dll, Determined framework for all sources: .NETCoreApp,Version=v2.0
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.978, 3271861507902, vstest.console.dll, AssemblyMetadataProvider.GetArchitecture: Determined architecture:AnyCPU info for assembly: C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.0\MyMath.dll
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.982, 3271861540850, vstest.console.dll, Determined platform for all sources: X86
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.983, 3271861557543, vstest.console.dll, Compatible sources list : 
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.983, 3271861558016, vstest.console.dll, C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.0\MyMath.dll
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.988, 3271861600485, vstest.console.dll, InferRunSettingsHelper.IsTestSettingsEnabled: Unable to navigate to RunSettings/MSTest. Current node: RunSettings
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.996, 3271861685039, vstest.console.dll, TestPluginManager.CreateTestExtension: Attempting to load test extension: Microsoft.VisualStudio.TestPlatform.CrossPlatEngine.Hosting.DefaultTestHostManager
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.996, 3271861686803, vstest.console.dll, TestPluginManager.CreateTestExtension: Attempting to load test extension: Microsoft.VisualStudio.TestPlatform.CrossPlatEngine.Hosting.DotnetTestHostManager
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:11.996, 3271861688773, vstest.console.dll, TestEngine: Initializing Parallel Execution as MaxCpuCount is set to: 1
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:11.997, 3271861692313, vstest.console.dll, InferRunSettingsHelper.IsTestSettingsEnabled: Unable to navigate to RunSettings/MSTest. Current node: RunSettings
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:12.005, 3271861769915, vstest.console.dll, TestRequestSender is acting as server
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:12.006, 3271861780807, vstest.console.dll, TestRunRequest.ExecuteAsync: Creating test run request.
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:12.006, 3271861783437, vstest.console.dll, TestRunRequest.ExecuteAsync: Starting.
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:12.006, 3271861785648, vstest.console.dll, TestRunRequest.ExecuteAsync: Starting run with settings:TestRunCriteria:
+   KeepAlive=False,FrequencyOfRunStatsChangeEvent=10,RunStatsChangeEventTimeout=00:00:01.5000000,TestCaseFilter=,TestExecutorLauncher=
+   Settingsxml=<RunSettings>
+  <RunConfiguration>
+    <ResultsDirectory>C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\TestResults</ResultsDirectory>
+    <TargetPlatform>X86</TargetPlatform>
+    <TargetFrameworkVersion>.NETCoreApp,Version=v2.0</TargetFrameworkVersion>
+    <DesignMode>False</DesignMode>
+    <CollectSourceInformation>False</CollectSourceInformation>
+  </RunConfiguration>
+  <LoggerRunSettings>
+    <Loggers>
+      <Logger friendlyName="Console" uri="logger://microsoft/TestPlatform/ConsoleLogger/v1" assemblyQualifiedName="Microsoft.VisualStudio.TestPlatform.CommandLine.Internal.ConsoleLogger, vstest.console, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" codeBase="C:\Program Files\dotnet\sdk\2.1.300\vstest.console.dll" enabled="True" />
+    </Loggers>
+  </LoggerRunSettings>
+</RunSettings>
+
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:12.006, 3271861786279, vstest.console.dll, TestRunRequest.ExecuteAsync: Wait for the first run request is over.
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:12.006, 3271861789339, vstest.console.dll, ParallelProxyExecutionManager: Start execution. Total sources: 1
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:12.007, 3271861794766, vstest.console.dll, ProxyParallelExecutionManager: Triggering test run for next source: C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.0\MyMath.dll
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:12.007, 3271861795448, vstest.console.dll, ProxyParallelExecutionManager: No sources available for execution.
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:12.007, 3271861795796, vstest.console.dll, TestRunRequest.ExecuteAsync: Started.
+TpTrace Verbose: 0 : 25744, 5, 2024/05/14, 04:08:12.007, 3271861796321, vstest.console.dll, ParallelProxyExecutionManager: Execution started. Started clients: 1
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:12.007, 3271861796536, vstest.console.dll, TestRunRequest.WaitForCompletion: Waiting with timeout -1.
+TpTrace Verbose: 0 : 25744, 5, 2024/05/14, 04:08:12.007, 3271861798654, vstest.console.dll, ProxyExecutionManager: Test host is always Lazy initialize.
+TpTrace Verbose: 0 : 25744, 5, 2024/05/14, 04:08:12.008, 3271861799954, vstest.console.dll, TestRequestSender.InitializeCommunication: initialize communication. 
+TpTrace Information: 0 : 25744, 5, 2024/05/14, 04:08:12.019, 3271861917403, vstest.console.dll, SocketServer.Start: Listening on endpoint : 127.0.0.1:60711
+TpTrace Verbose: 0 : 25744, 5, 2024/05/14, 04:08:12.023, 3271861949662, vstest.console.dll, DotnetTestHostmanager: Full path of dotnet.exe is C:\Program Files\dotnet\dotnet.exe
+TpTrace Verbose: 0 : 25744, 5, 2024/05/14, 04:08:12.023, 3271861951373, vstest.console.dll, DotnetTestHostmanager: Adding  --runtimeconfig "C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.0\MyMath.runtimeconfig.json" in args
+TpTrace Verbose: 0 : 25744, 5, 2024/05/14, 04:08:12.023, 3271861951932, vstest.console.dll, DotnetTestHostmanager: Adding  --depsfile "C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.0\MyMath.deps.json" in args
+TpTrace Information: 0 : 25744, 5, 2024/05/14, 04:08:12.023, 3271861952587, vstest.console.dll, AssemblyResolver: Microsoft.Extensions.DependencyModel: Resolving assembly.
+TpTrace Information: 0 : 25744, 5, 2024/05/14, 04:08:12.023, 3271861956987, vstest.console.dll, AssemblyResolver: Microsoft.Extensions.DependencyModel: Resolved assembly. 
+TpTrace Verbose: 0 : 25744, 5, 2024/05/14, 04:08:12.023, 3271861958878, vstest.console.dll, DotnetTestHostmanager: Reading file C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.0\MyMath.deps.json to get path of testhost.dll
+TpTrace Verbose: 0 : 25744, 5, 2024/05/14, 04:08:12.045, 3271862179290, vstest.console.dll, DotnetTestHostmanager: Relative path of testhost.dll with respect to package folder is microsoft.testplatform.testhost/16.9.4\lib/netcoreapp1.0/testhost.dll
+TpTrace Verbose: 0 : 25744, 5, 2024/05/14, 04:08:12.048, 3271862203803, vstest.console.dll, DotnetTestHostmanager: Looking for path microsoft.testplatform.testhost/16.9.4\lib/netcoreapp1.0/testhost.dll in folder C:\Users\brand\.dotnet\store\|arch|\|tfm|
+TpTrace Verbose: 0 : 25744, 5, 2024/05/14, 04:08:12.048, 3271862204609, vstest.console.dll, DotnetTestHostmanager: Looking for path microsoft.testplatform.testhost/16.9.4\lib/netcoreapp1.0/testhost.dll in folder C:\Users\brand\.nuget\packages
+TpTrace Verbose: 0 : 25744, 5, 2024/05/14, 04:08:12.048, 3271862205341, vstest.console.dll, DotnetTestHostmanager: Full path of testhost.dll is C:\Users\brand\.nuget\packages\microsoft.testplatform.testhost/16.9.4\lib/netcoreapp1.0/testhost.dll
+TpTrace Verbose: 0 : 25744, 4, 2024/05/14, 04:08:12.049, 3271862214912, vstest.console.dll, DotnetTestHostManager: Starting process 'C:\Program Files\dotnet\dotnet.exe' with command line 'exec --runtimeconfig "C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.0\MyMath.runtimeconfig.json" --depsfile "C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.0\MyMath.deps.json" "C:\Users\brand\.nuget\packages\microsoft.testplatform.testhost/16.9.4\lib/netcoreapp1.0/testhost.dll" --port 60711 --endpoint 127.0.0.1:060711 --role client --parentprocessid 25744 --diag "C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\log.host.24-05-14_04-08-12_02262_5.txt" --telemetryoptedin false'
+TpTrace Verbose: 0 : 25744, 4, 2024/05/14, 04:08:12.057, 3271862292276, vstest.console.dll, Test Runtime launched
+TpTrace Verbose: 0 : 25744, 5, 2024/05/14, 04:08:12.058, 3271862303630, vstest.console.dll, TestRequestSender.WaitForRequestHandlerConnection: waiting for connection with timeout: 60000
+TpTrace Verbose: 0 : 25744, 7, 2024/05/14, 04:08:12.350, 3271865219825, vstest.console.dll, SocketServer.OnClientConnected: Client connected for endPoint: 127.0.0.1:60711, starting MessageLoopAsync:
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:12.350, 3271865222066, vstest.console.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:60712 localEndPoint: 127.0.0.1:60711
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:12.524, 3271866962763, vstest.console.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: 127.0.0.1:60712 localEndPoint: 127.0.0.1:60711
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:12.526, 3271866981299, vstest.console.dll, TestRequestSender.CheckVersionWithTestHost: onMessageReceived received message: (ProtocolVersion) -> 2
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:12.526, 3271866984824, vstest.console.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:60712 localEndPoint: 127.0.0.1:60711
+TpTrace Verbose: 0 : 25744, 5, 2024/05/14, 04:08:12.528, 3271867004843, vstest.console.dll, TestRequestSender.InitializeExecution: Sending initializing execution with message: {"Version":2,"MessageType":"TestExecution.Initialize","Payload":["C:\\Users\\brand\\OneDrive\\Documents\\atlas-csharp\\csharp-tdd\\0-add\\MyMath\\bin\\Debug\\netcoreapp2.0\\xunit.runner.visualstudio.testadapter.dll"]}
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:12.531, 3271867035083, vstest.console.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: 127.0.0.1:60712 localEndPoint: 127.0.0.1:60711
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:12.531, 3271867035737, vstest.console.dll, TestRequestSender.OnExecutionMessageReceived: Received message: {"Version":2,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"Logging TestHost Diagnostics in file: C:\\Users\\brand\\OneDrive\\Documents\\atlas-csharp\\csharp-tdd\\0-add\\MyMath\\log.host.24-05-14_04-08-12_02262_5.txt"}}
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:12.534, 3271867068715, vstest.console.dll, TestRunRequest:SendTestRunMessage: Starting.
+TpTrace Information: 0 : 25744, 10, 2024/05/14, 04:08:12.535, 3271867070016, vstest.console.dll, TestRunRequest:SendTestRunMessage: Completed.
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:12.535, 3271867070489, vstest.console.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:60712 localEndPoint: 127.0.0.1:60711
+TpTrace Verbose: 0 : 25744, 5, 2024/05/14, 04:08:12.536, 3271867083724, vstest.console.dll, TestRequestSender.StartTestRun: Sending test run with message: {"Version":2,"MessageType":"TestExecution.StartWithSources","Payload":{"AdapterSourceMap":{"_none_":["C:\\Users\\brand\\OneDrive\\Documents\\atlas-csharp\\csharp-tdd\\0-add\\MyMath\\bin\\Debug\\netcoreapp2.0\\MyMath.dll"]},"RunSettings":"<RunSettings>\r\n  <RunConfiguration>\r\n    <ResultsDirectory>C:\\Users\\brand\\OneDrive\\Documents\\atlas-csharp\\csharp-tdd\\0-add\\MyMath\\TestResults</ResultsDirectory>\r\n    <TargetPlatform>X86</TargetPlatform>\r\n    <TargetFrameworkVersion>.NETCoreApp,Version=v2.0</TargetFrameworkVersion>\r\n    <DesignMode>False</DesignMode>\r\n    <CollectSourceInformation>False</CollectSourceInformation>\r\n  </RunConfiguration>\r\n  <LoggerRunSettings>\r\n    <Loggers>\r\n      <Logger friendlyName=\"Console\" uri=\"logger://microsoft/TestPlatform/ConsoleLogger/v1\" assemblyQualifiedName=\"Microsoft.VisualStudio.TestPlatform.CommandLine.Internal.ConsoleLogger, vstest.console, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a\" codeBase=\"C:\\Program Files\\dotnet\\sdk\\2.1.300\\vstest.console.dll\" enabled=\"True\" />\r\n    </Loggers>\r\n  </LoggerRunSettings>\r\n</RunSettings>","TestExecutionContext":{"FrequencyOfRunStatsChangeEvent":10,"RunStatsChangeEventTimeout":"00:00:01.5000000","InIsolation":false,"KeepAlive":false,"AreTestCaseLevelEventsRequired":false,"IsDebug":false,"TestCaseFilter":null,"FilterOptions":null},"Package":null}}
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.004, 3271871769651, vstest.console.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: 127.0.0.1:60712 localEndPoint: 127.0.0.1:60711
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.005, 3271871770610, vstest.console.dll, TestRequestSender.OnExecutionMessageReceived: Received message: {"Version":2,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit Desktop .NET 4.0.30319.42000)"}}
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.005, 3271871771996, vstest.console.dll, TestRunRequest:SendTestRunMessage: Starting.
+TpTrace Information: 0 : 25744, 10, 2024/05/14, 04:08:13.005, 3271871772394, vstest.console.dll, TestRunRequest:SendTestRunMessage: Completed.
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.005, 3271871772573, vstest.console.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:60712 localEndPoint: 127.0.0.1:60711
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.008, 3271871806365, vstest.console.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: 127.0.0.1:60712 localEndPoint: 127.0.0.1:60711
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.008, 3271871806931, vstest.console.dll, TestRequestSender.OnExecutionMessageReceived: Received message: {"Version":2,"MessageType":"TestSession.Message","Payload":{"MessageLevel":1,"Message":"No test is available in C:\\Users\\brand\\OneDrive\\Documents\\atlas-csharp\\csharp-tdd\\0-add\\MyMath\\bin\\Debug\\netcoreapp2.0\\MyMath.dll. Make sure that test discoverer & executors are registered and platform & framework version settings are appropriate and try again."}}
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.008, 3271871807546, vstest.console.dll, TestRunRequest:SendTestRunMessage: Starting.
+TpTrace Information: 0 : 25744, 10, 2024/05/14, 04:08:13.008, 3271871807741, vstest.console.dll, TestRunRequest:SendTestRunMessage: Completed.
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.008, 3271871807879, vstest.console.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: 127.0.0.1:60712 localEndPoint: 127.0.0.1:60711
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.024, 3271871962572, vstest.console.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: 127.0.0.1:60712 localEndPoint: 127.0.0.1:60711
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.024, 3271871963221, vstest.console.dll, TestRequestSender.OnExecutionMessageReceived: Received message: {"Version":2,"MessageType":"TestExecution.Completed","Payload":{"TestRunCompleteArgs":{"TestRunStatistics":{"ExecutedTests":0,"Stats":{}},"IsCanceled":false,"IsAborted":false,"Error":null,"AttachmentSets":[],"ElapsedTimeInRunningTests":"00:00:00.0093205","Metrics":{}},"LastRunTests":{"NewTestResults":[],"TestRunStatistics":{"ExecutedTests":0,"Stats":{}},"ActiveTests":[]},"RunAttachments":[],"ExecutorUris":[]}}
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.024, 3271871963898, vstest.console.dll, TestRequestSender.EndSession: Sending end session.
+TpTrace Information: 0 : 25744, 6, 2024/05/14, 04:08:13.029, 3271872019375, vstest.console.dll, TestRequestSender.OnClientProcessExit: Test host process exited. Standard error: 
+TpTrace Information: 0 : 25744, 6, 2024/05/14, 04:08:13.030, 3271872020099, vstest.console.dll, SocketServer.Stop: Stop server endPoint: 127.0.0.1:60711
+TpTrace Information: 0 : 25744, 6, 2024/05/14, 04:08:13.030, 3271872020264, vstest.console.dll, SocketServer.Stop: Cancellation requested. Stopping message loop.
+TpTrace Warning: 0 : 25744, 10, 2024/05/14, 04:08:13.030, 3271872020976, vstest.console.dll, ProxyOperationManager: Timed out waiting for test host to exit. Will terminate process.
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.043, 3271872150321, vstest.console.dll, TestRunRequest:SendTestRunStatsChange: Starting.
+TpTrace Information: 0 : 25744, 10, 2024/05/14, 04:08:13.043, 3271872150983, vstest.console.dll, TestRunRequest:SendTestRunStatsChange: Completed.
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.043, 3271872151724, vstest.console.dll, ParallelProxyExecutionManager: HandlePartialRunComplete: Total completed clients = 1, Run complete = True, Run canceled: False.
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.050, 3271872221374, vstest.console.dll, TestRunRequest:TestRunComplete: Starting. IsAborted:False IsCanceled:False.
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.050, 3271872222906, vstest.console.dll, TestLoggerManager.HandleTestRunComplete: Ignoring as the object is disposed.
+TpTrace Information: 0 : 25744, 10, 2024/05/14, 04:08:13.051, 3271872235972, vstest.console.dll, TestRunRequest:TestRunComplete: Completed.
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.051, 3271872236529, vstest.console.dll, TestRequestSender.SetOperationComplete: Setting operation complete.
+TpTrace Information: 0 : 25744, 10, 2024/05/14, 04:08:13.051, 3271872236690, vstest.console.dll, SocketServer.Stop: Stop server endPoint: 127.0.0.1:60711
+TpTrace Information: 0 : 25744, 10, 2024/05/14, 04:08:13.051, 3271872236796, vstest.console.dll, SocketServer.Stop: Cancellation requested. Stopping message loop.
+TpTrace Information: 0 : 25744, 10, 2024/05/14, 04:08:13.051, 3271872236948, vstest.console.dll, SocketServer.PrivateStop: Stopp server endPoint: 127.0.0.1:60711 error: 
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:13.051, 3271872237254, vstest.console.dll, TestRunRequest.Dispose: Starting.
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:13.051, 3271872237717, vstest.console.dll, TestRunRequest.Dispose: Completed.
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:13.051, 3271872237914, vstest.console.dll, TestRequestManager.RunTests: run tests completed.
+TpTrace Information: 0 : 25744, 1, 2024/05/14, 04:08:13.051, 3271872238226, vstest.console.dll, RunTestsArgumentProcessor:Execute: Test run is completed.
+TpTrace Verbose: 0 : 25744, 1, 2024/05/14, 04:08:13.051, 3271872238373, vstest.console.dll, Executor.Execute: Exiting with exit code of 0
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.052, 3271872239947, vstest.console.dll, LengthPrefixCommunicationChannel.Dispose: Dispose reader and writer.
+TpTrace Information: 0 : 25744, 10, 2024/05/14, 04:08:13.052, 3271872240312, vstest.console.dll, SocketServer.Stop: Raise disconnected event endPoint: 127.0.0.1:60711 error: 
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.052, 3271872240636, vstest.console.dll, TestRequestSender: OnTestRunAbort: Operation is already complete. Skip error message.
+TpTrace Verbose: 0 : 25744, 10, 2024/05/14, 04:08:13.052, 3271872240763, vstest.console.dll, TcpClientExtensions.MessageLoopAsync: exiting MessageLoopAsync remoteEndPoint: 127.0.0.1:60712 localEndPoint: 127.0.0.1:60711

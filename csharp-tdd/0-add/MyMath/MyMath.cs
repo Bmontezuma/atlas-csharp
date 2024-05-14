@@ -5,7 +5,7 @@ namespace MyMath
     /// <summary>
     /// Provides basic mathematical operations.
     /// </summary>
-    public static class Operations
+    public static class MyMath
     {
         /// <summary>
         /// Adds two integers.
