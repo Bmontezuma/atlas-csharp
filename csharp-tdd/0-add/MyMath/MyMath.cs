@@ -1,18 +1,13 @@
-﻿using System;
-
-namespace MyMath
+﻿namespace MyMath
 {
-    /// <summary>
-    /// Provides basic mathematical operations.
-    /// </summary>
-    public static class MyMath
+    public class Operations
     {
         /// <summary>
-        /// Adds two integers.
+        /// Adds two integers and returns their sum.
         /// </summary>
-        /// <param name="a">The first integer.</param>
-        /// <param name="b">The second integer.</param>
-        /// <returns>The sum of the two integers.</returns>
+        /// <param name="a">The first integer to add.</param>
+        /// <param name="b">The second integer to add.</param>
+        /// <returns>The sum of <paramref name="a"/> and <paramref name="b"/>.</returns>
         public static int Add(int a, int b)
         {
             return a + b;

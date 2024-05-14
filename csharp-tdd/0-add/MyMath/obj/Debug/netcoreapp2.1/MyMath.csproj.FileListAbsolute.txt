@@ -1,0 +1,17 @@
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.1\testhost.exe
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.1\testhost.dll
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.1\Microsoft.TestPlatform.PlatformAbstractions.dll
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.1\MyMath.deps.json
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.1\MyMath.runtimeconfig.json
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.1\MyMath.runtimeconfig.dev.json
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.1\MyMath.dll
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\bin\Debug\netcoreapp2.1\MyMath.pdb
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\obj\Debug\netcoreapp2.1\MyMath.csprojAssemblyReference.cache
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\obj\Debug\netcoreapp2.1\MyMath.csproj.CoreCompileInputs.cache
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\obj\Debug\netcoreapp2.1\MyMath.AssemblyInfoInputs.cache
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\obj\Debug\netcoreapp2.1\MyMath.AssemblyInfo.cs
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\obj\Debug\netcoreapp2.1\MyMath.dll
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\0-add\MyMath\obj\Debug\netcoreapp2.1\MyMath.pdb
