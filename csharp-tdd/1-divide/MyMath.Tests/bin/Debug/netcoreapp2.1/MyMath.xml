@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyMath</name>
+    </assembly>
+    <members>
+        <member name="M:MyMath.Matrix.Divide(System.Int32[0:,0:],System.Int32)">
+            <summary>
+            Divides all elements of a matrix by a specified number.
+            </summary>
+            <param name="matrix">The matrix to divide.</param>
+            <param name="num">The number to divide each element by.</param>
+            <returns>A new matrix containing the divided elements.</returns>
+            <remarks>
+            If num is 0, prints "Num cannot be 0" and returns null.
+            If matrix is null, returns null.
+            </remarks>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\1-divide\MyMath.Tests\obj\Debug\netstandard2.0\MyMath.Tests.csprojAssemblyReference.cache
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\1-divide\MyMath.Tests\obj\Debug\netstandard2.0\MyMath.Tests.csproj.CoreCompileInputs.cache
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\1-divide\MyMath.Tests\obj\Debug\netstandard2.0\MyMath.Tests.AssemblyInfoInputs.cache
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\1-divide\MyMath.Tests\obj\Debug\netstandard2.0\MyMath.Tests.AssemblyInfo.cs
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\1-divide\MyMath.Tests\bin\Debug\netstandard2.0\MyMath.Tests.deps.json
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\1-divide\MyMath.Tests\bin\Debug\netstandard2.0\MyMath.Tests.dll
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\1-divide\MyMath.Tests\bin\Debug\netstandard2.0\MyMath.Tests.pdb
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\1-divide\MyMath.Tests\bin\Debug\netstandard2.0\MyMath.dll
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\1-divide\MyMath.Tests\bin\Debug\netstandard2.0\MyMath.pdb
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\1-divide\MyMath.Tests\bin\Debug\netstandard2.0\MyMath.xml
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\1-divide\MyMath.Tests\obj\Debug\netstandard2.0\MyMath.Tests.csproj.CopyComplete
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\1-divide\MyMath.Tests\obj\Debug\netstandard2.0\MyMath.Tests.dll
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\1-divide\MyMath.Tests\obj\Debug\netstandard2.0\MyMath.Tests.pdb
