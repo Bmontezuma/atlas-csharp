@@ -9,12 +9,12 @@
             Class containing string manipulation methods.
             </summary>
         </member>
-        <member name="M:Text.Str.IsPalindrome(System.String)">
+        <member name="M:Text.Str.UniqueChar(System.String)">
             <summary>
-            Checks if a string is a palindrome.
+            Returns the index of the first non-repeating character in a string.
             </summary>
             <param name="s">Input string.</param>
-            <returns>True if string is a palindrome, False otherwise.</returns>
+            <returns>Index of the first non-repeating character, or -1 if there is none.</returns>
         </member>
     </members>
 </doc>
