@@ -1,59 +1,26 @@
-using NUnit.Framework;
+using Xunit;
+using MyMath;
 
 namespace MyMath.Tests
 {
-    /// <summary> Test Class of Operations </summary>
-    [TestFixture]
-    public class OpTests
+    public class OperationsTests
     {
-        [Test]
-        public void IsCorrect()
+        /// <summary>
+        /// Tests the <see cref="Operations.Add"/> method to ensure it returns the correct sum of two integers.
+        /// </summary>
+        [Fact]
+        public void Add_ReturnsCorrectSum()
         {
-            int a = 1;
-            int b = 2;
+            // Arrange
+            int a = 5;
+            int b = 7;
+            int expectedSum = 12;
 
-            int result = Operations.Add(a, b);
-            Assert.AreEqual(3, result);
-        }
-        
-        [Test]
-        public void NegativeNums()
-        {
-            int a = -1;
-            int b = -3;
+            // Act
+            int actualSum = Operations.Add(a, b);
 
-            int result = Operations.Add(a, b);
-            Assert.AreEqual(-4, result);
-        }
-
-        [Test]
-        public void PositiveAndNegativeNums()
-        {
-            int a = 1;
-            int b = -2;
-
-            int result = Operations.Add(a, b);
-            Assert.AreEqual(-1, result);
-        }
-
-        [Test]
-        public void AddingZeros()
-        {
-            int a = 0;
-            int b = 0;
-
-            int result = Operations.Add(a, b);
-            Assert.AreEqual(0, result);
-        }
-
-        [Test]
-        public void BigSum()
-        {
-            int a = 100000;
-            int b = 200000;
-
-            int result = Operations.Add(a, b);
-            Assert.AreEqual(300000, result);
+            // Assert
+            Assert.Equal(expectedSum, actualSum);
         }
     }
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyMath</name>
+    </assembly>
+    <members>
+        <member name="M:MyMath.Operations.Add(System.Int32,System.Int32)">
+            <summary>
+            Adds two integers and returns their sum.
+            </summary>
+            <param name="a">The first integer to add.</param>
+            <param name="b">The second integer to add.</param>
+            <returns>The sum of <paramref name="a"/> and <paramref name="b"/>.</returns>
+        </member>
+    </members>
+</doc>
