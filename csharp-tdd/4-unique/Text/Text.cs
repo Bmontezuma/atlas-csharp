@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Linq;
 
 namespace Text
 {
@@ -8,38 +9,17 @@ namespace Text
     public class Str
     {
         /// <summary>
-        /// Returns the index of the first non-repeating character in a string.
+        /// Checks if a string is a palindrome.
         /// </summary>
         /// <param name="s">Input string.</param>
-        /// <returns>Index of the first non-repeating character, or -1 if there is none.</returns>
-        public static int UniqueChar(string s)
+        /// <returns>True if string is a palindrome, False otherwise.</returns>
+        public static bool IsPalindrome(string s)
         {
-            Dictionary<char, int> charCount = new Dictionary<char, int>();
+            // Remove spaces and punctuation, convert to lowercase
+            string cleanedString = new string(s.Where(char.IsLetterOrDigit).ToArray()).ToLower();
 
-            // Count occurrences of each character
-            foreach (char c in s)
-            {
-                if (charCount.ContainsKey(c))
-                {
-                    charCount[c]++;
-                }
-                else
-                {
-                    charCount[c] = 1;
-                }
-            }
-
-            // Find the first character with count 1
-            for (int i = 0; i < s.Length; i++)
-            {
-                if (charCount[s[i]] == 1)
-                {
-                    return i;
-                }
-            }
-
-            // No non-repeating character found
-            return -1;
+            // Compare the cleaned string with its reverse
+            return cleanedString.SequenceEqual(cleanedString.Reverse());
         }
     }
 }
