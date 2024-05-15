@@ -1,0 +1,10 @@
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\3-palindrome\Text\bin\Debug\netstandard2.0\Text.xml
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\3-palindrome\Text\bin\Debug\netstandard2.0\Text.deps.json
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\3-palindrome\Text\bin\Debug\netstandard2.0\Text.dll
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\3-palindrome\Text\bin\Debug\netstandard2.0\Text.pdb
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\3-palindrome\Text\obj\Debug\netstandard2.0\Text.csprojAssemblyReference.cache
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\3-palindrome\Text\obj\Debug\netstandard2.0\Text.csproj.CoreCompileInputs.cache
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\3-palindrome\Text\obj\Debug\netstandard2.0\Text.AssemblyInfoInputs.cache
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\3-palindrome\Text\obj\Debug\netstandard2.0\Text.AssemblyInfo.cs
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\3-palindrome\Text\obj\Debug\netstandard2.0\Text.dll
+C:\Users\brand\OneDrive\Documents\atlas-csharp\csharp-tdd\3-palindrome\Text\obj\Debug\netstandard2.0\Text.pdb
