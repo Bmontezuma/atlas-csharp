@@ -3,71 +3,72 @@ using Text;
 
 namespace Text.Tests
 {
+    [TestFixture]
     public class StrTests
     {
         [Test]
-        public void UniqueChar_FirstUniqueIsFirstChar_ReturnsZero()
+        public void RegularPalindrome_ReturnsTrue()
         {
             // Arrange
-            string input = "helloworld";
+            string input = "Racecar";
 
             // Act
-            int result = Str.UniqueChar(input);
+            bool result = Str.IsPalindrome(input);
 
             // Assert
-            Assert.AreEqual(0, result);
+            Assert.IsTrue(result);
         }
 
         [Test]
-        public void UniqueChar_FirstUniqueIsLastChar_ReturnsCorrectIndex()
+        public void UpperLowerCaseLetters_ReturnsTrue()
         {
             // Arrange
-            string input = "helloholberton";
+            string input = "LeVel";
 
             // Act
-            int result = Str.UniqueChar(input);
+            bool result = Str.IsPalindrome(input);
 
             // Assert
-            Assert.AreEqual(8, result);
+            Assert.IsTrue(result);
         }
 
         [Test]
-        public void UniqueChar_FirstUniqueInMiddle_ReturnsCorrectIndex()
+        public void Punctuation_ReturnsTrue()
         {
             // Arrange
-            string input = "aabbccddeef";
+            string input = "A man, a plan, a canal: Panama.";
 
             // Act
-            int result = Str.UniqueChar(input);
+            bool result = Str.IsPalindrome(input);
 
             // Assert
-            Assert.AreEqual(10, result);
+            Assert.IsTrue(result);
         }
 
         [Test]
-        public void UniqueChar_NoUniqueCharacters_ReturnsMinusOne()
+        public void Spaces_ReturnsTrue()
         {
             // Arrange
-            string input = "hellohello";
+            string input = "taco cat";
 
             // Act
-            int result = Str.UniqueChar(input);
+            bool result = Str.IsPalindrome(input);
 
             // Assert
-            Assert.AreEqual(-1, result);
+            Assert.IsTrue(result);
         }
 
         [Test]
-        public void UniqueChar_EmptyString_ReturnsMinusOne()
+        public void EmptyString_ReturnsTrue()
         {
             // Arrange
             string input = "";
 
             // Act
-            int result = Str.UniqueChar(input);
+            bool result = Str.IsPalindrome(input);
 
             // Assert
-            Assert.AreEqual(-1, result);
+            Assert.IsTrue(result);
         }
     }
 }
