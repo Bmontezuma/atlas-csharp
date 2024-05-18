@@ -58,6 +58,6 @@ carrie@ubuntu:~/csharp-generics/1-enqueue$
 ```
 ## ***Repo***:
 
-***GitHub repository: atlas-csharp***
-***Directory: csharp-generics***
+***GitHub repository: atlas-csharp***\
+***Directory: csharp-generics***\
 ***File: 1-enqueue/, 1-enqueue/1-enqueue.csproj, 1-enqueue/queue.cs***

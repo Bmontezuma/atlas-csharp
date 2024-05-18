@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>1-enqueue</name>
+    </assembly>
+    <members>
+        <member name="T:Queue`1">
+            <summary>
+            Represents a generic queue.
+            </summary>
+            <typeparam name="T">The type of elements in the queue.</typeparam>
+        </member>
+        <member name="F:Queue`1.head">
+            <summary>
+            The head node of the queue.
+            </summary>
+        </member>
+        <member name="F:Queue`1.tail">
+            <summary>
+            The tail node of the queue.
+            </summary>
+        </member>
+        <member name="F:Queue`1.count">
+            <summary>
+            The number of nodes in the queue.
+            </summary>
+        </member>
+        <member name="T:Queue`1.Node">
+            <summary>
+            Represents a node in the queue.
+            </summary>
+        </member>
+        <member name="F:Queue`1.Node.Value">
+            <summary>
+            The value of the node.
+            </summary>
+        </member>
+        <member name="F:Queue`1.Node.Next">
+            <summary>
+            The next node in the queue.
+            </summary>
+        </member>
+        <member name="M:Queue`1.Node.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the Node class.
+            </summary>
+            <param name="value">The value of the node.</param>
+        </member>
+        <member name="M:Queue`1.CheckType">
+            <summary>
+            Returns the type of the queue's elements.
+            </summary>
+            <returns>The type of the elements in the queue.</returns>
+        </member>
+        <member name="M:Queue`1.#ctor">
+            <summary>
+            Initializes a new instance of the Queue class.
+            </summary>
+        </member>
+        <member name="M:Queue`1.Enqueue(`0)">
+            <summary>
+            Adds an element to the end of the queue.
+            </summary>
+            <param name="item">The element to add.</param>
+        </member>
+        <member name="M:Queue`1.Count">
+            <summary>
+            Returns the number of nodes in the queue.
+            </summary>
+            <returns>The number of nodes in the queue.</returns>
+        </member>
+    </members>
+</doc>
