@@ -2,6 +2,11 @@
 
 public class VectorMath
 {
+    /// <summary>
+    /// Calculates the magnitude of a 2D or 3D vector.
+    /// </summary>
+    /// <param name="vector">The vector array representing the components.</param>
+    /// <returns>The magnitude of the vector rounded to the nearest hundredth, or -1 if not a 2D or 3D vector.</returns>
     public static double Magnitude(double[] vector)
     {
         // Check if the vector is 2D or 3D
