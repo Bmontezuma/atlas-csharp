@@ -19,15 +19,7 @@ namespace _0_universal_health
         public Player(string name = "Player", float maxHp = 100f)
         {
             this.name = name;
-            if (maxHp > 0)
-            {
-                this.maxHp = maxHp;
-            }
-            else
-            {
-                this.maxHp = 100f;
-                Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
-            }
+            this.maxHp = maxHp > 0 ? maxHp : 100f; // Ensure maxHp is always positive
             this.hp = this.maxHp;
         }
 
