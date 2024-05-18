@@ -1,0 +1,12 @@
+C:\Users\brand\atlas-csharp\csharp-generics\3-peek\bin\Debug\netcoreapp2.1\3-peek.xml
+C:\Users\brand\atlas-csharp\csharp-generics\3-peek\bin\Debug\netcoreapp2.1\3-peek.deps.json
+C:\Users\brand\atlas-csharp\csharp-generics\3-peek\bin\Debug\netcoreapp2.1\3-peek.runtimeconfig.json
+C:\Users\brand\atlas-csharp\csharp-generics\3-peek\bin\Debug\netcoreapp2.1\3-peek.runtimeconfig.dev.json
+C:\Users\brand\atlas-csharp\csharp-generics\3-peek\bin\Debug\netcoreapp2.1\3-peek.dll
+C:\Users\brand\atlas-csharp\csharp-generics\3-peek\bin\Debug\netcoreapp2.1\3-peek.pdb
+C:\Users\brand\atlas-csharp\csharp-generics\3-peek\obj\Debug\netcoreapp2.1\3-peek.csprojAssemblyReference.cache
+C:\Users\brand\atlas-csharp\csharp-generics\3-peek\obj\Debug\netcoreapp2.1\3-peek.csproj.CoreCompileInputs.cache
+C:\Users\brand\atlas-csharp\csharp-generics\3-peek\obj\Debug\netcoreapp2.1\3-peek.AssemblyInfoInputs.cache
+C:\Users\brand\atlas-csharp\csharp-generics\3-peek\obj\Debug\netcoreapp2.1\3-peek.AssemblyInfo.cs
+C:\Users\brand\atlas-csharp\csharp-generics\3-peek\obj\Debug\netcoreapp2.1\3-peek.dll
+C:\Users\brand\atlas-csharp\csharp-generics\3-peek\obj\Debug\netcoreapp2.1\3-peek.pdb
