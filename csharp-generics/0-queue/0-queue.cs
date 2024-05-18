@@ -1,6 +1,11 @@
-﻿namespace _0_queue;
+﻿// queue.cs
+using System;
 
-public class Class1
+public class Queue<T>
 {
-
+    // Method to return the type of the queue
+    public Type CheckType()
+    {
+        return typeof(T);
+    }
 }
