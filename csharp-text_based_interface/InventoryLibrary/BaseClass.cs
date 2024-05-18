@@ -2,28 +2,34 @@
 
 namespace InventoryLibrary
 {
+    /// <summary>
+    /// Base class for all other classes in the InventoryLibrary project.
+    /// </summary>
     public class BaseClass
     {
         /// <summary>
-        /// Unique identifier for the object.
+        /// A unique identifier for the instance of the class.
         /// </summary>
         public string Id { get; set; }
 
         /// <summary>
-        /// Date and time when the object was created.
+        /// The date and time when the instance of the class was created.
         /// </summary>
         public DateTime DateCreated { get; set; }
 
         /// <summary>
-        /// Date and time when the object was last updated.
+        /// The date and time when the instance of the class was last updated.
         /// </summary>
         public DateTime DateUpdated { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BaseClass"/> class.
+        /// </summary>
         public BaseClass()
         {
-            Id = Guid.NewGuid().ToString(); // Generate a new GUID for Id
-            DateCreated = DateTime.Now;
-            DateUpdated = DateTime.Now;
+            Id = Guid.NewGuid().ToString();
+            DateCreated = DateTime.UtcNow;
+            DateUpdated = DateTime.UtcNow;
         }
     }
 }
