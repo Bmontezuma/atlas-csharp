@@ -1,23 +1,37 @@
 ﻿﻿using System;
-using System.Linq;
 
 /// <summary>
-/// Provides methods for performing vector mathematics
+/// A class for vector math operations.
 /// </summary>
-public static class VectorMathUtility
+public class VectorMath
 {
     /// <summary>
-    /// Calculates the magnitude of a 2D or 3D vector
+    /// Calculates the magnitude (length) of a given vector.
     /// </summary>
-    /// <param name="vector">A 2D or 3D vector represented as an array of doubles</param>
-    /// <returns>The magnitude of the vector, rounded to two decimal places</returns>
-    public static double CalculateMagnitude(double[] vector)
+    /// <param name="vector">The vector array (2D or 3D).</param>
+    /// <returns>The magnitude rounded to the nearest hundredth, or -1 if the vector is not 2D or 3D.</returns>
+    public static double Magnitude(double[] vector)
     {
-        if (vector.Length is not (2 or 3))
+        // Check if the vector is 2D or 3D
+        if (vector.Length == 2 || vector.Length == 3)
+        {
+            // Calculate the magnitude
+            double sumOfSquares = 0;
+            foreach (double component in vector)
+            {
+                sumOfSquares += Math.Pow(component, 2);
+            }
+            double magnitude = Math.Sqrt(sumOfSquares);
+
+            // Round to the nearest hundredth
+            magnitude = Math.Round(magnitude, 2);
+
+            return magnitude;
+        }
+        else
+        {
+            // Return -1 for vectors that are not 2D or 3D
             return -1;
-
-        double squaredSum = vector.Select(num => num * num).Sum();
-
-        return Math.Round(Math.Sqrt(squaredSum), 2);
+        }
     }
 }
