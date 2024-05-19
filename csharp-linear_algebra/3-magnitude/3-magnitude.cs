@@ -1,30 +1,30 @@
 ﻿﻿using System;
 
-public class VectorMath
+namespace Magnitude
 {
     /// <summary>
-    /// Calculates the magnitude of a 2D or 3D vector and rounds it to the nearest hundredth.
+    /// A static class containing methods for vector mathematics.
     /// </summary>
-    /// <param name="vector">The vector represented as an array of doubles.</param>
-    /// <returns>
-    /// The magnitude of the vector rounded to the nearest hundredth.
-    /// Returns -1 if the vector is not 2D or 3D.
-    /// </returns>
-    public static double Magnitude(double[] vector)
+    public static class VectorMath
     {
-        if (vector.Length == 2)
+        /// <summary>
+        /// Calculates the magnitude of a given vector.
+        /// </summary>
+        /// <param name="vector">The vector to calculate the magnitude of.</param>
+        /// <returns>The magnitude of the vector, rounded to the nearest hundredth.</returns>
+        /// <remarks>
+        /// The vector can be 2D or 3D. If the vector is not a 2D or 3D vector, -1 is returned.
+        /// </remarks>
+        public static double Magnitude(double[] vector)
         {
-            double magnitude = Math.Sqrt(vector[0] * vector[0] + vector[1] * vector[1]);
-            return Math.Round(magnitude, 2);
-        }
-        else if (vector.Length == 3)
-        {
-            double magnitude = Math.Sqrt(vector[0] * vector[0] + vector[1] * vector[1] + vector[2] * vector[2]);
-            return Math.Round(magnitude, 2);
-        }
-        else
-        {
-            return -1;
+            if (vector.Length == 2 || vector.Length == 3)
+            {
+                return Math.Round(Math.Sqrt(vector.Select(v => v * v).Sum()), 2);
+            }
+            else
+            {
+                return -1;
+            }
         }
     }
 }
