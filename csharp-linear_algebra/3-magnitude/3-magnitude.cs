@@ -11,13 +11,13 @@ namespace Magnitude
         /// Calculates the magnitude of a given vector.
         /// </summary>
         /// <param name="vector">The vector to calculate the magnitude of.</param>
-        /// <returns>The magnitude of the vector, rounded to the nearest hundredth.</returns>
+        /// <returns>The magnitude of the vector, rounded to the nearest hundredth. If the vector is not a 2D or 3D vector, returns -1.</returns>
         /// <remarks>
         /// The vector can be 2D or 3D. If the vector is not a 2D or 3D vector, -1 is returned.
         /// </remarks>
         public static double Magnitude(double[] vector)
         {
-            if (vector == null || vector.Length < 2 || vector.Length > 3)
+            if (vector == null || (vector.Length != 2 && vector.Length != 3))
             {
                 return -1;
             }
