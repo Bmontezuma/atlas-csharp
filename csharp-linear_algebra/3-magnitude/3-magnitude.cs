@@ -19,7 +19,7 @@ public class VectorMath
             double sumOfSquares = 0;
             foreach (double component in vector)
             {
-                sumOfSquares += Math.Pow(component, 2);
+                sumOfSquares += component * component;
             }
             double magnitude = Math.Sqrt(sumOfSquares);
 
