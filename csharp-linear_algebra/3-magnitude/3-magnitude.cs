@@ -1,34 +1,23 @@
 ﻿﻿using System;
+using System.Linq;
 
-namespace Magnitude
+/// <summary>
+/// Provides methods for performing vector mathematics
+/// </summary>
+public static class VectorMathUtility
 {
     /// <summary>
-    /// A static class containing methods for vector mathematics.
+    /// Calculates the magnitude of a 2D or 3D vector
     /// </summary>
-    public static class VectorMath
+    /// <param name="vector">A 2D or 3D vector represented as an array of doubles</param>
+    /// <returns>The magnitude of the vector, rounded to two decimal places</returns>
+    public static double CalculateMagnitude(double[] vector)
     {
-        /// <summary>
-        /// Calculates the magnitude of a given vector.
-        /// </summary>
-        /// <param name="vector">The vector to calculate the magnitude of.</param>
-        /// <returns>The magnitude of the vector, rounded to the nearest hundredth. If the vector is not a 2D or 3D vector, returns -1.</returns>
-        /// <remarks>
-        /// The vector can be 2D or 3D. If the vector is not a 2D or 3D vector, -1 is returned.
-        /// </remarks>
-        public static double Magnitude(double[] vector)
-        {
-            if (vector == null || (vector.Length != 2 && vector.Length != 3))
-            {
-                return -1;
-            }
+        if (vector.Length is not (2 or 3))
+            return -1;
 
-            double sum = 0;
-            for (int i = 0; i < vector.Length; i++)
-            {
-                sum += vector[i] * vector[i];
-            }
+        double squaredSum = vector.Select(num => num * num).Sum();
 
-            return Math.Round(Math.Sqrt(sum), 2);
-        }
+        return Math.Round(Math.Sqrt(squaredSum), 2);
     }
 }
