@@ -17,14 +17,18 @@ namespace Magnitude
         /// </remarks>
         public static double Magnitude(double[] vector)
         {
-            if (vector.Length == 2 || vector.Length == 3)
-            {
-                return Math.Round(Math.Sqrt(vector.Select(v => v * v).Sum()), 2);
-            }
-            else
+            if (vector == null || vector.Length < 2 || vector.Length > 3)
             {
                 return -1;
             }
+
+            double sum = 0;
+            for (int i = 0; i < vector.Length; i++)
+            {
+                sum += vector[i] * vector[i];
+            }
+
+            return Math.Round(Math.Sqrt(sum), 2);
         }
     }
 }
