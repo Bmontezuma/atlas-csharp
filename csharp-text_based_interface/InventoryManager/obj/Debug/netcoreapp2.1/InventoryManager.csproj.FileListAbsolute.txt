@@ -1,0 +1,14 @@
+C:\Users\brand\atlas-csharp\csharp-text_based_interface\InventoryManager\bin\Debug\netcoreapp2.1\InventoryManager.deps.json
+C:\Users\brand\atlas-csharp\csharp-text_based_interface\InventoryManager\bin\Debug\netcoreapp2.1\InventoryManager.runtimeconfig.json
+C:\Users\brand\atlas-csharp\csharp-text_based_interface\InventoryManager\bin\Debug\netcoreapp2.1\InventoryManager.runtimeconfig.dev.json
+C:\Users\brand\atlas-csharp\csharp-text_based_interface\InventoryManager\bin\Debug\netcoreapp2.1\InventoryManager.dll
+C:\Users\brand\atlas-csharp\csharp-text_based_interface\InventoryManager\bin\Debug\netcoreapp2.1\InventoryManager.pdb
+C:\Users\brand\atlas-csharp\csharp-text_based_interface\InventoryManager\bin\Debug\netcoreapp2.1\InventoryLibrary.dll
+C:\Users\brand\atlas-csharp\csharp-text_based_interface\InventoryManager\bin\Debug\netcoreapp2.1\InventoryLibrary.pdb
+C:\Users\brand\atlas-csharp\csharp-text_based_interface\InventoryManager\obj\Debug\netcoreapp2.1\InventoryManager.csprojAssemblyReference.cache
+C:\Users\brand\atlas-csharp\csharp-text_based_interface\InventoryManager\obj\Debug\netcoreapp2.1\InventoryManager.csproj.CoreCompileInputs.cache
+C:\Users\brand\atlas-csharp\csharp-text_based_interface\InventoryManager\obj\Debug\netcoreapp2.1\InventoryManager.AssemblyInfoInputs.cache
+C:\Users\brand\atlas-csharp\csharp-text_based_interface\InventoryManager\obj\Debug\netcoreapp2.1\InventoryManager.AssemblyInfo.cs
+C:\Users\brand\atlas-csharp\csharp-text_based_interface\InventoryManager\obj\Debug\netcoreapp2.1\InventoryManager.csproj.CopyComplete
+C:\Users\brand\atlas-csharp\csharp-text_based_interface\InventoryManager\obj\Debug\netcoreapp2.1\InventoryManager.dll
+C:\Users\brand\atlas-csharp\csharp-text_based_interface\InventoryManager\obj\Debug\netcoreapp2.1\InventoryManager.pdb
