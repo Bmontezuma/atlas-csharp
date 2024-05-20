@@ -1,68 +1,34 @@
 ﻿﻿using System;
 
-namespace VectorMathLibrary
+/// <summary>
+/// Provides methods for vector mathematics.
+/// </summary>
+public class CustomVectorMath
 {
     /// <summary>
-    /// Class for vector math operations.
+    /// Calculates the magnitude of a vector.
     /// </summary>
-    public class VectorMath
+    /// <param name="vector">The input vector, which can be of any dimension.</param>
+    /// <returns>The magnitude of the vector, rounded to two decimal places.
+    /// If the input vector is invalid, returns -1.</returns>
+    public static double CalculateMagnitude(double[] vector)
     {
-        private double[] vector;
-
-        /// <summary>
-        /// Constructor for VectorMath class.
-        /// </summary>
-        /// <param name="vector">Array representing the vector.</param>
-        public VectorMath(double[] vector)
+        // Check if the vector is valid (non-null and has at least one component)
+        if (vector == null || vector.Length == 0)
         {
-            this.vector = vector;
+            return -1;
         }
 
-        /// <summary>
-        /// Gets or sets the component at the specified index.
-        /// </summary>
-        /// <param name="index">The zero-based index of the component to get or set.</param>
-        /// <returns>The value of the component at the specified index.</returns>
-        public double this[int index]
+        double sumOfSquares = 0;
+
+        // Calculate the sum of the squares of the vector components
+        foreach (double component in vector)
         {
-            get
-            {
-                if (index < 0 || index >= vector.Length)
-                {
-                    throw new IndexOutOfRangeException();
-                }
-                return vector[index];
-            }
-            set
-            {
-                if (index < 0 || index >= vector.Length)
-                {
-                    throw new IndexOutOfRangeException();
-                }
-                vector[index] = value;
-            }
+            sumOfSquares += component * component;
         }
 
-        /// <summary>
-        /// Calculates the magnitude of the vector.
-        /// </summary>
-        /// <returns>The magnitude of the vector, rounded to the nearest hundredth. Returns -1 if the vector is not 2D or 3D.</returns>
-        public double Magnitude()
-        {
-            // Check if the vector is 2D or 3D
-            if (vector.Length != 2 && vector.Length != 3)
-            {
-                return -1; // Return -1 if the vector is not 2D or 3D
-            }
-
-            // Calculate the magnitude
-            double sumOfSquares = 0;
-            foreach (var component in vector)
-            {
-                sumOfSquares += Math.Pow(component, 2);
-            }
-
-            return Math.Round(Math.Sqrt(sumOfSquares), 2); // Return the rounded magnitude
-        }
+        // Calculate and round the magnitude of the vector
+        double magnitude = Math.Sqrt(sumOfSquares);
+        return Math.Round(magnitude, 2);
     }
 }
