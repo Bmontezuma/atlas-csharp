@@ -8,40 +8,40 @@ public class Player
     /// <summary>
     /// Gets the name of the player.
     /// </summary>
-    public string Name { get; }
+    public string PlayerName { get; }
 
-    private float _maxHp;
+    private float _maximumHealth;
     /// <summary>
     /// Gets the maximum health points of the player.
     /// </summary>
-    public float MaxHp
+    public float MaximumHealth
     {
-        get => _maxHp;
+        get => _maximumHealth;
         private set
         {
             if (value <= 0)
             {
-                _maxHp = 100f;
+                _maximumHealth = 100f;
                 Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
             }
             else
             {
-                _maxHp = value;
+                _maximumHealth = value;
             }
         }
     }
 
-    private float _hp;
+    private float _currentHealth;
     /// <summary>
     /// Gets the current health points of the player.
     /// </summary>
-    public float Hp
+    public float CurrentHealth
     {
-        get => _hp;
+        get => _currentHealth;
         private set
         {
-            // Ensure hp doesn't exceed maxHp
-            _hp = Math.Min(value, MaxHp);
+            // Ensure current health doesn't exceed maximum health
+            _currentHealth = Math.Min(value, MaximumHealth);
         }
     }
 
@@ -49,12 +49,12 @@ public class Player
     /// Initializes a new instance of the <see cref="Player"/> class with specified name and maximum health points.
     /// </summary>
     /// <param name="name">The name of the player.</param>
-    /// <param name="maxHp">The maximum health points of the player.</param>
-    public Player(string name = "Player", float maxHp = 100f)
+    /// <param name="maxHealth">The maximum health points of the player.</param>
+    public Player(string name = "Player", float maxHealth = 100f)
     {
-        Name = name;
-        MaxHp = maxHp;
-        Hp = maxHp; // Set current health to maximum health
+        PlayerName = name;
+        MaximumHealth = maxHealth;
+        CurrentHealth = maxHealth; // Set current health to maximum health
     }
 
     /// <summary>
@@ -62,6 +62,6 @@ public class Player
     /// </summary>
     public void PrintHealth()
     {
-        Console.WriteLine($"{Name} has {Hp} / {MaxHp} health");
+        Console.WriteLine($"{PlayerName} has {CurrentHealth} / {MaximumHealth} health");
     }
 }
