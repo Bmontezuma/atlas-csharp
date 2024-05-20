@@ -1,0 +1,11 @@
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\14-matrix_addition\bin\Debug\netcoreapp2.1\14-matrix_addition.deps.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\14-matrix_addition\bin\Debug\netcoreapp2.1\14-matrix_addition.runtimeconfig.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\14-matrix_addition\bin\Debug\netcoreapp2.1\14-matrix_addition.runtimeconfig.dev.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\14-matrix_addition\bin\Debug\netcoreapp2.1\14-matrix_addition.dll
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\14-matrix_addition\bin\Debug\netcoreapp2.1\14-matrix_addition.pdb
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\14-matrix_addition\obj\Debug\netcoreapp2.1\14-matrix_addition.csprojAssemblyReference.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\14-matrix_addition\obj\Debug\netcoreapp2.1\14-matrix_addition.csproj.CoreCompileInputs.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\14-matrix_addition\obj\Debug\netcoreapp2.1\14-matrix_addition.AssemblyInfoInputs.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\14-matrix_addition\obj\Debug\netcoreapp2.1\14-matrix_addition.AssemblyInfo.cs
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\14-matrix_addition\obj\Debug\netcoreapp2.1\14-matrix_addition.dll
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\14-matrix_addition\obj\Debug\netcoreapp2.1\14-matrix_addition.pdb
