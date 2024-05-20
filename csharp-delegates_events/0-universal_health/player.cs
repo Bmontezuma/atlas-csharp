@@ -32,7 +32,7 @@ public class Player
             maxHp = 100f;
             Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
         }
-        Name = name;
+        Name = name ?? "Player";
         MaxHp = maxHp;
         Hp = maxHp;
     }
