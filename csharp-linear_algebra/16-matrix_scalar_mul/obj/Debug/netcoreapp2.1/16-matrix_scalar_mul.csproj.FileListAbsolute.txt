@@ -1,0 +1,11 @@
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\16-matrix_scalar_mul\bin\Debug\netcoreapp2.1\16-matrix_scalar_mul.deps.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\16-matrix_scalar_mul\bin\Debug\netcoreapp2.1\16-matrix_scalar_mul.runtimeconfig.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\16-matrix_scalar_mul\bin\Debug\netcoreapp2.1\16-matrix_scalar_mul.runtimeconfig.dev.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\16-matrix_scalar_mul\bin\Debug\netcoreapp2.1\16-matrix_scalar_mul.dll
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\16-matrix_scalar_mul\bin\Debug\netcoreapp2.1\16-matrix_scalar_mul.pdb
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\16-matrix_scalar_mul\obj\Debug\netcoreapp2.1\16-matrix_scalar_mul.csprojAssemblyReference.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\16-matrix_scalar_mul\obj\Debug\netcoreapp2.1\16-matrix_scalar_mul.csproj.CoreCompileInputs.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\16-matrix_scalar_mul\obj\Debug\netcoreapp2.1\16-matrix_scalar_mul.AssemblyInfoInputs.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\16-matrix_scalar_mul\obj\Debug\netcoreapp2.1\16-matrix_scalar_mul.AssemblyInfo.cs
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\16-matrix_scalar_mul\obj\Debug\netcoreapp2.1\16-matrix_scalar_mul.dll
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\16-matrix_scalar_mul\obj\Debug\netcoreapp2.1\16-matrix_scalar_mul.pdb
