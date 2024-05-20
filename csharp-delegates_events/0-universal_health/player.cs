@@ -1,67 +1,58 @@
-﻿using System;
+﻿﻿using System;
 
 /// <summary>
-/// Represents a player with health attributes.
+/// Class containing Player details and functions
 /// </summary>
-public class Player
+class Player
 {
     /// <summary>
-    /// Gets the name of the player.
+    /// The name of the player
     /// </summary>
-    public string PlayerName { get; }
+    private string name { get; set; }
 
-    private float _maximumHealth;
+    private float _maxHp;
     /// <summary>
-    /// Gets the maximum health points of the player.
+    /// The maximum HP of the player
     /// </summary>
-    public float MaximumHealth
+    private float maxHp
     {
-        get => _maximumHealth;
-        private set
+        get { return _maxHp; }
+        set
         {
-            if (value <= 0)
+            if (value < 0f)
             {
-                _maximumHealth = 100f;
                 Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
+                _maxHp = 100f;
             }
             else
             {
-                _maximumHealth = value;
+                _maxHp = value;
             }
         }
     }
 
-    private float _currentHealth;
     /// <summary>
-    /// Gets the current health points of the player.
+    /// The current HP of the player
     /// </summary>
-    public float CurrentHealth
+    private float hp { get; set; }
+
+    /// <summary>
+    /// Player constructor
+    /// </summary>
+    /// <param name="name">The name to be given to the player, "Player" by default</param>
+    /// <param name="maxHp">The maximum HP the player can have, 100 by default</param>
+    public Player(string name = "Player", float maxHp = 100f)
     {
-        get => _currentHealth;
-        private set
-        {
-            // Ensure current health doesn't exceed maximum health
-            _currentHealth = Math.Min(value, MaximumHealth);
-        }
+        this.name = name;
+        this.maxHp = maxHp;
+        this.hp = this.maxHp;
     }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="Player"/> class with specified name and maximum health points.
-    /// </summary>
-    /// <param name="name">The name of the player.</param>
-    /// <param name="maxHealth">The maximum health points of the player.</param>
-    public Player(string name = "Player", float maxHealth = 100f)
-    {
-        PlayerName = name;
-        MaximumHealth = maxHealth;
-        CurrentHealth = maxHealth; // Set current health to maximum health
-    }
-
-    /// <summary>
-    /// Prints the health of the player.
+    /// Print out the player's health
     /// </summary>
     public void PrintHealth()
     {
-        Console.WriteLine($"{PlayerName} has {CurrentHealth} / {MaximumHealth} health");
+        Console.WriteLine($"{name} has {hp} / {maxHp} health");
     }
 }
