@@ -1,37 +1,33 @@
 ﻿﻿using System;
 
-/// <summary>
-/// A class for vector math operations.
-/// </summary>
-public class VectorMath
+namespace VectorMathLibrary
 {
     /// <summary>
-    /// Calculates the magnitude (length) of a given vector.
+    /// Class for vector math operations.
     /// </summary>
-    /// <param name="vector">The vector array (2D or 3D).</param>
-    /// <returns>The magnitude rounded to the nearest hundredth, or -1 if the vector is not 2D or 3D.</returns>
-    public static double Magnitude(double[] vector)
+    public class VectorMath
     {
-        // Check if the vector is 2D or 3D
-        if (vector.Length == 2 || vector.Length == 3)
+        /// <summary>
+        /// Calculates the magnitude of a given vector.
+        /// </summary>
+        /// <param name="vector">Array representing the vector.</param>
+        /// <returns>The magnitude of the vector, rounded to the nearest hundredth. Returns -1 if the vector is not 2D or 3D.</returns>
+        public static double Magnitude(double[] vector)
         {
+            // Check if the vector is 2D or 3D
+            if (vector.Length != 2 && vector.Length != 3)
+            {
+                return -1; // Return -1 if the vector is not 2D or 3D
+            }
+
             // Calculate the magnitude
             double sumOfSquares = 0;
-            foreach (double component in vector)
+            foreach (var component in vector)
             {
-                sumOfSquares += component * component;
+                sumOfSquares += Math.Pow(component, 2);
             }
-            double magnitude = Math.Sqrt(sumOfSquares);
 
-            // Round to the nearest hundredth
-            magnitude = Math.Round(magnitude, 2);
-
-            return magnitude;
-        }
-        else
-        {
-            // Return -1 for vectors that are not 2D or 3D
-            return -1;
+            return Math.Round(Math.Sqrt(sumOfSquares), 2); // Return the rounded magnitude
         }
     }
 }
