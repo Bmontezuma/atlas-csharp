@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿﻿﻿using System;
 
 /// <summary>
 /// Class containing Player details and functions
