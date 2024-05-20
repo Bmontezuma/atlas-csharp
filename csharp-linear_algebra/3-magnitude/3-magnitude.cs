@@ -1,27 +1,30 @@
 ﻿﻿using System;
 
 /// <summary>
-/// Provides mathematical methods for vector calculations.
+/// A static class containing methods for performing vector math operations.
 /// </summary>
 public static class VectorMath
 {
     /// <summary>
-    /// Calculates and returns the magnitude of a given vector.
+    /// Calculates the magnitude (length) of a double array (vector) representing a 2D or 3D vector.
     /// </summary>
-    /// <param name="vector">The vector to calculate the magnitude for. Can be 2D or 3D.</param>
-    /// <returns>The magnitude of the vector rounded to the nearest hundredth, or -1 if the vector is not 2D or 3D.</returns>
+    /// <param name="vector">The double array representing a 2D or 3D vector.</param>
+    /// <returns>
+    /// The magnitude (length) of the input vector, rounded to the nearest hundredth, 
+    /// or -1 if the vector is not a 2D or 3D vector.
+    /// </returns>
     public static double Magnitude(double[] vector)
     {
-        if (vector.Length == 2 || vector.Length == 3)
-        {
-            double sumOfSquares = 0;
-            foreach (double component in vector)
-            {
-                sumOfSquares += component * component;
-            }
-            double magnitude = Math.Sqrt(sumOfSquares);
-            return Math.Round(magnitude, 2);
-        }
-        return -1;
+        // Check if the length of the input vector is within the valid range (2-3).
+        if (vector.Length > 3 || vector.Length < 2)
+            return -1;
+        
+        // Calculate the sum of the squares of the vector's elements.
+        double sum = 0;
+        foreach (double i in vector)
+            sum += i * i;
+        
+        // Return the magnitude (length) of the input vector.
+        return Math.Round(Math.Sqrt(sum), 2);
     }
 }
