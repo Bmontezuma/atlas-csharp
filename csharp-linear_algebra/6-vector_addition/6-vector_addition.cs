@@ -1,28 +1,34 @@
-﻿using System.Linq;
-using System;
+﻿using System;
 
-class VectorMath {
-    public static double[] Add(double[] vector1, double[] vector2) {
-        int size;
-        double[] sum;
-
-        if ((size = vector1.Count()) != vector2.Count()|| !IsVector(vector1) || !IsVector(vector2))
-            return new double[] {-1};
-        
-        sum = new double[size];
-        
-        for (int i = 0; i < size; i++)
+/// <summary>
+/// Provides methods for vector operations.
+/// </summary>
+public class VectorMath
+{
+    /// <summary>
+    /// Adds two vectors and returns the resulting vector.
+    /// </summary>
+    /// <param name="vector1">The first vector.</param>
+    /// <param name="vector2">The second vector.</param>
+    /// <returns>The resulting vector as an array of doubles.</returns>
+    /// <remarks>
+    /// Vectors must be of the same dimension (2D or 3D). If not, returns a vector with a single element -1.
+    /// </remarks>
+    public static double[] Add(double[] vector1, double[] vector2)
+    {
+        if (vector1.Length != vector2.Length)
         {
-            sum[i] = vector1[i] + vector2[i];
+            return new double[] { -1 }; // Return a vector with a single element -1 if vectors are not of the same size
         }
 
-        return sum;
-        
-    }
+        int n = vector1.Length;
+        double[] result = new double[n];
 
-    static bool IsVector(double[] vec) {
-        if (vec.Count() == 2 || vec.Count() == 3)
-            return true;
-        return false;
+        for (int i = 0; i < n; i++)
+        {
+            result[i] = vector1[i] + vector2[i];
+        }
+
+        return result;
     }
 }
