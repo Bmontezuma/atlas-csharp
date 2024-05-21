@@ -5,19 +5,8 @@
 /// </summary>
 public class Player
 {
-    /// <summary>
-    /// Gets the name of the player.
-    /// </summary>
-    public string Name { get; private set; }
-
-    /// <summary>
-    /// Gets the maximum health points of the player.
-    /// </summary>
-    public float MaxHp { get; private set; }
-
-    /// <summary>
-    /// Gets the current health points of the player.
-    /// </summary>
+    public string Name { get; }
+    public float MaxHp { get; }
     public float Hp { get; private set; }
 
     /// <summary>
@@ -28,7 +17,7 @@ public class Player
     public Player(string name = "Player", float maxHp = 100f)
     {
         Name = name;
-        MaxHp = maxHp > 0 ? maxHp : 100f;
+        MaxHp = Math.Max(maxHp, 0f); // Ensure maxHp is non-negative
         Hp = MaxHp;
         if (maxHp <= 0)
         {
