@@ -5,9 +5,36 @@
 /// </summary>
 public class Player
 {
-    public string Name { get; }
-    public float MaxHp { get; }
-    public float Hp { get; private set; }
+    private string _name;
+    private float _maxHp;
+    private float _hp;
+
+    /// <summary>
+    /// Gets or sets the name of the player.
+    /// </summary>
+    public string Name
+    {
+        get { return _name; }
+        private set { _name = value; }
+    }
+
+    /// <summary>
+    /// Gets or sets the maximum health points of the player.
+    /// </summary>
+    public float MaxHp
+    {
+        get { return _maxHp; }
+        private set { _maxHp = value > 0 ? value : 100f; }
+    }
+
+    /// <summary>
+    /// Gets the current health points of the player.
+    /// </summary>
+    public float Hp
+    {
+        get { return _hp; }
+        private set { _hp = value; }
+    }
 
     /// <summary>
     /// Creates a new instance of the <see cref="Player"/> class with the specified name and maximum health points.
@@ -17,7 +44,7 @@ public class Player
     public Player(string name = "Player", float maxHp = 100f)
     {
         Name = name;
-        MaxHp = Math.Max(maxHp, 0f); // Ensure maxHp is non-negative
+        MaxHp = maxHp;
         Hp = MaxHp;
         if (maxHp <= 0)
         {
