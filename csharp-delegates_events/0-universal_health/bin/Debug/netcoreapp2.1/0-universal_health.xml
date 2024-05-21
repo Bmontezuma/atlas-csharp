@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>0-universal_health</name>
+    </assembly>
+    <members>
+        <member name="T:Player">
+            <summary>
+            Represents a player entity with health properties.
+            </summary>
+        </member>
+        <member name="P:Player.Name">
+            <summary>
+            Gets or sets the name of the player.
+            </summary>
+        </member>
+        <member name="P:Player.MaxHp">
+            <summary>
+            Gets or sets the maximum health points of the player.
+            </summary>
+        </member>
+        <member name="P:Player.Hp">
+            <summary>
+            Gets the current health points of the player.
+            </summary>
+        </member>
+        <member name="M:Player.#ctor(System.String,System.Single)">
+            <summary>
+            Creates a new instance of the <see cref="T:Player"/> class with the specified name and maximum health points.
+            </summary>
+            <param name="name">The name of the player.</param>
+            <param name="maxHp">The maximum health points of the player.</param>
+        </member>
+        <member name="M:Player.PrintHealth">
+            <summary>
+            Prints the health status of the player.
+            </summary>
+        </member>
+    </members>
+</doc>
