@@ -112,3 +112,11 @@ public class Player
         }
     }
 }
+
+/// <summary>
+/// Delegate to calculate modifier for a player's action.
+/// </summary>
+/// <param name="baseValue">The base value to modify.</param>
+/// <param name="modifier">The modifier to apply.</param>
+/// <returns>The modified value.</returns>
+public delegate float CalculateModifier(float baseValue, Player.Modifier modifier);
