@@ -1,86 +1,135 @@
 ﻿using System;
 
-public enum Modifier
-{
-    Weak,
-    Base,
-    Strong
-}
-
-public delegate float CalculateModifier(float baseValue, Modifier modifier);
-
+/// <summary>
+/// Represents a player with health points.
+/// </summary>
 public class Player
 {
-    private float health;
-    public string name;
+    private string name;
+    private float maxHp;
+    private float hp;
 
-    public Player(string name = "Plant Dinosaur", float health = 100f)
+    /// <summary>
+    /// Delegate to calculate health changes.
+    /// </summary>
+    /// <param name="amount">The amount to change the health by.</param>
+    public delegate void CalculateHealth(float amount);
+
+    /// <summary>
+    /// Gets the player's name.
+    /// </summary>
+    public string Name
     {
-        if (health <= 0f)
+        get { return name; }
+    }
+
+    /// <summary>
+    /// Gets the player's maximum health points.
+    /// </summary>
+    public float MaxHp
+    {
+        get { return maxHp; }
+    }
+
+    /// <summary>
+    /// Gets the player's current health points.
+    /// </summary>
+    public float Hp
+    {
+        get { return hp; }
+    }
+
+    /// <summary>
+    /// Initializes a new instance of the Player class.
+    /// </summary>
+    /// <param name="name">The name of the player.</param>
+    /// <param name="maxHp">The maximum health points of the player.</param>
+    public Player(string name = "Player", float maxHp = 100f)
+    {
+        if (maxHp <= 0)
         {
-            Console.WriteLine("Health must be greater than 0. Setting default health to 100.");
-            this.health = 100f;
-        }
-        else
-        {
-            this.health = health;
+            Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
+            maxHp = 100f;
         }
         this.name = name;
+        this.maxHp = maxHp;
+        this.hp = maxHp;
     }
 
+    /// <summary>
+    /// Prints the player's health.
+    /// </summary>
     public void PrintHealth()
     {
-        Console.WriteLine($"{name} has {health} / 100 health");
+        Console.WriteLine($"{name} has {hp} / {maxHp} health");
     }
 
+    /// <summary>
+    /// Reduces the player's health by the specified damage amount.
+    /// </summary>
+    /// <param name="damage">The amount of damage to take.</param>
     public void TakeDamage(float damage)
     {
-        if (damage <= 0f)
+        if (damage < 0)
         {
-            Console.WriteLine($"{name} takes 0 damage!");
+            damage = 0;
         }
-        else if (damage >= health)
-        {
-            Console.WriteLine($"{name} takes {health} damage!");
-            health = 0f;
-        }
-        else
-        {
-            Console.WriteLine($"{name} takes {damage} damage!");
-            health -= damage;
-        }
+        Console.WriteLine($"{name} takes {damage} damage!");
+        float newHp = hp - damage;
+        ValidateHP(newHp);
     }
 
+    /// <summary>
+    /// Increases the player's health by the specified heal amount.
+    /// </summary>
+    /// <param name="heal">The amount of health to restore.</param>
     public void HealDamage(float heal)
     {
-        if (heal <= 0f)
+        if (heal < 0)
         {
-            Console.WriteLine($"{name} heals 0 HP!");
+            heal = 0;
+        }
+        Console.WriteLine($"{name} heals {heal} HP!");
+        float newHp = hp + heal;
+        ValidateHP(newHp);
+    }
+
+    /// <summary>
+    /// Validates and sets the player's health points.
+    /// </summary>
+    /// <param name="newHp">The new health points to set.</param>
+    public void ValidateHP(float newHp)
+    {
+        if (newHp < 0)
+        {
+            hp = 0;
+        }
+        else if (newHp > maxHp)
+        {
+            hp = maxHp;
         }
         else
         {
-            Console.WriteLine($"{name} heals {heal} HP!");
-            health += heal;
-            if (health > 100f)
-            {
-                health = 100f;
-            }
+            hp = newHp;
         }
     }
 
+    /// <summary>
+    /// Applies a modifier to a base value.
+    /// </summary>
+    /// <param name="baseValue">The base value to modify.</param>
+    /// <param name="modifier">The modifier to apply.</param>
+    /// <returns>The modified value.</returns>
     public float ApplyModifier(float baseValue, Modifier modifier)
     {
-        switch (modifier)
+        if (modifier == Modifier.Weak)
         {
-            case Modifier.Weak:
-                return baseValue / 2f;
-            case Modifier.Base:
-                return baseValue;
-            case Modifier.Strong:
-                return baseValue * 1.5f;
-            default:
-                Console.WriteLine("Invalid modifier.");
-                return baseValue;
+            return baseValue / 2;
         }
+        else if (modifier == Modifier.Strong)
+        {
+            return baseValue * 1.5f;
+        }
+        return baseValue;
     }
 }
