@@ -1,6 +1,27 @@
 ﻿using System;
 
 /// <summary>
+/// Enumeration for modifiers.
+/// </summary>
+public enum Modifier
+{
+    /// <summary>Weak modifier (0.5x).</summary>
+    Weak,
+    /// <summary>Base modifier (1x).</summary>
+    Base,
+    /// <summary>Strong modifier (1.5x).</summary>
+    Strong
+}
+
+/// <summary>
+/// Delegate for calculating modified values.
+/// </summary>
+/// <param name="baseValue">The base value to modify.</param>
+/// <param name="modifier">The modifier to apply.</param>
+/// <returns>The modified value.</returns>
+public delegate float CalculateModifier(float baseValue, Modifier modifier);
+
+/// <summary>
 /// Represents a player with health points.
 /// </summary>
 public class Player
@@ -8,12 +29,6 @@ public class Player
     private string name;
     private float maxHp;
     private float hp;
-
-    /// <summary>
-    /// Delegate to calculate health changes.
-    /// </summary>
-    /// <param name="amount">The amount to change the health by.</param>
-    public delegate void CalculateHealth(float amount);
 
     /// <summary>
     /// Gets the player's name.
@@ -120,7 +135,7 @@ public class Player
     /// <param name="baseValue">The base value to modify.</param>
     /// <param name="modifier">The modifier to apply.</param>
     /// <returns>The modified value.</returns>
-    public float ApplyModifier(float baseValue, Modifier modifier)
+    public static float ApplyModifier(float baseValue, Modifier modifier)
     {
         if (modifier == Modifier.Weak)
         {
@@ -131,5 +146,24 @@ public class Player
             return baseValue * 1.5f;
         }
         return baseValue;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Player player = new Player("Plant Dinosaur");
+        CalculateModifier mod = new CalculateModifier(Player.ApplyModifier);
+
+        player.PrintHealth();
+
+        player.TakeDamage(mod(50f, Modifier.Weak));
+
+        player.PrintHealth();
+
+        player.HealDamage(mod(10f, Modifier.Strong));
+
+        player.PrintHealth();
     }
 }
