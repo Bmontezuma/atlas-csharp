@@ -9,6 +9,13 @@ public class Player
     private float maxHp;
     private float hp;
 
+    public enum Modifier
+    {
+        Weak,
+        Base,
+        Strong
+    }
+
     /// <summary>
     /// Initializes a new instance of the Player class.
     /// </summary>
