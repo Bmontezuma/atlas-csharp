@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>1-damage_delegation</name>
+    </assembly>
+    <members>
+        <member name="T:Player">
+            <summary>
+            Represents a player with health points.
+            </summary>
+        </member>
+        <member name="P:Player.Name">
+            <summary>
+            Gets the player's name.
+            </summary>
+        </member>
+        <member name="P:Player.MaxHp">
+            <summary>
+            Gets the player's maximum health points.
+            </summary>
+        </member>
+        <member name="P:Player.Hp">
+            <summary>
+            Gets the player's current health points.
+            </summary>
+        </member>
+        <member name="T:Player.CalculateHealth">
+            <summary>
+            Delegate for calculating health changes.
+            </summary>
+            <param name="amount">The amount to change health by.</param>
+        </member>
+        <member name="M:Player.#ctor(System.String,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Player"/> class.
+            </summary>
+            <param name="name">The name of the player.</param>
+            <param name="maxHp">The maximum health points of the player.</param>
+        </member>
+        <member name="M:Player.PrintHealth">
+            <summary>
+            Prints the player's current health status.
+            </summary>
+        </member>
+        <member name="M:Player.TakeDamage(System.Single)">
+            <summary>
+            Applies damage to the player.
+            </summary>
+            <param name="damage">The amount of damage to apply.</param>
+        </member>
+        <member name="M:Player.HealDamage(System.Single)">
+            <summary>
+            Heals the player.
+            </summary>
+            <param name="heal">The amount of healing to apply.</param>
+        </member>
+    </members>
+</doc>
