@@ -1,45 +1,35 @@
 ﻿using System;
 
 /// <summary>
-/// Enum representing different modifiers that can be applied.
+/// Represents a player with health points.
 /// </summary>
-public enum Modifier
+public class Player
 {
-    /// <summary>
-    /// Weak modifier that halves the base value.
-    /// </summary>
-    Weak,
-    /// <summary>
-    /// Base modifier that does not change the base value.
-    /// </summary>
-    Base,
-    /// <summary>
-    /// Strong modifier that multiplies the base value by 1.5.
-    /// </summary>
-    Strong
-}
+    private string name;
+    private float maxHp;
+    private float hp;
 
-/// <summary>
-/// Delegate to calculate modifier for a player's action.
-/// </summary>
-/// <param name="baseValue">The base value to modify.</param>
-/// <param name="modifier">The modifier to apply.</param>
-/// <returns>The modified value.</returns>
-public delegate float CalculateModifier(float baseValue, Modifier modifier);
-
-/// <summary>
-/// Class representing a player with health points.
-/// </summary>
-public static class Player
-{
-    private static string name;
-    private static float maxHp;
-    private static float hp;
+    /// <summary>
+    /// Initializes a new instance of the Player class.
+    /// </summary>
+    /// <param name="name">The name of the player.</param>
+    /// <param name="maxHp">The maximum health points of the player.</param>
+    public Player(string name = "Player", float maxHp = 100f)
+    {
+        if (maxHp <= 0)
+        {
+            Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
+            maxHp = 100f;
+        }
+        this.name = name;
+        this.maxHp = maxHp;
+        this.hp = maxHp;
+    }
 
     /// <summary>
     /// Prints the player's health.
     /// </summary>
-    public static void PrintHealth()
+    public void PrintHealth()
     {
         Console.WriteLine($"{name} has {hp} / {maxHp} health");
     }
@@ -48,7 +38,7 @@ public static class Player
     /// Reduces the player's health by the specified damage amount.
     /// </summary>
     /// <param name="damage">The amount of damage to take.</param>
-    public static void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         if (damage < 0)
         {
@@ -63,7 +53,7 @@ public static class Player
     /// Increases the player's health by the specified heal amount.
     /// </summary>
     /// <param name="heal">The amount of health to restore.</param>
-    public static void HealDamage(float heal)
+    public void HealDamage(float heal)
     {
         if (heal < 0)
         {
@@ -74,7 +64,11 @@ public static class Player
         ValidateHP(newHp);
     }
 
-    private static void ValidateHP(float newHp)
+    /// <summary>
+    /// Validates and sets the player's health points.
+    /// </summary>
+    /// <param name="newHp">The new health points to set.</param>
+    private void ValidateHP(float newHp)
     {
         if (newHp < 0)
         {
@@ -91,9 +85,9 @@ public static class Player
     }
 
     /// <summary>
-    /// Applies the specified modifier to the base value.
+    /// Calculates the modified value based on the provided base value and modifier.
     /// </summary>
-    /// <param name="baseValue">The base value to modify.</param>
+    /// <param name="baseValue">The base value to be modified.</param>
     /// <param name="modifier">The modifier to apply.</param>
     /// <returns>The modified value.</returns>
     public static float ApplyModifier(float baseValue, Modifier modifier)
