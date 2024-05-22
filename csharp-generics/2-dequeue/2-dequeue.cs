@@ -1,6 +1,8 @@
-﻿namespace _2_dequeue;
+﻿using System;
 
-public class Class1
+namespace _2_dequeue
 {
-
+    public class Class1
+    {
+    }
 }

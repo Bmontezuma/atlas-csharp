@@ -1,0 +1,11 @@
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\18-matrix_matrix_mul\obj\Debug\netcoreapp2.1\18-matrix_matrix_mul.csprojAssemblyReference.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\18-matrix_matrix_mul\obj\Debug\netcoreapp2.1\18-matrix_matrix_mul.csproj.CoreCompileInputs.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\18-matrix_matrix_mul\obj\Debug\netcoreapp2.1\18-matrix_matrix_mul.AssemblyInfoInputs.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\18-matrix_matrix_mul\obj\Debug\netcoreapp2.1\18-matrix_matrix_mul.AssemblyInfo.cs
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\18-matrix_matrix_mul\bin\Debug\netcoreapp2.1\18-matrix_matrix_mul.deps.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\18-matrix_matrix_mul\bin\Debug\netcoreapp2.1\18-matrix_matrix_mul.runtimeconfig.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\18-matrix_matrix_mul\bin\Debug\netcoreapp2.1\18-matrix_matrix_mul.runtimeconfig.dev.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\18-matrix_matrix_mul\bin\Debug\netcoreapp2.1\18-matrix_matrix_mul.dll
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\18-matrix_matrix_mul\bin\Debug\netcoreapp2.1\18-matrix_matrix_mul.pdb
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\18-matrix_matrix_mul\obj\Debug\netcoreapp2.1\18-matrix_matrix_mul.dll
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\18-matrix_matrix_mul\obj\Debug\netcoreapp2.1\18-matrix_matrix_mul.pdb

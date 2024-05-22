@@ -1,0 +1,11 @@
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\20-matrix_rotate_2D\bin\Debug\netcoreapp2.1\20-matrix_rotate_2D.deps.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\20-matrix_rotate_2D\bin\Debug\netcoreapp2.1\20-matrix_rotate_2D.runtimeconfig.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\20-matrix_rotate_2D\bin\Debug\netcoreapp2.1\20-matrix_rotate_2D.runtimeconfig.dev.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\20-matrix_rotate_2D\bin\Debug\netcoreapp2.1\20-matrix_rotate_2D.dll
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\20-matrix_rotate_2D\bin\Debug\netcoreapp2.1\20-matrix_rotate_2D.pdb
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\20-matrix_rotate_2D\obj\Debug\netcoreapp2.1\20-matrix_rotate_2D.csprojAssemblyReference.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\20-matrix_rotate_2D\obj\Debug\netcoreapp2.1\20-matrix_rotate_2D.csproj.CoreCompileInputs.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\20-matrix_rotate_2D\obj\Debug\netcoreapp2.1\20-matrix_rotate_2D.AssemblyInfoInputs.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\20-matrix_rotate_2D\obj\Debug\netcoreapp2.1\20-matrix_rotate_2D.AssemblyInfo.cs
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\20-matrix_rotate_2D\obj\Debug\netcoreapp2.1\20-matrix_rotate_2D.dll
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\20-matrix_rotate_2D\obj\Debug\netcoreapp2.1\20-matrix_rotate_2D.pdb
