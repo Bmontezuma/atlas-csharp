@@ -1,20 +1,26 @@
 ﻿using System;
 
 /// <summary>
-/// Enumeration for modifiers.
+/// Enum representing different modifiers that can be applied.
 /// </summary>
 public enum Modifier
 {
-    /// <summary>Weak modifier (0.5x).</summary>
+    /// <summary>
+    /// Weak modifier that halves the base value.
+    /// </summary>
     Weak,
-    /// <summary>Base modifier (1x).</summary>
+    /// <summary>
+    /// Base modifier that does not change the base value.
+    /// </summary>
     Base,
-    /// <summary>Strong modifier (1.5x).</summary>
+    /// <summary>
+    /// Strong modifier that multiplies the base value by 1.5.
+    /// </summary>
     Strong
 }
 
 /// <summary>
-/// Delegate for calculating modified values.
+/// Delegate to calculate modifier for a player's action.
 /// </summary>
 /// <param name="baseValue">The base value to modify.</param>
 /// <param name="modifier">The modifier to apply.</param>
@@ -22,59 +28,18 @@ public enum Modifier
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
 
 /// <summary>
-/// Represents a player with health points.
+/// Class representing a player with health points.
 /// </summary>
-public class Player
+public static class Player
 {
-    private string name;
-    private float maxHp;
-    private float hp;
-
-    /// <summary>
-    /// Gets the player's name.
-    /// </summary>
-    public string Name
-    {
-        get { return name; }
-    }
-
-    /// <summary>
-    /// Gets the player's maximum health points.
-    /// </summary>
-    public float MaxHp
-    {
-        get { return maxHp; }
-    }
-
-    /// <summary>
-    /// Gets the player's current health points.
-    /// </summary>
-    public float Hp
-    {
-        get { return hp; }
-    }
-
-    /// <summary>
-    /// Initializes a new instance of the Player class.
-    /// </summary>
-    /// <param name="name">The name of the player.</param>
-    /// <param name="maxHp">The maximum health points of the player.</param>
-    public Player(string name = "Player", float maxHp = 100f)
-    {
-        if (maxHp <= 0)
-        {
-            Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
-            maxHp = 100f;
-        }
-        this.name = name;
-        this.maxHp = maxHp;
-        this.hp = maxHp;
-    }
+    private static string name;
+    private static float maxHp;
+    private static float hp;
 
     /// <summary>
     /// Prints the player's health.
     /// </summary>
-    public void PrintHealth()
+    public static void PrintHealth()
     {
         Console.WriteLine($"{name} has {hp} / {maxHp} health");
     }
@@ -83,7 +48,7 @@ public class Player
     /// Reduces the player's health by the specified damage amount.
     /// </summary>
     /// <param name="damage">The amount of damage to take.</param>
-    public void TakeDamage(float damage)
+    public static void TakeDamage(float damage)
     {
         if (damage < 0)
         {
@@ -98,7 +63,7 @@ public class Player
     /// Increases the player's health by the specified heal amount.
     /// </summary>
     /// <param name="heal">The amount of health to restore.</param>
-    public void HealDamage(float heal)
+    public static void HealDamage(float heal)
     {
         if (heal < 0)
         {
@@ -109,11 +74,7 @@ public class Player
         ValidateHP(newHp);
     }
 
-    /// <summary>
-    /// Validates and sets the player's health points.
-    /// </summary>
-    /// <param name="newHp">The new health points to set.</param>
-    public void ValidateHP(float newHp)
+    private static void ValidateHP(float newHp)
     {
         if (newHp < 0)
         {
@@ -130,21 +91,23 @@ public class Player
     }
 
     /// <summary>
-    /// Applies a modifier to a base value.
+    /// Applies the specified modifier to the base value.
     /// </summary>
     /// <param name="baseValue">The base value to modify.</param>
     /// <param name="modifier">The modifier to apply.</param>
     /// <returns>The modified value.</returns>
     public static float ApplyModifier(float baseValue, Modifier modifier)
     {
-        if (modifier == Modifier.Weak)
+        switch (modifier)
         {
-            return baseValue / 2;
+            case Modifier.Weak:
+                return baseValue * 0.5f;
+            case Modifier.Base:
+                return baseValue;
+            case Modifier.Strong:
+                return baseValue * 1.5f;
+            default:
+                throw new ArgumentException("Invalid modifier");
         }
-        else if (modifier == Modifier.Strong)
-        {
-            return baseValue * 1.5f;
-        }
-        return baseValue;
     }
 }
