@@ -1,9 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RootNamespace>_12_dot_product</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="VectorMath.cs" />
+  </ItemGroup>
 
 </Project>
