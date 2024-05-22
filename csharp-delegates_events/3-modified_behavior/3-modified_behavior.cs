@@ -148,22 +148,3 @@ public class Player
         return baseValue;
     }
 }
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        Player player = new Player("Plant Dinosaur");
-        CalculateModifier mod = new CalculateModifier(Player.ApplyModifier);
-
-        player.PrintHealth();
-
-        player.TakeDamage(mod(50f, Modifier.Weak));
-
-        player.PrintHealth();
-
-        player.HealDamage(mod(10f, Modifier.Strong));
-
-        player.PrintHealth();
-    }
-}
