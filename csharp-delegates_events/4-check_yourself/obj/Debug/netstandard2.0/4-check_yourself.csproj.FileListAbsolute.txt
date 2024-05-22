@@ -1,9 +1,0 @@
-C:\Users\brand\atlas-csharp\csharp-delegates_events\4-check_yourself\bin\Debug\netstandard2.0\4-check_yourself.deps.json
-C:\Users\brand\atlas-csharp\csharp-delegates_events\4-check_yourself\bin\Debug\netstandard2.0\4-check_yourself.dll
-C:\Users\brand\atlas-csharp\csharp-delegates_events\4-check_yourself\bin\Debug\netstandard2.0\4-check_yourself.pdb
-C:\Users\brand\atlas-csharp\csharp-delegates_events\4-check_yourself\obj\Debug\netstandard2.0\4-check_yourself.csprojAssemblyReference.cache
-C:\Users\brand\atlas-csharp\csharp-delegates_events\4-check_yourself\obj\Debug\netstandard2.0\4-check_yourself.csproj.CoreCompileInputs.cache
-C:\Users\brand\atlas-csharp\csharp-delegates_events\4-check_yourself\obj\Debug\netstandard2.0\4-check_yourself.AssemblyInfoInputs.cache
-C:\Users\brand\atlas-csharp\csharp-delegates_events\4-check_yourself\obj\Debug\netstandard2.0\4-check_yourself.AssemblyInfo.cs
-C:\Users\brand\atlas-csharp\csharp-delegates_events\4-check_yourself\obj\Debug\netstandard2.0\4-check_yourself.dll
-C:\Users\brand\atlas-csharp\csharp-delegates_events\4-check_yourself\obj\Debug\netstandard2.0\4-check_yourself.pdb
