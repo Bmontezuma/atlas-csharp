@@ -9,13 +9,6 @@ public class Player
     private float maxHp;
     private float hp;
 
-    public enum Modifier
-    {
-        Weak,
-        Base,
-        Strong
-    }
-
     /// <summary>
     /// Initializes a new instance of the Player class.
     /// </summary>
@@ -90,11 +83,35 @@ public class Player
             hp = newHp;
         }
     }
+}
 
+/// <summary>
+/// Represents the possible modifiers for the player's action.
+/// </summary>
+public enum Modifier
+{
+    Weak,
+    Base,
+    Strong
+}
+
+/// <summary>
+/// Delegate to calculate modifier for a player's action.
+/// </summary>
+/// <param name="baseValue">The base value to modify.</param>
+/// <param name="modifier">The modifier to apply.</param>
+/// <returns>The modified value.</returns>
+public delegate float CalculateModifier(float baseValue, Modifier modifier);
+
+/// <summary>
+/// Provides a method to apply a modifier to a base value.
+/// </summary>
+public static class ModifierHelper
+{
     /// <summary>
-    /// Calculates the modified value based on the provided base value and modifier.
+    /// Applies a modifier to a base value.
     /// </summary>
-    /// <param name="baseValue">The base value to be modified.</param>
+    /// <param name="baseValue">The base value to modify.</param>
     /// <param name="modifier">The modifier to apply.</param>
     /// <returns>The modified value.</returns>
     public static float ApplyModifier(float baseValue, Modifier modifier)
@@ -112,11 +129,3 @@ public class Player
         }
     }
 }
-
-/// <summary>
-/// Delegate to calculate modifier for a player's action.
-/// </summary>
-/// <param name="baseValue">The base value to modify.</param>
-/// <param name="modifier">The modifier to apply.</param>
-/// <returns>The modified value.</returns>
-public delegate float CalculateModifier(float baseValue, Player.Modifier modifier);
