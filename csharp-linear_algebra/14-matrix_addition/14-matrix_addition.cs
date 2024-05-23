@@ -2,6 +2,12 @@
 
 public class MatrixMath
 {
+    /// <summary>
+    /// Adds two matrices and returns the resulting matrix.
+    /// </summary>
+    /// <param name="matrix1">The first matrix.</param>
+    /// <param name="matrix2">The second matrix.</param>
+    /// <returns>The resulting matrix or a matrix containing -1 if any conditions are not met.</returns>
     public static double[,] Add(double[,] matrix1, double[,] matrix2)
     {
         int rows1 = matrix1.GetLength(0);
