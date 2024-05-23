@@ -6,31 +6,36 @@
 public class MatrixMath
 {
     /// <summary>
-    /// Multiplies a matrix by a scalar.
+    /// Multiplies two matrices and returns the resulting matrix.
     /// </summary>
-    /// <param name="matrix">The matrix to multiply.</param>
-    /// <param name="scalar">The scalar to multiply by.</param>
-    /// <returns>The resulting matrix after scalar multiplication.</returns>
-    public static double[,] MultiplyScalar(double[,] matrix, double scalar)
+    /// <param name="matrix1">The first matrix to multiply.</param>
+    /// <param name="matrix2">The second matrix to multiply.</param>
+    /// <returns>The resulting matrix after multiplication.</returns>
+    public static double[,] Multiply(double[,] matrix1, double[,] matrix2)
     {
-        int rows = matrix.GetLength(0);
-        int cols = matrix.GetLength(1);
+        int rows1 = matrix1.GetLength(0);
+        int cols1 = matrix1.GetLength(1);
+        int rows2 = matrix2.GetLength(0);
+        int cols2 = matrix2.GetLength(1);
 
-        // Check if the matrix is 2D or 3D
-        if (rows != 2 && rows != 3 && cols != 2 && cols != 3)
+        // Check if matrices can be multiplied
+        if (cols1 != rows2)
         {
-            Console.WriteLine("The matrix must be either 2D or 3D.");
+            Console.WriteLine("The matrices cannot be multiplied.");
             return new double[,] { { -1 } };
         }
 
-        double[,] result = new double[rows, cols];
+        double[,] result = new double[rows1, cols2];
 
-        // Perform scalar multiplication
-        for (int i = 0; i < rows; i++)
+        // Perform matrix multiplication
+        for (int i = 0; i < rows1; i++)
         {
-            for (int j = 0; j < cols; j++)
+            for (int j = 0; j < cols2; j++)
             {
-                result[i, j] = matrix[i, j] * scalar;
+                for (int k = 0; k < cols1; k++)
+                {
+                    result[i, j] += matrix1[i, k] * matrix2[k, j];
+                }
             }
         }
 
