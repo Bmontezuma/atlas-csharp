@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("33-inverse_2D")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75329c3e2d3d11b1f6bc64f05b8ad48d0e78056e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43f9e10c5d02eab2c87ce9f3097de057d6b1a8b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("33-inverse_2D")]
 [assembly: System.Reflection.AssemblyTitleAttribute("33-inverse_2D")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
