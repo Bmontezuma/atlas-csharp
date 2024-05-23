@@ -1,37 +1,39 @@
 ﻿using System;
 
-namespace MatrixMathLibrary
+/// <summary>
+/// Class for performing matrix operations.
+/// </summary>
+public class MatrixMath
 {
     /// <summary>
-    /// Provides methods for matrix operations.
+    /// Multiplies a matrix by a scalar.
     /// </summary>
-    public class MatrixMath
+    /// <param name="matrix">The matrix to multiply.</param>
+    /// <param name="scalar">The scalar to multiply by.</param>
+    /// <returns>The resulting matrix after scalar multiplication.</returns>
+    public static double[,] MultiplyScalar(double[,] matrix, double scalar)
     {
-        /// <summary>
-        /// Multiplies a matrix by a scalar.
-        /// </summary>
-        /// <param name="matrix">The matrix to multiply.</param>
-        /// <param name="scalar">The scalar value to multiply by.</param>
-        /// <returns>The resulting matrix after scalar multiplication.</returns>
-        /// <exception cref="ArgumentNullException">Thrown when the input matrix is null.</exception>
-        public static double[,] MultiplyScalar(double[,] matrix, double scalar)
+        int rows = matrix.GetLength(0);
+        int cols = matrix.GetLength(1);
+
+        // Check if the matrix is 2D or 3D
+        if (rows != 2 && rows != 3 && cols != 2 && cols != 3)
         {
-            if (matrix == null)
-                throw new ArgumentNullException(nameof(matrix), "Matrix cannot be null.");
-
-            int rows = matrix.GetLength(0);
-            int cols = matrix.GetLength(1);
-
-            double[,] result = new double[rows, cols];
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < cols; j++)
-                {
-                    result[i, j] = matrix[i, j] * scalar;
-                }
-            }
-
-            return result;
+            Console.WriteLine("The matrix must be either 2D or 3D.");
+            return new double[,] { { -1 } };
         }
+
+        double[,] result = new double[rows, cols];
+
+        // Perform scalar multiplication
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < cols; j++)
+            {
+                result[i, j] = matrix[i, j] * scalar;
+            }
+        }
+
+        return result;
     }
 }
