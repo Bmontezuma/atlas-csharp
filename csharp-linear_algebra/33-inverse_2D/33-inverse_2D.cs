@@ -1,37 +1,25 @@
 ﻿using System;
 
-namespace MatrixMathLibrary
+namespace VectorMathLibrary
 {
-    public static class MatrixMath
+    public static class VectorMath
     {
-        public static double[,] Inverse2D(double[,] matrix)
+        public static double[] CrossProduct(double[] vector1, double[] vector2)
         {
-            int rows = matrix.GetLength(0);
-            int cols = matrix.GetLength(1);
-
-            // Check if the matrix is a 2D matrix
-            if (rows != 2 || cols != 2)
+            // Check if both vectors are 3D vectors
+            if (vector1.Length != 3 || vector2.Length != 3)
             {
-                return new double[,] { { -1 } };
+                // Return a vector containing -1 if either vector is not 3D
+                return new double[] { -1, -1, -1 };
             }
 
-            // Calculate determinant
-            double determinant = matrix[0, 0] * matrix[1, 1] - matrix[0, 1] * matrix[1, 0];
+            // Calculate the cross product
+            double[] result = new double[3];
+            result[0] = vector1[1] * vector2[2] - vector1[2] * vector2[1];
+            result[1] = vector1[2] * vector2[0] - vector1[0] * vector2[2];
+            result[2] = vector1[0] * vector2[1] - vector1[1] * vector2[0];
 
-            // Check if the matrix is invertible
-            if (Math.Abs(determinant) < double.Epsilon)
-            {
-                return new double[,] { { -1 } };
-            }
-
-            // Calculate inverse
-            double[,] inverse = new double[2, 2];
-            inverse[0, 0] = matrix[1, 1] / determinant;
-            inverse[0, 1] = -matrix[0, 1] / determinant;
-            inverse[1, 0] = -matrix[1, 0] / determinant;
-            inverse[1, 1] = matrix[0, 0] / determinant;
-
-            return inverse;
+            return result;
         }
     }
 }
