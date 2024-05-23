@@ -1,21 +1,41 @@
 using System;
 
-namespace _18_matrix_matrix_mul
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Example usage:
+        double[,] matrix = {
+            { 1, 2, 3 },
+            { 4, 5, 6 },
+            { 7, 8, 9 }
+        };
+
+        double angleInRadians = Math.PI / 4; // 45 degrees
+
+        // Rotate the matrix
+        double[,] rotatedMatrix = MatrixMath.Rotate2D(matrix, angleInRadians);
+
+        // Display the rotated matrix
+        Console.WriteLine("Original Matrix:");
+        PrintMatrix(matrix);
+
+        Console.WriteLine("\nRotated Matrix:");
+        PrintMatrix(rotatedMatrix);
+    }
+
+    static void PrintMatrix(double[,] matrix)
+    {
+        int rows = matrix.GetLength(0);
+        int cols = matrix.GetLength(1);
+
+        for (int i = 0; i < rows; i++)
         {
-            var a = new double[,] { { 1, 2 }, { 4, 5 }, { 7, 8 } };
-            var b = new double[,] {{2,3},{4,5}};
-
-            Console.WriteLine("rows {0}, Columns {1}", a.GetLength(0), a.GetLength(1));
-
-           var matrix =  MatrixMath.Multiply(a,b);
-           var s = matrix;
-            Console.WriteLine("Row: |{0}|{1}|", s[0,0], s[0,1]);
-            Console.WriteLine("Row: |{0}|{1}|", s[1,0], s[1,1]);
-            Console.WriteLine("Row: |{0}|{1}|", s[2,0], s[2,1]);
+            for (int j = 0; j < cols; j++)
+            {
+                Console.Write($"{matrix[i, j],8}");
+            }
+            Console.WriteLine();
         }
     }
 }
