@@ -1,0 +1,15 @@
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\bin\Debug\netcoreapp2.1\12-dot_product.xml
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\bin\Debug\netcoreapp2.1\12-dot_product.deps.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\bin\Debug\netcoreapp2.1\12-dot_product.runtimeconfig.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\bin\Debug\netcoreapp2.1\12-dot_product.runtimeconfig.dev.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\bin\Debug\netcoreapp2.1\12-dot_product.dll
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\bin\Debug\netcoreapp2.1\12-dot_product.pdb
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\obj\Debug\netcoreapp2.1\12-dot_product.csproj.AssemblyReference.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\obj\Debug\netcoreapp2.1\12-dot_product.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\obj\Debug\netcoreapp2.1\12-dot_product.AssemblyInfoInputs.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\obj\Debug\netcoreapp2.1\12-dot_product.AssemblyInfo.cs
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\obj\Debug\netcoreapp2.1\12-dot_product.csproj.CoreCompileInputs.cache
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\obj\Debug\netcoreapp2.1\12-dot_product.sourcelink.json
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\obj\Debug\netcoreapp2.1\12-dot_product.dll
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\obj\Debug\netcoreapp2.1\12-dot_product.pdb
+C:\Users\brand\atlas-csharp\csharp-linear_algebra\12-dot_product\obj\Debug\netcoreapp2.1\12-dot_product.genruntimeconfig.cache
