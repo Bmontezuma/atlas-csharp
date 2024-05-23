@@ -1,14 +1,12 @@
 using System;
-using VectorMathLibrary;
 
-class MainClass {
-    public static void Main (string[] args) {
-        // Test case
-        double[] vector1 = { 7, 11 };
-        double[] vector2 = { -3, 2 };
-
-        double dotProduct = VectorMath.DotProduct(vector1, vector2);
-
-        Console.WriteLine(dotProduct); // Output: 1
+class Program
+{
+    static void Main(string[] args)
+    {
+        var s = VectorMath.DotProduct(new double[]{-4, 0, 10}, new double[]{3, 7, -9});
+        Console.WriteLine("{0}", s);
     }
 }
+
+
